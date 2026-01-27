@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  
+  <script src="scripts/site.js" defer></script>
+  
+  <style>
+    .hero-card { overflow: hidden; }
+    .hero-bottom{
+      background: #f6f7fb;
+      padding: 18px 20px;
+      margin-top: 14px;
+    }
+    .hero-bottom .address span,
+    .hero-bottom .address{ color: #64748b; }
+
+    .hero-bottom .btn{
+      color: #0f172a;
+      border-color: rgba(15,23,42,.12);
+      background: rgba(255,255,255,.70);
+    }
+    .cta-row .btn:hover{
+      background: rgba(0,0,255,.95);
+      color: white;
+    }
+
+    .teacher-grid .card h3{ margin-top: 0; }
+
+    .schedule-table{
+      width:100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    .schedule-table th, .schedule-table td{
+      padding:10px;
+      border-bottom: 1px solid #f1f5f9;
+      text-align:left;
+      vertical-align: top;
+    }
+    .schedule-table th{ border-bottom: 1px solid #e8ecf3; }
+
+    .anchor-offset{ scroll-margin-top: 90px; }
+  </style>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
+        <div class="brand-text">
+          <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong>
+          <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="langToggle" type="button">English</button>
+        <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <div class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
+    <header>
+      <strong>Menu</strong>
+      <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
+    </header>
+
+    <a href="index.html" data-i18n="menu.home">Accueil</a>
+    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
+    <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du lion?</a>
+    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
+    <a href="contact.html" data-i18n="menu.contact">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-head">
+          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
+
+          <div class="hero-head-text">
+            <h1 class="hero-title">
+              <span data-i18n="aproposPage.title">À propos de l'école</span>
+            </h1>
+
+            <p class="hero-tagline" data-i18n="aproposPage.subtitle">
+              Découvrez nos professeurs, nos disciplines et nos horaires.
+            </p>
+
+            <div class="hero-meta">
+              <a class="pill" href="tel:4387254918">
+                <i data-feather="phone"></i>
+                <span data-i18n="school.phone">(438) 725-4918</span>
+              </a>
+
+              <a class="pill" href="https://wa.me/14387254918" target="_blank" rel="noopener">
+                <i data-feather="message-circle"></i>
+                <span data-i18n="school.phone2">What's App</span>
+              </a>
+
+              <span class="pill" data-i18n="cta.trial">Cours d'essai gratuit</span>
+              <span class="pill" data-i18n="cta.registration">Inscriptions en tout temps.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="address">
+            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
+            <span data-i18n="address.line2">Brossard, Québec</span><br/>
+            <span data-i18n="address.line3">J4W 3J2 Canada</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
+            <a class="btn" href="index.html" data-i18n="cta.home">Accueil</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Professeurs -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2 data-i18n="aproposPage.teachers.title">Professeurs</h2>
+
+        <div class="grid grid-3 teacher-grid" style="margin-top:14px;">
+          <div class="card">
+            <h3 data-i18n="aproposPage.teachers.michel.name">Michel Orchard</h3>
+            <p class="muted" data-i18n="aproposPage.teachers.michel.bio">Lorem ipsum…</p>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="aproposPage.teachers.antoine.name">Antoine X.</h3>
+            <p class="muted" data-i18n="aproposPage.teachers.antoine.bio">Lorem ipsum…</p>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="aproposPage.teachers.ming.name">Mr. Ming</h3>
+            <p class="muted" data-i18n="aproposPage.teachers.ming.bio">Lorem ipsum…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- École (anchor) -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2 id="ecole" class="anchor-offset" data-i18n="aproposPage.schoolsSectionTitle">École</h2>
+        <p class="muted" data-i18n="aproposPage.schoolsSectionSubtitle">Philosophie, histoire et horaires de nos disciplines.</p>
+        <p data-i18n="aproposPage.schools.wingchun.p1">L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong, l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité, économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité (Chi Sao), discipline et respect.</p>
+        <p data-i18n="aproposPage.schools.wingchun.p2">Sifu Michel Orchard est un instructeur passionné, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années d’expérience, il s’est illustré en compétition en remportant plusieurs distinctions (catégories selon événements), tout en conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.</p>
+        <p data-i18n="aproposPage.schools.wingchun.p3">La philosophie de l’école s’inspire des valeurs associées à la lignée Yip Man : respect des traditions, travail rigoureux, humilité, esprit de communauté et transmission honnête. Les élèves y trouvent un environnement motivant, où l’on apprend à se protéger, à gagner en confiance, à gérer le stress et à se dépasser, tout en cultivant une pratique respectueuse et responsable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disciplines + horaires -->
+  <section>
+    <div class="container">
+      <div class="grid grid-2">
+        <!-- Wing Chun -->
+        <div class="card">
+          <h2 data-i18n="aproposPage.schools.wingchun.title">Kung Fu Wing Chun</h2>
+          <p class="muted" data-i18n="aproposPage.schools.wingchun.philosophy">…</p>
+          <p class="muted" data-i18n="aproposPage.schools.wingchun.history">…</p>
+
+          <h3 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h3>
+          <div style="overflow:auto;">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th data-i18n="aproposPage.schedule.day">Jour</th>
+                  <th data-i18n="aproposPage.schedule.wingchun">Wing Chun</th>
+                </tr>
+              </thead>
+              <tbody id="wingchunScheduleBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Lion Dance -->
+        <div class="card">
+          <h2 data-i18n="aproposPage.schools.lion.title">Danse du lion</h2>
+          <p class="muted" data-i18n="aproposPage.schools.lion.philosophy">…</p>
+          <p class="muted" data-i18n="aproposPage.schools.lion.history">…</p>
+
+          <h3 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h3>
+          <div style="overflow:auto;">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th data-i18n="aproposPage.schedule.day">Jour</th>
+                  <th data-i18n="aproposPage.schedule.lion">Danse du lion</th>
+                </tr>
+              </thead>
+              <tbody id="lionScheduleBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:10px;" data-i18n="aproposPage.schedule.note">Les horaires peuvent varier selon les événements spéciaux.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard 2025</div>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

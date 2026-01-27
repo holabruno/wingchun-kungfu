@@ -4,6 +4,7 @@
       "name": "Institut d'arts Martiaux Chinois de la rive sud de Montréal",
       "tagline": "Enseignement traditionnel du Kung Fu Wing Chun depuis 1991",
       "phone": "(438) 725-4918",
+      "phone2": "What's App",
       "membership": "Membre de l'association YIP Man de Hong Kong"
     },
     "address": {
@@ -175,7 +176,7 @@
       "fields": {
         "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
         "lastName": { "label": "Nom", "placeholder": "Votre nom" },
-        "phone": { "label": "Téléphone", "placeholder": "(438) 725-4918" },
+        "phone": { "label": "Téléphone", "placeholder": "(999) 999-9999" },
         "message": { "label": "Message", "placeholder": "Écrivez votre message…" },
         "age": {
           "label": "Âge",
@@ -189,7 +190,7 @@
           ]
         },
         "source": {
-          "label": "Source",
+          "label": "Référé par",
           "options": [
             { "value": "facebook", "label": "Facebook" },
             { "value": "eleve", "label": "Élève de l'école" },
@@ -383,7 +384,7 @@
       "fields": {
         "firstName": { "label": "First name", "placeholder": "Your first name" },
         "lastName": { "label": "Last name", "placeholder": "Your last name" },
-        "phone": { "label": "Phone", "placeholder": "(438) 725-4918" },
+        "phone": { "label": "Phone", "placeholder": "(999) 999-9999" },
         "message": { "label": "Message", "placeholder": "Write your message…" },
         "age": {
           "label": "Age",

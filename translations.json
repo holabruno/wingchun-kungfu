@@ -1,0 +1,709 @@
+{
+  "fr": {
+    "menu": {
+      "home": "Accueil",
+      "about": "À propos de notre école",
+      "school": "École",
+      "whatWingChun": "Qu'est-ce que le Wing Chun?",
+      "whatLionDance": "Qu'est-ce que la danse du lion?",
+      "contact": "Contactez-nous"
+    },
+    "school": {
+      "name": "Institut d'arts Martiaux Chinois de la rive sud de Montréal",
+      "tagline": "Enseignement traditionnel du Kung Fu Wing Chun depuis 1991",
+      "phone": "(438) 725-4918",
+      "phone2": "What's App",
+      "membership": "Membre de l'association YIP Man de Hong Kong"
+    },
+    "address": {
+      "label": "Adresse :",
+      "line1": "6400, boulevard Taschereau, local 209",
+      "line2": "Brossard, Québec",
+      "line3": "J4W 3J2 Canada"
+    },
+    "cta": {
+      "trial": "Cours d'essai gratuit",
+      "registration": "Inscriptions en tout temps.",
+      "home": "Accueil"
+    },
+    "benefits": {
+      "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
+      "items": [
+        "Autodéfense",
+        "Confiance en soi",
+        "Gestion du stress",
+        "Santé et mise en forme",
+        "Prévention contre l'intimidation"
+      ]
+    },
+    "whatIs": {
+      "title": "Qu'est-ce que le Wing Chun?",
+      "subtitle": "Le Wing Chun est l'art de devenir insaisissable:",
+      "p1": "Le Wing Chun est basé sur une esquive et une contre-attaque rapide et puissante. Le pratiquant utilise la force de son adversaire à son avantage et le neutralise avec des coups extrêmement rapides, secs et précis.",
+      "p2": "L'une des particularités du Wing Chun est le développement de la sensibilité aux mouvements de l'adversaire. À travers la pratique du Chi Sao (un exercice de sensibilité), le pratiquant apprend à sentir les gestes de son adversaire et à anticiper ses actions pour contre-attaquer avec une rapidité fulgurante.",
+      "p3": "En plus d'améliorer la forme physique, le Wing Chun favorise la concentration, la volonté, la confiance en soi et permet le dépassement de soi-même."
+    },
+    "schoolInfo": {
+      "title": "L'école:",
+      "p1": "L'école de \"Wing Chun Kung Fu - Michel Orchard Kung Fu Rive-Sud\" est dirigée par Sifu Michel Orchard, un expert en arts martiaux avec plus de 35 ans d'expérience dans le domaine. Sifu Orchard croit en l'approche traditionnelle de l'enseignement du Wing Chun, tel qu'il l'a appris de ses maîtres."
+    },
+    "sifu": {
+      "title": "Sifu Michel Orchard:",
+      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial."
+    },
+    "wingChunHistory": {
+      "title": "Qu'est-ce que le Wing Chun, ses figures clés et contexte historique",
+      "legendNote": "Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (figures légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.",
+      "historicContextTitle": "Contexte historique",
+      "moreButton": "Plus sur le Wing Chun...",
+      "figuresTitle": "Maitres de Wing Chun",
+      "whatIsWingChunTitle": "Qu'est-ce que le Wing Chun?",
+      "whatIsP1": "Le Wing Chun Kung Fu est un art martial chinois de self-défense axé sur l’efficacité, la simplicité et l’économie de mouvement. Conçu pour fonctionner à courte distance, il privilégie des actions directes plutôt que des gestes amples ou spectaculaires. Son principe central est d’occuper la ligne centrale — l’axe entre vous et l’adversaire — afin de protéger les zones vitales et de créer des ouvertures pour contre-attaquer.",
+      "whatIsP2": "Le Wing Chun mise sur la structure du corps, l’alignement, la détente et la précision. On y apprend à générer de la puissance sans force brute, en utilisant la posture, le transfert de poids et la coordination. Les techniques comprennent des frappes rapides, des coups de paume, des coudes, des genoux, ainsi que des contrôles et des déviations pour neutraliser l’attaque dès son départ.",
+      "whatIsP3": "Une pratique emblématique est le Chi Sao (« mains collantes »), un exercice qui développe la sensibilité tactile, le timing et la capacité à réagir instantanément à la pression et à la direction du mouvement adverse. Au-delà du combat, le Wing Chun améliore la concentration, la confiance en soi, la gestion du stress et la condition physique, tout en cultivant discipline et maîtrise de soi.",
+      "periods": [
+        {
+          "id": "qing_legend",
+          "name": "Dynastie Qing (récits fondateurs)",
+          "summary": "Les récits situent l'origine du Wing Chun sous la dynastie Qing, dans un contexte d'instabilité et de répression (selon la tradition orale), avec des réseaux et communautés cherchant à préserver ou transmettre des savoirs."
+        },
+        {
+          "id": "late_qing_crisis",
+          "name": "Crises du Qing tardif (XIXe siècle)",
+          "summary": "Le sud de la Chine (Guangdong) est marqué par de grandes guerres et rébellions, dont la révolte des Taiping (1850–1864) et l'agitation sociale; cette période correspond aux premiers maîtres plus documentés."
+        },
+        {
+          "id": "republic_wars",
+          "name": "République, guerres et exils (1911–1949)",
+          "summary": "La révolution de 1911 met fin au Qing et ouvre une période de fragmentation et de conflits. La guerre sino-japonaise (1937–1945) puis la guerre civile mènent à la proclamation de la RPC en 1949 et à un exode important vers Hong Kong."
+        },
+        {
+          "id": "hongkong_modern",
+          "name": "Hong Kong (modernisation et diffusion mondiale)",
+          "summary": "Hong Kong (administration britannique; occupation japonaise 1941–1945) devient une plaque tournante où le Wing Chun est enseigné publiquement et se mondialise après-guerre."
+        }
+      ],
+      "figures": [
+        {
+          "id": "ng_mui",
+          "name": "Ng Mui (伍枚)",
+          "born": "1703 (attribué; légendaire)",
+          "died": "inconnu",
+          "wingChunRole": "Figure légendaire souvent décrite comme une des « Cinq Anciens »; on lui attribue la création ou la transmission d'un système qui deviendra le Wing Chun.",
+          "chinaContext": "Dynastie Qing (récit traditionnel de répression et de survivance de lignées martiales).",
+          "sources": ["ng_mui"]
+        },
+        {
+          "id": "yim_wing_chun",
+          "name": "Yim Wing Chun (嚴詠春)",
+          "born": "1735 (attribué; légendaire)",
+          "died": "1795 (attribué; légendaire)",
+          "wingChunRole": "Héroïne légendaire; le style porterait son nom selon les récits de lignée.",
+          "chinaContext": "Dynastie Qing (récits d'oppression locale/harcèlement; valorisation d'une méthode efficace en courte distance).",
+          "sources": ["yim_wing_chun"]
+        },
+        {
+          "id": "leung_bok_chau",
+          "name": "Leung Bok-chau (梁博儔)",
+          "born": "dates non établies (récit légendaire)",
+          "died": "dates non établies",
+          "wingChunRole": "Souvent présenté comme l'époux de Yim Wing Chun et un relais de transmission dans certaines versions de la légende.",
+          "chinaContext": "Dynastie Qing (période des récits fondateurs).",
+          "sources": ["yim_wing_chun"]
+        },
+        {
+          "id": "leung_jan",
+          "name": "Leung Jan (梁贊)",
+          "born": "1821",
+          "died": "1901",
+          "wingChunRole": "Maître historique majeur associé à Foshan; considéré comme un pivot de la transmission « documentée » du Wing Chun.",
+          "chinaContext": "Qing tardif: fortes turbulences (dont la révolte des Taiping 1850–1864) et agitation sociale au XIXe siècle.",
+          "sources": ["leung_jan", "taiping"]
+        },
+        {
+          "id": "chan_wah_shun",
+          "name": "Chan Wah-shun (陳華順)",
+          "born": "1836",
+          "died": "1913",
+          "wingChunRole": "Élève de Leung Jan; maître de Ip Man; figure clé de la transition vers l'enseignement plus public.",
+          "chinaContext": "Fin Qing / début République; montée des tensions anti-étrangères culminant avec la révolte des Boxers (1899–1901).",
+          "sources": ["chan_wah_shun", "boxer"]
+        },
+        {
+          "id": "leung_bik",
+          "name": "Leung Bik (梁璧)",
+          "born": "1843",
+          "died": "1911",
+          "wingChunRole": "Fils de Leung Jan; souvent crédité d'avoir transmis des aspects avancés à Ip Man.",
+          "chinaContext": "Fin Qing; période de transition et de modernisation forcée, tensions internes et externes.",
+          "sources": ["leung_bik"]
+        },
+        {
+          "id": "ip_man",
+          "name": "Ip Man / Yip Man (葉問)",
+          "born": "1 octobre 1893",
+          "died": "2 décembre 1972",
+          "wingChunRole": "Pivot moderne: enseigne à Hong Kong, structure et popularise le Wing Chun à grande échelle; forme de nombreux maîtres, dont Bruce Lee.",
+          "chinaContext": "Révolution de 1911 (fin du Qing), guerre sino-japonaise (1937–1945), guerre civile et proclamation de la RPC (1949), exil/installation à Hong Kong.",
+          "sources": ["ip_man", "xinhai_1911", "sino_japanese_war", "prc_1949", "british_hk"]
+        },
+        {
+          "id": "bruce_lee",
+          "name": "Bruce Lee (李小龍)",
+          "born": "27 novembre 1940",
+          "died": "20 juillet 1973",
+          "wingChunRole": "Élève d'Ip Man (jeunesse). Sa notoriété a accéléré la diffusion mondiale des arts martiaux et a indirectement amplifié la visibilité du Wing Chun.",
+          "chinaContext": "Hong Kong sous administration britannique (occupation japonaise 1941–1945), puis ville-refuge et carrefour culturel d'après-guerre.",
+          "sources": ["bruce_lee", "british_hk"]
+        },
+        {
+          "id": "wong_shun_leung",
+          "name": "Wong Shun-leung (黃淳樑)",
+          "born": "8 mai 1935",
+          "died": "28 janvier 1997",
+          "wingChunRole": "Grand promoteur de l'approche pragmatique/combative à Hong Kong; influence majeure dans l'écosystème Ip Man.",
+          "chinaContext": "Hong Kong d'après-guerre, scène martiale compétitive, modernisation rapide.",
+          "sources": ["wong_shun_leung", "british_hk"]
+        },
+        {
+          "id": "ip_chun",
+          "name": "Ip Chun (葉準)",
+          "born": "10 juillet 1924",
+          "died": "—",
+          "wingChunRole": "Fils aîné d'Ip Man; transmission et diffusion internationale via écoles et séminaires.",
+          "chinaContext": "Hong Kong d'après-guerre et mondialisation des arts martiaux.",
+          "sources": ["ip_chun"]
+        },
+        {
+          "id": "ip_ching",
+          "name": "Ip Ching (葉正)",
+          "born": "7 juillet 1936",
+          "died": "25 janvier 2020",
+          "wingChunRole": "Fils cadet d'Ip Man; contribue à l'enseignement, aux ouvrages et à la préservation de la lignée.",
+          "chinaContext": "Hong Kong d'après-guerre; diffusion internationale.",
+          "sources": ["ip_ching"]
+        }
+      ],
+      "fusedList": [
+        {
+          "id": "ng_mui",
+          "title": "Ng Mui (伍枚) — (1703 attribué; légendaire – inconnu)",
+          "text": "Contexte : dynastie Qing (récit fondateur) — instabilité et répression (selon la tradition orale), transmission de savoirs au sein de réseaux et communautés. Contribution : figure légendaire (une des « Cinq Anciens ») à qui l’on attribue la création ou la transmission d’un système qui deviendra le Wing Chun."
+        },
+        {
+          "id": "yim_wing_chun",
+          "title": "Yim Wing Chun (嚴詠春) — (1735 attribué; légendaire – 1795 attribué; légendaire)",
+          "text": "Contexte : dynastie Qing (récit fondateur) — récits d’efficacité et d’autoprotection dans des rapports de force locaux. Contribution : héroïne légendaire; le style porterait son nom selon les récits de lignée."
+        },
+        {
+          "id": "leung_bok_chau",
+          "title": "Leung Bok-chau (梁博儔) — (dates non établies; récit légendaire)",
+          "text": "Contexte : dynastie Qing (récit fondateur) — transmission informelle, souvent familiale, hors institutions. Contribution : souvent présenté comme l’époux de Yim Wing Chun et un relais de transmission dans certaines versions."
+        },
+        {
+          "id": "leung_jan",
+          "title": "Leung Jan (梁贊) — (1821 – 1901)",
+          "text": "Contexte : Qing tardif (XIXe siècle) — Guangdong marqué par guerres et rébellions, dont la révolte des Taiping (1850–1864), et une agitation sociale durable. Contribution : maître historique majeur à Foshan; pivot de la transmission plus « documentée » du Wing Chun."
+        },
+        {
+          "id": "chan_wah_shun",
+          "title": "Chan Wah-shun (陳華順) — (1836 – 1913)",
+          "text": "Contexte : fin Qing → début République — transition politique et tensions internes/externes menant à de grands bouleversements. Contribution : élève de Leung Jan; maître de Ip Man; figure clé vers un enseignement plus public et structuré."
+        },
+        {
+          "id": "leung_bik",
+          "title": "Leung Bik (梁璧) — (1843 – 1911)",
+          "text": "Contexte : fin Qing — empire en déclin, pressions internes/externes et modernisation forcée. Contribution : fils de Leung Jan; dans plusieurs lignées, transmet à Ip Man des éléments avancés/raffinés du système."
+        },
+        {
+          "id": "ip_man",
+          "title": "Ip Man / Yip Man (葉問) — (1893 – 1972)",
+          "text": "Contexte : République, guerres et exode — Révolution de 1911, guerre sino-japonaise (1937–1945), guerre civile menant à 1949; exode vers Hong Kong, carrefour culturel et refuge. Contribution : pivot moderne; enseigne largement à Hong Kong et popularise le Wing Chun, formant de nombreux maîtres."
+        },
+        {
+          "id": "wong_shun_leung",
+          "title": "Wong Shun-leung (黃淳樑) — (1935 – 1997)",
+          "text": "Contexte : Hong Kong d’après-guerre — scène martiale urbaine compétitive et diffusion rapide des écoles. Contribution : promoteur majeur d’une approche pragmatique orientée application; influence importante dans l’écosystème Ip Man."
+        },
+        {
+          "id": "bruce_lee",
+          "title": "Bruce Lee (李小龍) — (1940 – 1973)",
+          "text": "Contexte : Hong Kong → Occident — Hong Kong d’après-guerre devient passerelle culturelle; cinéma et médias accélèrent la diffusion mondiale. Contribution : élève d’Ip Man (jeunesse); sa notoriété a amplifié l’intérêt mondial et la visibilité du Wing Chun."
+        },
+        {
+          "id": "ip_chun",
+          "title": "Ip Chun (葉準) — (1924 – )",
+          "text": "Contexte : Hong Kong post-guerre — structuration des écoles et mondialisation progressive (séminaires, migrations, médias). Contribution : fils aîné d’Ip Man; rôle majeur dans la préservation et la diffusion internationale de la lignée."
+        },
+        {
+          "id": "ip_ching",
+          "title": "Ip Ching (葉正) — (1936 – 2020)",
+          "text": "Contexte : Hong Kong post-guerre — standardisation de l’enseignement et demande internationale croissante. Contribution : fils cadet d’Ip Man; contribue à l’enseignement, à la continuité et à la transmission de la lignée."
+        }
+      ]
+    },
+    "aproposPage": {
+      "title": "À propos de l'école",
+      "subtitle": "Découvrez nos professeurs, nos disciplines et nos horaires.",
+      "backHome": "Accueil",
+
+      "teachers": {
+        "title": "Professeurs",
+        "michel": {
+          "name": "Michel Orchard",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa."
+        },
+        "antoine": {
+          "name": "Antoine X.",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Sed at."
+        },
+        "ming": {
+          "name": "Mr. Ming",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus."
+        }
+      },
+      "schools": {
+        "wingchun": {
+          "title": "Kung Fu Wing Chun",
+          "p1": "L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong, l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité, économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité (Chi Sao), discipline et respect.",
+          "p2": "Sifu Michel Orchard est un instructeur passionné, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années d’expérience, il s’est illustré en compétition en remportant plusieurs distinctions (catégories selon événements), tout en conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.",
+          "p3": "La philosophie de l’école s’inspire des valeurs associées à la lignée Yip Man : respect des traditions, travail rigoureux, humilité, esprit de communauté et transmission honnête. Les élèves y trouvent un environnement motivant, où l’on apprend à se protéger, à gagner en confiance, à gérer le stress et à se dépasser, tout en cultivant une pratique respectueuse et responsable.",
+          "philosophy": "Philosophie : discipline, respect, efficacité et développement personnel. L'entraînement vise la maîtrise de soi, la précision et l'amélioration continue.",
+          "history": "Histoire : enseignement traditionnel inspiré des grandes lignées du Wing Chun, avec une approche progressive et structurée."
+        },
+        "lion": {
+          "title": "Danse du lion",
+          "philosophy": "Philosophie : esprit d'équipe, rythme, coordination et transmission culturelle. La pratique développe endurance et synchronisation.",
+          "history": "Histoire : discipline culturelle et martiale, liée aux fêtes traditionnelles, combinant musique, performance et traditions."
+        }
+      },
+
+      "schedule": {
+        "title": "Horaires (7 jours)",
+        "day": "Jour",
+        "wingchun": "Wing Chun",
+        "lion": "Danse du lion",
+        "note": "Les horaires peuvent varier selon les événements spéciaux.",
+
+        "wingchunRows": [
+          { "day": "Lundi", "time": "19h00 – 21h00" },
+          { "day": "Mardi", "time": "—" },
+          { "day": "Mercredi", "time": "19h00 – 21h00" },
+          { "day": "Jeudi", "time": "—" },
+          { "day": "Vendredi", "time": "19h00 – 21h00" },
+          { "day": "Samedi", "time": "12h00 – 13h30" },
+          { "day": "Dimanche", "time": "—" }
+        ],
+
+        "lionRows": [
+          { "day": "Lundi", "time": "—" },
+          { "day": "Mardi", "time": "—" },
+          { "day": "Mercredi", "time": "—" },
+          { "day": "Jeudi", "time": "19h00 – 20h30" },
+          { "day": "Vendredi", "time": "—" },
+          { "day": "Samedi", "time": "14h00 – 15h00" },
+          { "day": "Dimanche", "time": "13h00 – 15h30" }
+        ]
+      }
+    },
+
+    "contactPage": {
+      "title": "Contact",
+      "subtitle": "Écrivez-nous et nous vous répondrons rapidement.",
+      "fields": {
+        "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
+        "lastName": { "label": "Nom", "placeholder": "Votre nom" },
+        "phone": { "label": "Téléphone", "placeholder": "(999) 999-9999" },
+        "message": { "label": "Message", "placeholder": "Écrivez votre message…" },
+        "age": {
+          "label": "Âge",
+          "options": [
+            { "value": "5-12", "label": "5-12 ans" },
+            { "value": "13-18", "label": "13-18 ans" },
+            { "value": "19-29", "label": "19-29 ans" },
+            { "value": "30-39", "label": "30-39 ans" },
+            { "value": "40-49", "label": "40-49 ans" },
+            { "value": "50+", "label": "50 ans et plus" }
+          ]
+        },
+        "source": {
+          "label": "Référé par",
+          "options": [
+            { "value": "facebook", "label": "Facebook" },
+            { "value": "eleve", "label": "Élève de l'école" },
+            { "value": "publicite", "label": "Publicité" },
+            { "value": "bouche-a-oreille", "label": "Bouche-à-oreille" },
+            { "value": "instagram", "label": "Instagram" },
+            { "value": "site-internet", "label": "Site internet" }
+          ]
+        }
+      },
+      "help": "Indiquez votre objectif (cours privé/groupe), disponibilité et niveau.",
+      "submit": "Envoyer",
+      "addressTitle": "Adresse de l’école",
+      "openMaps": "Ouvrir dans Google Maps"
+    }
+  },
+  "en": {
+     "menu": {
+      "home": "Home",
+      "about": "About our school",
+      "school": "Our school",
+      "whatWingChun": "Wing Chun: What is it?",
+      "whatLionDance": "Lion dance: What is it?",
+      "contact": "Contact us"
+    },
+    "school": {
+      "name": "South Shore Montreal Chinese Martial Arts Institute",
+      "tagline": "We offer private lessons and group classes.",
+      "phone": "(438) 725-4918",
+      "membership": "Member of the YIP Man Association of Hong Kong"
+    },
+    "address": {
+      "label": "Address:",
+      "line1": "6400 Taschereau Boulevard, Suite 209",
+      "line2": "Brossard, Quebec",
+      "line3": "J4W 3J2 Canada"
+    },
+    "cta": {
+      "trial": "Free trial class",
+      "registration": "Registration open year-round.",
+      "home": "Home"
+    },
+    "benefits": {
+      "title": "What you will gain from practicing Wing Chun:",
+      "items": [
+        "Self-defense",
+        "Self-confidence",
+        "Stress management",
+        "Health and fitness",
+        "Anti-bullying prevention"
+      ]
+    },
+    "whatIs": {
+      "title": "What is Wing Chun?",
+      "subtitle": "Wing Chun is the art of becoming elusive:",
+      "p1": "Wing Chun is based on evasive movement and fast, powerful counter-attacks. Practitioners use an opponent’s force to their advantage and neutralize them with extremely rapid, crisp, and precise strikes.",
+      "p2": "One of Wing Chun’s specialties is developing sensitivity to an opponent’s movements. Through Chi Sao (a sensitivity drill), practitioners learn to feel the opponent’s actions and anticipate what comes next—then counter with lightning speed.",
+      "p3": "Beyond improving physical conditioning, Wing Chun fosters focus, willpower, self-confidence, and personal growth."
+    },
+    "schoolInfo": {
+      "title": "The school:",
+      "p1": "The \"Wing Chun Kung Fu - Michel Orchard Kung Fu Rive-Sud\" school is led by Sifu Michel Orchard, a martial arts expert with over 35 years of experience. Sifu Orchard believes in a traditional approach to teaching Wing Chun, as he learned it from his masters."
+    },
+    "sifu": {
+      "title": "Sifu Michel Orchard:",
+      "p1": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art."
+    },
+    "wingChunHistory": {
+      "title": "Wing Chun: What it is, key figures and historical context",
+      "legendNote": "Note: Ng Mui and Yim Wing Chun belong to origin narratives (legendary figures). Dates vary by lineage and are not fully verifiable historically.",
+      "historicContextTitle": "Historic context",
+      "figuresTitle": "Wing Chun Masters",
+      "whatIsWingChunTitle": "Wing Chun: what it is?",
+      "moreButton": "More on Wing Chun...",
+      "whatIsP1": "Wing Chun Kung Fu is a Chinese martial art focused on efficiency, simplicity, and economy of motion. Designed for close-range self-defense, it favors direct actions rather than wide, flashy movements. Its core principle is controlling the centerline—the axis between you and your opponent—to protect vital targets and create openings for counterattacks.",
+      "whatIsP2": "Wing Chun emphasizes body structure, alignment, relaxation, and precision. Practitioners learn to generate power without brute strength by using posture, weight transfer, and coordination. Techniques include fast strikes, palm attacks, elbows, knees, as well as controls and deflections meant to neutralize an attack as early as possible.",
+      "whatIsP3": "A signature practice is Chi Sao (“sticky hands”), a drill that develops tactile sensitivity, timing, and the ability to react instantly to pressure and changes in an opponent’s movement. Beyond fighting, Wing Chun improves focus, self-confidence, stress management, and overall fitness, while also cultivating discipline and self-control.",
+      "periods": [
+        {
+          "id": "qing_legend",
+          "name": "Qing dynasty (origin narratives)",
+          "summary": "Origin stories place Wing Chun during the Qing dynasty, in a setting of instability and repression (as told in oral tradition), where communities sought to preserve and transmit martial knowledge."
+        },
+        {
+          "id": "late_qing_crisis",
+          "name": "Late-Qing crises (19th century)",
+          "summary": "Southern China (Guangdong) was shaped by major wars and uprisings, including the Taiping Rebellion (1850–1864). This period overlaps with the earliest more-documented Wing Chun masters."
+        },
+        {
+          "id": "republic_wars",
+          "name": "Republic era, wars and displacement (1911–1949)",
+          "summary": "The 1911 Revolution ended the Qing and was followed by fragmentation and conflict. The Second Sino-Japanese War (1937–1945) and the Chinese Civil War culminated in the PRC’s proclamation in 1949 and large-scale displacement toward Hong Kong."
+        },
+        {
+          "id": "hongkong_modern",
+          "name": "Hong Kong (modernization and global spread)",
+          "summary": "Hong Kong (British rule; Japanese occupation 1941–1945) became a hub where Wing Chun was taught publicly and later spread internationally."
+        }
+      ],
+      "figures": [
+        {
+          "id": "ng_mui",
+          "name": "Ng Mui (伍枚)",
+          "born": "1703 (attributed; legendary)",
+          "died": "unknown",
+          "wingChunRole": "Legendary figure often described as one of the “Five Elders”; credited in some lineages with creating or transmitting what became Wing Chun.",
+          "chinaContext": "Qing dynasty (traditional narrative of repression and survival of martial lineages).",
+          "sources": ["ng_mui"]
+        },
+        {
+          "id": "yim_wing_chun",
+          "name": "Yim Wing Chun (嚴詠春)",
+          "born": "1735 (attributed; legendary)",
+          "died": "1795 (attributed; legendary)",
+          "wingChunRole": "Legendary heroine; the art is said to bear her name in origin stories.",
+          "chinaContext": "Qing dynasty (stories of local oppression/harassment; emphasis on efficient close-range methods).",
+          "sources": ["yim_wing_chun"]
+        },
+        {
+          "id": "leung_bok_chau",
+          "name": "Leung Bok-chau (梁博儔)",
+          "born": "dates unknown (legend)",
+          "died": "dates unknown",
+          "wingChunRole": "Often described as Yim Wing Chun’s husband and a transmission link in some versions of the story.",
+          "chinaContext": "Qing dynasty origin narratives.",
+          "sources": ["yim_wing_chun"]
+        },
+        {
+          "id": "leung_jan",
+          "name": "Leung Jan (梁贊)",
+          "born": "1821",
+          "died": "1901",
+          "wingChunRole": "Major historical figure associated with Foshan; key pivot in the more documented Wing Chun transmission.",
+          "chinaContext": "Late Qing: major upheavals including the Taiping Rebellion (1850–1864) and broader social unrest.",
+          "sources": ["leung_jan", "taiping"]
+        },
+        {
+          "id": "chan_wah_shun",
+          "name": "Chan Wah-shun (陳華順)",
+          "born": "1836",
+          "died": "1913",
+          "wingChunRole": "Student of Leung Jan; teacher of Ip Man; key figure in the shift toward broader teaching.",
+          "chinaContext": "Late Qing / early Republic; anti-foreign tensions culminating in the Boxer Rebellion (1899–1901).",
+          "sources": ["chan_wah_shun", "boxer"]
+        },
+        {
+          "id": "leung_bik",
+          "name": "Leung Bik (梁璧)",
+          "born": "1843",
+          "died": "1911",
+          "wingChunRole": "Son of Leung Jan; often credited with transmitting advanced material to Ip Man.",
+          "chinaContext": "Late Qing transition; internal strain and external pressure on the empire.",
+          "sources": ["leung_bik"]
+        },
+        {
+          "id": "ip_man",
+          "name": "Ip Man / Yip Man (葉問)",
+          "born": "1 October 1893",
+          "died": "2 December 1972",
+          "wingChunRole": "Modern pivot: taught publicly in Hong Kong, systematized and popularized Wing Chun; trained many masters, including Bruce Lee.",
+          "chinaContext": "1911 Revolution; Second Sino-Japanese War (1937–1945); civil war leading to the PRC proclamation (1949); relocation to Hong Kong.",
+          "sources": ["ip_man", "xinhai_1911", "sino_japanese_war", "prc_1949", "british_hk"]
+        },
+        {
+          "id": "bruce_lee",
+          "name": "Bruce Lee (李小龍)",
+          "born": "27 November 1940",
+          "died": "20 July 1973",
+          "wingChunRole": "Trained under Ip Man as a youth; his global fame accelerated worldwide interest in martial arts and indirectly increased Wing Chun visibility.",
+          "chinaContext": "British Hong Kong (Japanese occupation 1941–1945), then postwar cultural crossroads.",
+          "sources": ["bruce_lee", "british_hk"]
+        },
+        {
+          "id": "wong_shun_leung",
+          "name": "Wong Shun-leung (黃淳樑)",
+          "born": "8 May 1935",
+          "died": "28 January 1997",
+          "wingChunRole": "Key promoter of a practical fighting approach in postwar Hong Kong; highly influential within the Ip Man ecosystem.",
+          "chinaContext": "Postwar Hong Kong modernization and competitive martial arts scene.",
+          "sources": ["wong_shun_leung", "british_hk"]
+        },
+        {
+          "id": "ip_chun",
+          "name": "Ip Chun (葉準)",
+          "born": "10 July 1924",
+          "died": "—",
+          "wingChunRole": "Ip Man’s elder son; helped preserve and spread the lineage internationally through schools and seminars.",
+          "chinaContext": "Postwar Hong Kong and global dissemination of martial arts.",
+          "sources": ["ip_chun"]
+        },
+        {
+          "id": "ip_ching",
+          "name": "Ip Ching (葉正)",
+          "born": "7 July 1936",
+          "died": "25 January 2020",
+          "wingChunRole": "Ip Man’s younger son; supported teaching, publishing, and lineage preservation.",
+          "chinaContext": "Postwar Hong Kong and international dissemination.",
+          "sources": ["ip_ching"]
+        }
+      ],
+      "fusedList": [
+        {
+          "id": "ng_mui",
+          "title": "Ng Mui (伍枚) — (1703 attributed; legendary – unknown)",
+          "text": "Context: Qing dynasty (origin narrative) — instability and repression (as told in oral tradition), with communities preserving and transmitting knowledge through networks. Contribution: legendary figure (one of the “Five Elders”) credited in some lineages with creating or transmitting what became Wing Chun."
+        },
+        {
+          "id": "yim_wing_chun",
+          "title": "Yim Wing Chun (嚴詠春) — (1735 attributed; legendary – 1795 attributed; legendary)",
+          "text": "Context: Qing dynasty (origin narrative) — stories emphasize practical self-protection and efficiency in local power dynamics. Contribution: legendary heroine; the art is said to bear her name in origin stories."
+        },
+        {
+          "id": "leung_bok_chau",
+          "title": "Leung Bok-chau (梁博儔) — (dates unknown; legendary narrative)",
+          "text": "Context: Qing dynasty (origin narrative) — informal, often family-based transmission outside institutions. Contribution: often described as Yim Wing Chun’s husband and a transmission link in some versions."
+        },
+        {
+          "id": "leung_jan",
+          "title": "Leung Jan (梁贊) — (1821 – 1901)",
+          "text": "Context: late Qing (19th century) — Guangdong shaped by major wars and uprisings, including the Taiping Rebellion (1850–1864), and long-term social unrest. Contribution: major historical figure in Foshan; a pivot in the more documented Wing Chun transmission."
+        },
+        {
+          "id": "chan_wah_shun",
+          "title": "Chan Wah-shun (陳華順) — (1836 – 1913)",
+          "text": "Context: late Qing → early Republic — political transition and rising internal/external tensions leading to major upheavals. Contribution: student of Leung Jan; teacher of Ip Man; key figure in the move toward broader, more structured teaching."
+        },
+        {
+          "id": "leung_bik",
+          "title": "Leung Bik (梁璧) — (1843 – 1911)",
+          "text": "Context: late Qing — an empire in decline under internal strain and foreign pressure, with forced modernization. Contribution: son of Leung Jan; in many lineages, transmitted refined/advanced material to Ip Man."
+        },
+        {
+          "id": "ip_man",
+          "title": "Ip Man / Yip Man (葉問) — (1893 – 1972)",
+          "text": "Context: Republic era, wars and displacement — the 1911 Revolution, the Second Sino-Japanese War (1937–1945), and civil war culminating in 1949; many relocated to Hong Kong, a cultural refuge. Contribution: modern pivot; taught widely in Hong Kong and popularized Wing Chun, training many influential students."
+        },
+        {
+          "id": "wong_shun_leung",
+          "title": "Wong Shun-leung (黃淳樑) — (1935 – 1997)",
+          "text": "Context: postwar Hong Kong — a competitive urban martial arts scene and rapid expansion of schools. Contribution: major promoter of a pragmatic, application-focused approach; highly influential within the Ip Man ecosystem."
+        },
+        {
+          "id": "bruce_lee",
+          "title": "Bruce Lee (李小龍) — (1940 – 1973)",
+          "text": "Context: Hong Kong → the West — postwar Hong Kong became a cultural bridge; film and media accelerated global spread. Contribution: trained under Ip Man as a youth; his fame amplified worldwide interest and Wing Chun visibility."
+        },
+        {
+          "id": "ip_chun",
+          "title": "Ip Chun (葉準) — (1924 – )",
+          "text": "Context: postwar Hong Kong — school structuring and gradual globalization (seminars, migration, media). Contribution: Ip Man’s elder son; major role in preserving and spreading the lineage internationally."
+        },
+        {
+          "id": "ip_ching",
+          "title": "Ip Ching (葉正) — (1936 – 2020)",
+          "text": "Context: postwar Hong Kong — teaching standardization and growing international demand. Contribution: Ip Man’s younger son; supported teaching, continuity, and transmission of the lineage."
+        }
+      ]
+    },
+    "aproposPage": {
+      "title": "About the school",
+      "subtitle": "Meet our instructors, our disciplines, and our schedule.",
+      "backHome": "Home",
+
+      "teachers": {
+        "title": "Instructors",
+        "michel": {
+          "name": "Michel Orchard",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa."
+        },
+        "antoine": {
+          "name": "Antoine X.",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Sed at."
+        },
+        "ming": {
+          "name": "Mr. Ming",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus."
+        }
+      },
+
+      "schools": {
+        "wingchun": {
+          "title": "Wing Chun Kung Fu",
+          "p1": "The Wing Chun Kung Fu – Michel Orchard (South Shore) school is a place dedicated to traditional Wing Chun, taught in a structured and welcoming way, where students develop both technical skill and personal character. Affiliated with the Yip Man Association of Hong Kong, the school emphasizes a transmission faithful to the spirit of Wing Chun: efficiency, simplicity, economy of motion, centerline control, and adaptability. Beyond self-defense, the approach supports long-term progress through posture and structure, timing, sensitivity training (Chi Sao), discipline, and respect.",
+          "p2": "Sifu Michel Orchard is a passionate instructor known for his professionalism and commitment to his students. With many years of experience, he has also distinguished himself in competition by earning several awards (depending on events and categories), while keeping a clear perspective: performance can be valuable, but the priority remains technical mastery, safety, and personal development. His teaching focuses on precision, understanding core principles, and realistic application within a structured framework.",
+          "p3": "The school’s philosophy reflects values associated with the Yip Man lineage: respect for tradition, rigorous practice, humility, community spirit, and honest transmission. Students benefit from a motivating environment where they learn practical self-defense, build confidence, manage stress, and push their limits—while maintaining a respectful and responsible practice.",
+          "philosophy": "Philosophy: discipline, respect, efficiency, and personal development. Training focuses on self-control, precision, and continuous improvement.",
+          "history": "History: traditional teaching inspired by major Wing Chun lineages, with a progressive and structured approach."
+        },
+        "lion": {
+          "title": "Lion Dance",
+          "philosophy": "Philosophy: teamwork, rhythm, coordination, and cultural transmission. Practice builds endurance and synchronization.",
+          "history": "History: a cultural and martial discipline tied to traditional celebrations, combining music, performance, and traditions."
+        }
+      },
+
+      "schedule": {
+        "title": "Schedule (7 days)",
+        "day": "Day",
+        "wingchun": "Wing Chun",
+        "lion": "Lion Dance",
+        "note": "Schedules may vary during special events.",
+
+        "wingchunRows": [
+          { "day": "Monday", "time": "7:00 pm – 9:00 pm" },
+          { "day": "Tuesday", "time": "—" },
+          { "day": "Wednesday", "time": "7:00 pm – 9:00 pm" },
+          { "day": "Thursday", "time": "—" },
+          { "day": "Friday", "time": "7:00 pm – 9:00 pm" },
+          { "day": "Saturday", "time": "12:00 pm – 1:30 pm" },
+          { "day": "Sunday", "time": "—" }
+        ],
+
+        "lionRows": [
+          { "day": "Monday", "time": "—" },
+          { "day": "Tuesday", "time": "—" },
+          { "day": "Wednesday", "time": "—" },
+          { "day": "Thursday", "time": "7:00 pm – 8:30 pm" },
+          { "day": "Friday", "time": "—" },
+          { "day": "Saturday", "time": "2:00 pm – 3:00 pm" },
+          { "day": "Sunday", "time": "1:00 pm – 3:30 pm" }
+        ]
+      }
+    },
+    "contactPage": {
+      "title": "Contact",
+      "subtitle": "Send us a message and we’ll get back to you shortly.",
+      "fields": {
+        "firstName": { "label": "First name", "placeholder": "Your first name" },
+        "lastName": { "label": "Last name", "placeholder": "Your last name" },
+        "phone": { "label": "Phone", "placeholder": "(999) 999-9999" },
+        "message": { "label": "Message", "placeholder": "Write your message…" },
+        "age": {
+          "label": "Age",
+          "options": [
+            { "value": "5-12", "label": "5–12 years" },
+            { "value": "13-18", "label": "13–18 years" },
+            { "value": "19-29", "label": "19–29 years" },
+            { "value": "30-39", "label": "30–39 years" },
+            { "value": "40-49", "label": "40–49 years" },
+            { "value": "50+", "label": "50+ years" }
+          ]
+        },
+        "source": {
+          "label": "How did you hear about us?",
+          "options": [
+            { "value": "facebook", "label": "Facebook" },
+            { "value": "eleve", "label": "School student" },
+            { "value": "publicite", "label": "Advertising" },
+            { "value": "bouche-a-oreille", "label": "Word of mouth" },
+            { "value": "instagram", "label": "Instagram" },
+            { "value": "site-internet", "label": "Website" }
+          ]
+        }
+      },
+      "help": "Tell us your goal (private/group), availability, and experience level.",
+      "submit": "Send",
+      "addressTitle": "School address",
+      "openMaps": "Open in Google Maps"
+    }
+  },
+  "_sources": {
+    "ng_mui": ["https://en.wikipedia.org/wiki/Ng_Mui"],
+    "yim_wing_chun": ["https://en.wikipedia.org/wiki/Yim_Wing-chun"],
+    "leung_jan": ["https://en.wikipedia.org/wiki/Leung_Jan"],
+    "chan_wah_shun": ["https://en.wikipedia.org/wiki/Chan_Wah-shun"],
+    "leung_bik": ["https://en.wikipedia.org/wiki/Leung_Bik"],
+    "ip_man": ["https://en.wikipedia.org/wiki/Ip_Man"],
+    "bruce_lee": ["https://en.wikipedia.org/wiki/Bruce_Lee"],
+    "wong_shun_leung": ["https://en.wikipedia.org/wiki/Wong_Shun-leung"],
+    "ip_chun": ["https://en.wikipedia.org/wiki/Ip_Chun"],
+    "ip_ching": ["https://en.wikipedia.org/wiki/Ip_Ching"],
+    "taiping": ["https://en.wikipedia.org/wiki/Taiping_Rebellion", "https://www.britannica.com/event/Taiping-Rebellion"],
+    "boxer": ["https://en.wikipedia.org/wiki/Boxer_Rebellion", "https://www.britannica.com/event/Boxer-Rebellion"],
+    "xinhai_1911": ["https://en.wikipedia.org/wiki/1911_Revolution", "https://history.state.gov/milestones/1899-1913/chinese-rev"],
+    "sino_japanese_war": ["https://en.wikipedia.org/wiki/Second_Sino-Japanese_War", "https://www.britannica.com/event/Second-Sino-Japanese-War"],
+    "prc_1949": ["https://en.wikipedia.org/wiki/Proclamation_of_the_People%27s_Republic_of_China", "https://history.state.gov/milestones/1945-1952/chinese-rev"],
+    "british_hk": ["https://en.wikipedia.org/wiki/British_Hong_Kong"]
+  }
+}

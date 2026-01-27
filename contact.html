@@ -4,17 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact</title>
-  <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+
 </head>
 
 <body>
-  <!-- Topbar -->
+   <!-- Topbar -->
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive-sud de Montréal</strong>
-        <span data-i18n="school.membership">Membre de l'association YIP Man de Hong-Kong</span>
+        <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
+        <div class="brand-text">
+          <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong>
+          <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
+        </div>
       </div>
+
 
       <div class="actions">
         <button class="btn" id="langToggle" type="button">English</button>
@@ -37,12 +42,11 @@
       <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
     </header>
 
-    <a href="index.html">Accueil</a>
-    <a href="ecole.html">École</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="histoire-wingchun.html">Histoire du Wing Chun</a>
-    <a href="danselion.html">Danse du lion</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-i18n="menu.home">Accueil</a>
+    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
+    <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du lion?</a>
+    <a href="a-propos.html" data-i18n="menu.about">À propos de l'école</a>
+    <a href="contact.html" data-i18n="menu.contact">Contact</a>
   </nav>
 
   <!-- Hero -->
@@ -81,7 +85,7 @@
             <div class="field">
               <label for="telephone" data-i18n="contactPage.fields.phone.label">Téléphone</label>
               <input id="telephone" name="telephone" type="tel" autocomplete="tel"
-                     data-i18n-placeholder="contactPage.fields.phone.placeholder" placeholder="(438) 725-4918" />
+                     data-i18n-placeholder="contactPage.fields.phone.placeholder" placeholder="(999) 999-9999" />
             </div>
 
             <div class="field">
@@ -92,7 +96,7 @@
             </div>
 
             <div class="field">
-              <label for="source" data-i18n="contactPage.fields.source.label">Source</label>
+              <label for="source" data-i18n="contactPage.fields.source.label">Référé par</label>
               <select id="source" name="source" data-i18n-options="contactPage.fields.source.options" required>
                 <option value="">—</option>
               </select>
@@ -157,7 +161,7 @@
 
   <footer>
     <div class="container">
-      <div data-i18n="footer.copy">© 2025</div>
+      <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard 2025</div>
     </div>
   </footer>
 
@@ -185,7 +189,7 @@
       if (e.target.closest('a')) closeMenu();
     });
 
-    // ---------- i18n ----------
+    // ---------- i18n (match index.html robust behavior) ----------
     const langToggle = document.getElementById('langToggle');
     let I18N = null;
 
@@ -214,10 +218,9 @@
 
     function applyTranslations(lang){
       console.log("applyTranslations(contact):", lang, "I18N loaded:", !!I18N?.fr, !!I18N?.en);
-
       if (!I18N || !I18N[lang]) return;
-      const dict = I18N[lang];
 
+      const dict = I18N[lang];
       document.documentElement.setAttribute('lang', lang);
 
       // text
@@ -237,8 +240,7 @@
       // select options
       $all('[data-i18n-options]').forEach(el => {
         const key = el.getAttribute('data-i18n-options');
-        const opts = get(dict, key);
-        populateOptions(el, opts);
+        populateOptions(el, get(dict, key));
       });
 
       // toggle label
@@ -248,7 +250,7 @@
     }
 
     async function initI18n(){
-      // Determine language
+      // Determine language from localStorage first
       let lang = 'fr';
       try {
         const saved = localStorage.getItem('siteLang');
@@ -257,20 +259,20 @@
           const nav = (navigator.language || 'fr').toLowerCase();
           lang = nav.startsWith('en') ? 'en' : 'fr';
         }
-      } catch(e) {}
+      } catch(e){}
 
       // Load translations.json
       try{
-        const res = await fetch('./translation.json', { cache: 'no-store' });
+        const res = await fetch('./translation.json', { cache:'no-store' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         I18N = await res.json();
-        console.log("translations.json loaded OK (contact):", Object.keys(I18N || {}));
-      }catch(err){
-        console.error('Unable to load translations.json (contact):', err);
+        console.log("translation.json loaded OK (contact):", Object.keys(I18N || {}));
+      } catch(err){
+        console.error('Unable to load translation.json (contact):', err);
         I18N = { fr:{}, en:{} };
       }
 
-      // Force html lang + apply
+      // Apply now
       document.documentElement.setAttribute('lang', lang);
       applyTranslations(lang);
 
