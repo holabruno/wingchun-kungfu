@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles/contact.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive-sud de Montréal</strong>
+        <span data-i18n="school.membership">Membre de l'association YIP Man de Hong-Kong</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="langToggle" type="button">English</button>
+
+        <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <div class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
+    <header>
+      <strong>Menu</strong>
+      <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
+    </header>
+
+    <a href="index.html">Accueil</a>
+    <a href="ecole.html">École</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="histoire-wingchun.html">Histoire du Wing Chun</a>
+    <a href="danselion.html">Danse du lion</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="hero-card">
+        <h1 data-i18n="contactPage.title">Contact</h1>
+        <p data-i18n="contactPage.subtitle">Écrivez-nous et nous vous répondrons rapidement.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Top: Contact form -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="position:absolute;left:-9999px;opacity:0;">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="prenom" data-i18n="contactPage.fields.firstName.label">Prénom</label>
+              <input id="prenom" name="prenom" type="text" autocomplete="given-name" required
+                     data-i18n-placeholder="contactPage.fields.firstName.placeholder" placeholder="Votre prénom" />
+            </div>
+
+            <div class="field">
+              <label for="nom" data-i18n="contactPage.fields.lastName.label">Nom</label>
+              <input id="nom" name="nom" type="text" autocomplete="family-name" required
+                     data-i18n-placeholder="contactPage.fields.lastName.placeholder" placeholder="Votre nom" />
+            </div>
+
+            <div class="field">
+              <label for="telephone" data-i18n="contactPage.fields.phone.label">Téléphone</label>
+              <input id="telephone" name="telephone" type="tel" autocomplete="tel"
+                     data-i18n-placeholder="contactPage.fields.phone.placeholder" placeholder="(438) 725-4918" />
+            </div>
+
+            <div class="field">
+              <label for="age" data-i18n="contactPage.fields.age.label">Âge</label>
+              <select id="age" name="age" data-i18n-options="contactPage.fields.age.options" required>
+                <option value="">—</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="source" data-i18n="contactPage.fields.source.label">Source</label>
+              <select id="source" name="source" data-i18n-options="contactPage.fields.source.options" required>
+                <option value="">—</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="message" data-i18n="contactPage.fields.message.label">Message</label>
+              <textarea id="message" name="message" required
+                        data-i18n-placeholder="contactPage.fields.message.placeholder"
+                        placeholder="Écrivez votre message…"></textarea>
+              <div class="help" data-i18n="contactPage.help">
+                Indiquez votre objectif (cours privé/groupe), disponibilité et niveau.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn-primary" type="submit" data-i18n="contactPage.submit">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Middle: Address -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2 data-i18n="contactPage.addressTitle">Adresse de l’école</h2>
+        <div class="address-block">
+          <div class="address-lines">
+            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
+            <span data-i18n="address.line2">Brossard, Québec</span><br/>
+            <span data-i18n="address.line3">J4W 3J2 Canada</span>
+          </div>
+
+          <div class="help">
+            <a target="_blank" rel="noopener"
+               href="https://www.google.com/maps?q=6400+Boulevard+Taschereau,+Brossard,+QC+J4W+3J2"
+               data-i18n="contactPage.openMaps">
+              Ouvrir dans Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom: Google Map -->
+  <section>
+    <div class="container">
+      <div class="map-wrap">
+        <iframe class="map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=6400%20Boulevard%20Taschereau%2C%20Brossard%2C%20QC%20J4W%203J2&output=embed"
+          title="Google Map - 6400 boulevard Taschereau, Brossard">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div data-i18n="footer.copy">© 2025</div>
+    </div>
+  </footer>
+
+  <script>
+    // ---------- Menu ----------
+    const menuBtn = document.getElementById('menuBtn');
+    const menuClose = document.getElementById('menuClose');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    function openMenu(){
+      document.body.classList.add('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu(){
+      document.body.classList.remove('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    menuBtn.addEventListener('click', () => {
+      document.body.classList.contains('menu-open') ? closeMenu() : openMenu();
+    });
+    menuClose.addEventListener('click', closeMenu);
+    menuBackdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    document.getElementById('menuPanel').addEventListener('click', (e) => {
+      if (e.target.closest('a')) closeMenu();
+    });
+
+    // ---------- i18n ----------
+    const langToggle = document.getElementById('langToggle');
+    let I18N = null;
+
+    const $all = (sel) => Array.from(document.querySelectorAll(sel));
+    const get = (obj, path) => path.split('.').reduce((a,k) => (a && k in a) ? a[k] : undefined, obj);
+
+    function populateOptions(selectEl, options){
+      if (!Array.isArray(options)) return;
+      const current = selectEl.value;
+
+      selectEl.innerHTML = '';
+      const empty = document.createElement('option');
+      empty.value = '';
+      empty.textContent = '—';
+      selectEl.appendChild(empty);
+
+      options.forEach(o => {
+        const opt = document.createElement('option');
+        opt.value = o.value;
+        opt.textContent = o.label;
+        selectEl.appendChild(opt);
+      });
+
+      if (current) selectEl.value = current;
+    }
+
+    function applyTranslations(lang){
+      console.log("applyTranslations(contact):", lang, "I18N loaded:", !!I18N?.fr, !!I18N?.en);
+
+      if (!I18N || !I18N[lang]) return;
+      const dict = I18N[lang];
+
+      document.documentElement.setAttribute('lang', lang);
+
+      // text
+      $all('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = get(dict, key);
+        if (typeof val === 'string') el.textContent = val;
+      });
+
+      // placeholders
+      $all('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        const val = get(dict, key);
+        if (typeof val === 'string') el.setAttribute('placeholder', val);
+      });
+
+      // select options
+      $all('[data-i18n-options]').forEach(el => {
+        const key = el.getAttribute('data-i18n-options');
+        const opts = get(dict, key);
+        populateOptions(el, opts);
+      });
+
+      // toggle label
+      langToggle.textContent = (lang === 'fr') ? 'English' : 'Français';
+
+      try { localStorage.setItem('siteLang', lang); } catch(e) {}
+    }
+
+    async function initI18n(){
+      // Determine language
+      let lang = 'fr';
+      try {
+        const saved = localStorage.getItem('siteLang');
+        if (saved === 'fr' || saved === 'en') lang = saved;
+        else {
+          const nav = (navigator.language || 'fr').toLowerCase();
+          lang = nav.startsWith('en') ? 'en' : 'fr';
+        }
+      } catch(e) {}
+
+      // Load translations.json
+      try{
+        const res = await fetch('./translation.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        I18N = await res.json();
+        console.log("translations.json loaded OK (contact):", Object.keys(I18N || {}));
+      }catch(err){
+        console.error('Unable to load translations.json (contact):', err);
+        I18N = { fr:{}, en:{} };
+      }
+
+      // Force html lang + apply
+      document.documentElement.setAttribute('lang', lang);
+      applyTranslations(lang);
+
+      // Toggle
+      langToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('lang') || 'fr';
+        const next = (current === 'fr') ? 'en' : 'fr';
+        document.documentElement.setAttribute('lang', next);
+        applyTranslations(next);
+      });
+    }
+
+    initI18n();
+  </script>
+</body>
+</html>
