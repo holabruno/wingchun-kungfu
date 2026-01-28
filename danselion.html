@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danse du lion</title>
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Shared menu + i18n -->
+  <script src="scripts/site.js" defer></script>
+
+  <!-- Match index hero-bottom look -->
+  <style>
+    .hero-card{ overflow:hidden; }
+    .hero-bottom{
+      background:#f6f7fb;
+      padding:18px 20px;
+      margin-top:14px;
+    }
+    .hero-bottom .address,
+    .hero-bottom .address span{ color:#64748b; }
+    .hero-bottom .btn{
+      color:#0f172a;
+      border-color: rgba(15,23,42,.12);
+      background: rgba(255,255,255,.70);
+    }
+    .cta-row .btn:hover{
+      background: rgba(0,0,255,.95);
+      color:#fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
+        <div class="brand-text">
+          <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong>
+          <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="langToggle" type="button">English</button>
+
+        <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel" aria-expanded="false">
+          <span class="sr-only">Menu</span>
+          <div class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+  <nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
+    <header>
+      <strong>Menu</strong>
+      <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
+    </header>
+
+    <a href="index.html" data-i18n="menu.home">Accueil</a>
+    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
+    <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du lion?</a>
+    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
+    <a href="contact.html" data-i18n="menu.contact">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-head">
+          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Lion Dance" />
+
+          <div class="hero-head-text">
+            <h1 class="hero-title">
+              <span data-i18n="whatIsLion.title">Qu'est-ce que la danse du lion?</span>
+            </h1>
+
+            <!-- Reuse your common tagline (or change to a dedicated key if you prefer) -->
+            <p class="hero-tagline" data-i18n="school.tagline">
+              Enseignement traditionnel du Kung Fu Wing Chun depuis 1991
+            </p>
+
+            <div class="hero-meta">
+              <a class="pill" href="tel:4387254918">
+                <i data-feather="phone"></i>
+                <span data-i18n="school.phone">(438) 725-4918</span>
+              </a>
+
+              <a class="pill" href="https://wa.me/14387254918" target="_blank" rel="noopener">
+                <i data-feather="message-circle"></i>
+                <span data-i18n="school.phone2">What's App</span>
+              </a>
+
+              <span class="pill" data-i18n="cta.trial">Cours d'essai gratuit</span>
+              <a class="pill" href="index.html">
+                <i data-feather="home"></i>
+                <span data-i18n="menu.home">Accueil</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="address">
+            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
+            <span data-i18n="address.line2">Brossard, Québec</span><br/>
+            <span data-i18n="address.line3">J4W 3J2 Canada</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
+            <a class="btn" href="a-propos.html#ecole" data-i18n="menu.about">À propos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2 data-i18n="whatIsLion.title">Qu'est-ce que la danse du lion?</h2>
+
+        <p data-i18n="whatIsLion.p1"></p>
+        <p data-i18n="whatIsLion.p2"></p>
+      </div>
+    </div>
+    <div class="container">
+          <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun ?</a>
+      </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard (2026)</div>
+    </div>
+  </footer>
+
+</body>
+</html>

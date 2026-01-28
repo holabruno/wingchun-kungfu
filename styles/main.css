@@ -46,24 +46,21 @@ a:hover{ text-decoration: underline; }
   gap: 12px;
 }
 
-/* Brand becomes a horizontal row: image left, text right */
+/* Brand: image left, text right */
 .brand{
   display: flex;
-  flex-direction: row;
-  align-items: center;   /* vertically align text with the image */
+  align-items: center;
   gap: 12px;
   min-width: 0;
 }
 
-/* Make the logo the same height as the topbar content area */
 .brand-logo{
-  height: 66px;          /* adjust (40–52px) to taste */
-  width: auto;           /* keep ratio */
+  height: 52px;      /* 66px was taller than the 64px topbar */
+  width: auto;
   display: block;
   flex: 0 0 auto;
 }
 
-/* Keep the text block tight and not wrapping weird */
 .brand-text{
   display: flex;
   flex-direction: column;
@@ -72,14 +69,15 @@ a:hover{ text-decoration: underline; }
   min-width: 0;
 }
 
-/* Ensure long titles don’t break the layout */
 .brand-text strong,
 .brand-text span{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--white);
 }
 
+.brand-text span{ color: rgba(255,255,255,.75); }
 
 .actions{
   display:flex;
@@ -176,17 +174,11 @@ a:hover{ text-decoration: underline; }
   border-color: rgba(255,255,255,.10);
 }
 
-.menu small{
-  color: rgba(255,255,255,.65);
-  display:block;
-  margin-top:2px;
-}
-
 .menu-open .menu,
 .menu-open .menu-backdrop{ display:block; }
 
 /* ===========================
-   Home hero (index)
+   Hero (index + shared hero cards)
    =========================== */
 .hero{
   background:
@@ -206,36 +198,10 @@ a:hover{ text-decoration: underline; }
   padding: 22px;
   display:grid;
   gap: 16px;
+  overflow: hidden;
 }
 
-.hero-title{
-  display: flex;
-  align-items: flex-start;   /* top align */
-  gap: 18px;
-  margin: 0;
-}
-
-.hero-logo{
-  width: 110px;              /* adjust */
-  height: auto;
-  flex: 0 0 auto;
-}
-
-.hero-title span{
-  display: block;
-  min-width: 0;              /* allows wrapping */
-  line-height: 1.05;
-}
-
-/* Muted text on dark hero cards should still be light */
-.hero .muted,
-.hero-card .muted {
-  color: rgba(255,255,255,.75);
-}
-
-/* HERO HEAD: logo + text aligned */
-.hero-card { overflow: hidden; } /* keep rounded corners clean */
-
+/* Hero head layout (logo left, text right) */
 .hero-head{
   display: grid;
   grid-template-columns: 140px 1fr;
@@ -260,67 +226,24 @@ a:hover{ text-decoration: underline; }
   word-break: normal;
 }
 
-/* Tagline sits under the title, aligned with it */
 .hero-tagline{
   margin: 10px 0 0;
   color: rgba(255,255,255,.82);
   font-size: 16px;
 }
 
-/* Make pills fully readable and not “lost” on the split background */
+/* Muted text on dark hero cards */
+.hero .muted,
+.hero-card .muted { color: rgba(255,255,255,.75); }
+
+/* Pills row (desktop default) */
 .hero-meta{
   margin-top: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  align-items: center;
-}
-
-/* Ensure pill text never clips and stays on one line if possible */
-.pill{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-  overflow: visible;
-}
-
-/* Feather SVG sizing inside pills */
-.pill svg{
-  width: 18px;
-  height: 18px;
-}
-
-/* Mobile: stack nicer */
-@media (max-width: 760px){
-  .hero-head{
-    grid-template-columns: 110px 1fr;
-  }
-  .hero-logo{ width: 110px; }
-}
-
-
-.hero h1{
-  margin: 0;
-  font-size: clamp(28px, 4vw, 44px);
-  letter-spacing: .2px;
-  line-height: 1.1;
-}
-
-.hero p{
-  margin: 0;
-  color: rgba(255,255,255,.82);
-  font-size: 16px;
-}
-
-.hero-meta{
   display:flex;
-  flex-wrap:nowrap;
   flex-direction: row;
+  flex-wrap: nowrap;
   gap: 10px 14px;
   align-items:center;
-  color: rgba(255,255,255,.90);
-  font-weight: 600;
 }
 
 .pill{
@@ -332,13 +255,25 @@ a:hover{ text-decoration: underline; }
   background: rgba(255,255,255,.10);
   border: 1px solid rgba(255,255,255,.14);
   font-size: 14px;
+  white-space: nowrap;
 }
 
-.address{
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dashed rgba(255,255,255,.22);
-  color: rgba(255,255,255,.85);
+.pill svg{ width: 18px; height: 18px; }
+
+/* Hero bottom (light area under the dark hero card) */
+.hero-bottom{
+  background: #f6f7fb;
+  padding: 18px 20px;
+  margin-top: 14px;
+}
+
+.hero-bottom .address,
+.hero-bottom .address span{ color: #64748b; }
+
+.hero-bottom .btn{
+  color: #0f172a;
+  border-color: rgba(15,23,42,.12);
+  background: rgba(255,255,255,.70);
 }
 
 /* CTA row */
@@ -355,6 +290,31 @@ a:hover{ text-decoration: underline; }
 }
 
 .btn-primary:hover{ background: #1d4ed8; }
+
+/* Keep your hover override if you really want it */
+.cta-row .btn:hover{
+  background: rgba(0,0,255,.95);
+  color: white;
+}
+
+/* Mobile tweaks */
+@media (max-width: 760px){
+  .hero-head{ grid-template-columns: 110px 1fr; }
+  .hero-logo{ width: 110px; }
+}
+
+/* Stack pills on small screens (this now works reliably) */
+@media (max-width: 640px){
+  .hero-meta{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .hero-meta .pill{
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
 
 /* ===========================
    Sections + cards
@@ -391,68 +351,30 @@ section{ padding: 42px 0; }
   margin: 10px 0 0;
   padding-left: 18px;
 }
-
 .list li{ margin: 6px 0; }
 
+/* Teachers + schedule helpers */
+.teacher-grid .card h3{ margin-top: 0; }
+
+.schedule-table{
+  width:100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.schedule-table th, .schedule-table td{
+  padding:10px;
+  border-bottom: 1px solid #f1f5f9;
+  text-align:left;
+  vertical-align: top;
+}
+.schedule-table th{ border-bottom: 1px solid #e8ecf3; }
+
+.anchor-offset{ scroll-margin-top: 90px; }
+
 /* ===========================
-   Footer
+   Internal pages hero (contact etc.)
    =========================== */
-footer{
-  padding: 28px 0 46px;
-  color: #64748b;
-  text-align:center;
-}
-
-/* small helper */
-.sr-only{
-  position:absolute!important;
-  width:1px;height:1px;
-  padding:0;margin:-1px;
-  overflow:hidden;clip:rect(0,0,0,0);
-  white-space:nowrap;border:0;
-}
-
-/* ============================================================
-
-   ============================================================ */
-
-.hero-card { overflow: hidden; }
-    .hero-bottom{
-      background: #f6f7fb;
-      padding: 18px 20px;
-      margin-top: 14px;
-    }
-    .hero-bottom .address span,
-    .hero-bottom .address{ color: #64748b; }
-
-    .hero-bottom .btn{
-      color: #0f172a;
-      border-color: rgba(15,23,42,.12);
-      background: rgba(255,255,255,.70);
-    }
-    .cta-row .btn:hover{
-      background: rgba(0,0,255,.95);
-      color: white;
-    }
-
-    .teacher-grid .card h3{ margin-top: 0; }
-
-    .schedule-table{
-      width:100%;
-      border-collapse: collapse;
-      min-width: 520px;
-    }
-    .schedule-table th, .schedule-table td{
-      padding:10px;
-      border-bottom: 1px solid #f1f5f9;
-      text-align:left;
-      vertical-align: top;
-    }
-    .schedule-table th{ border-bottom: 1px solid #e8ecf3; }
-
-    .anchor-offset{ scroll-margin-top: 90px; }
-
-/* Internal pages hero: keep it fully dark (no light split) */
 header.page-hero{
   background:
     radial-gradient(900px 400px at 20% 0%, rgba(37,99,235,.18), transparent 60%),
@@ -461,8 +383,6 @@ header.page-hero{
   padding: 34px 0 0;
 }
 
-
-/* Ensure internal hero-card looks consistent */
 .page-hero .hero-card{
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.12);
@@ -470,13 +390,10 @@ header.page-hero{
   box-shadow: 0 18px 50px rgba(0,0,0,.25);
   padding: 22px;
   margin: 16px 0 0;
-}
-
-/* Fix “white band” issues caused by overlays/pseudo-elements */
-.page-hero .hero-card{
   overflow: hidden;
   position: relative;
 }
+
 .page-hero .hero-card::before,
 .page-hero .hero-card::after{
   content: none !important;
@@ -484,13 +401,13 @@ header.page-hero{
   background: none !important;
 }
 
-/* Ensure subtitle does not paint its own light background */
 .page-hero .hero-card h1{
   margin: 0 0 10px 0;
   font-size: clamp(26px, 4vw, 40px);
   line-height: 1.1;
   color: rgba(255,255,255,.95);
 }
+
 .page-hero .hero-card p{
   margin: 0;
   color: rgba(255,255,255,.82);
@@ -574,50 +491,41 @@ input:focus, select:focus, textarea:focus{
   display:block;
 }
 
-.error{ color:#dc2626; font-size:.9rem; min-height:1.1rem; display:block; }
-.invalid{ border-color:#dc2626 !important; box-shadow: 0 0 0 4px rgba(220,38,38,.14) !important; }
-
-
-/* STACK HERO META PILLS ON SMALL SCREENS */
-@media (max-width: 900px){
-  .hero-card .hero-meta{
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    flex-wrap: nowrap !important;
-    overflow: visible !important;   /* disable horizontal scroll if you had it */
-    gap: 10px !important;
-  }
-
-  .hero-card .hero-meta .pill{
-    justify-content: flex-start !important;
-  }
-}
-
-.hero-bottom{
-  background: #f6f7fb;
-  padding: 18px 20px;
-  margin-top: 14px;
-}
-.hero-bottom .address span,
-.hero-bottom .address{ color: #64748b; }
-
-.hero-bottom .btn{
-  color: #0f172a;
-  border-color: rgba(15,23,42,.12);
-  background: rgba(255,255,255,.70);
-}
-.cta-row .btn:hover{
-  background: rgba(0,0,255,.95);
-  color: white;
-}
-
-
-/* Force error color no matter what overrides earlier */
+/* Errors */
 small.error{
   color: #dc2626 !important;
   font-size: .9rem;
   min-height: 1.1rem;
   display: block;
   margin-top: 6px;
+}
+.invalid{
+  border-color:#dc2626 !important;
+  box-shadow: 0 0 0 4px rgba(220,38,38,.14) !important;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer{
+  padding: 28px 0 46px;
+  color: #64748b;
+  text-align:center;
+}
+
+/* small helper */
+.sr-only{
+  position:absolute!important;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);
+  white-space:nowrap;border:0;
+}
+
+.social-link {
+  color: rgba(37,99,235,.35);
+}
+
+.social-link:hover {
+  text-decoration: none;
 }

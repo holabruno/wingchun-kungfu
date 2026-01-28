@@ -36,6 +36,11 @@
         "Prévention contre l'intimidation"
       ]
     },
+    "whatIsLion": {
+      "title": "Qu'est-ce que la danse du lion?",
+      "p1": "La danse du lion est une tradition chinoise à la fois culturelle et artistique, souvent présentée lors du Nouvel An lunaire, des inaugurations, des mariages et des festivals. Deux danseurs portent un costume de lion (tête et corps) et exécutent des mouvements rythmés au son des tambours, gongs et cymbales. Le lion symbolise la chance, la protection et la prospérité : on croit qu’il chasse les mauvais esprits et apporte une énergie positive à la communauté et aux commerces qu’il visite.",
+      "p2": "Au-delà du spectacle, la danse du lion demande un entraînement rigoureux. Elle combine équilibre, force, souplesse, coordination et esprit d’équipe, car les deux danseurs doivent bouger comme un seul corps, parfois sur des sauts, des positions basses ou des plateformes. Dans plusieurs écoles, la danse du lion est liée aux arts martiaux (comme le kung fu) : les bases de posture, de puissance des jambes et de discipline mentale se retrouvent dans la performance. C’est donc à la fois un art vivant de transmission culturelle et une pratique physique exigeante."
+    },
     "whatIs": {
       "title": "Qu'est-ce que le Wing Chun?",
       "subtitle": "Le Wing Chun est l'art de devenir insaisissable:",
@@ -283,7 +288,7 @@
         "day": "Jour",
         "wingchun": "Wing Chun",
         "lion": "Danse du lion",
-        "note": "Les horaires peuvent varier selon les événements spéciaux.",
+        "note": "Les horaires peuvent varier selon les événements spéciaux et les congés fériés.",
 
         "wingchunRows": [
           { "day": "Lundi", "time": "19h00 – 21h00" },
@@ -388,6 +393,11 @@
       "p1": "Wing Chun is based on evasive movement and fast, powerful counter-attacks. Practitioners use an opponent’s force to their advantage and neutralize them with extremely rapid, crisp, and precise strikes.",
       "p2": "One of Wing Chun’s specialties is developing sensitivity to an opponent’s movements. Through Chi Sao (a sensitivity drill), practitioners learn to feel the opponent’s actions and anticipate what comes next—then counter with lightning speed.",
       "p3": "Beyond improving physical conditioning, Wing Chun fosters focus, willpower, self-confidence, and personal growth."
+    },
+     "whatIsLion": {
+      "title": "What is the Lion Dance ?",
+      "p1": "Lion dance is a Chinese cultural and performing tradition often presented during Lunar New Year, grand openings, weddings, and festivals. Two performers wear a lion costume (head and body) and bring it to life through rhythmic movements accompanied by drums, gongs, and cymbals. The lion symbolizes good fortune, protection, and prosperity; it is believed to drive away negative spirits and bring positive energy to the community and to the businesses it visits.",
+      "p2": "Beyond the show, lion dance requires serious training. It combines balance, strength, flexibility, coordination, and teamwork, because the two performers must move as one—sometimes through jumps, low stances, and even on raised platforms. In many schools, lion dance is closely connected to martial arts (such as kung fu): the same foundations of posture, leg power, and mental discipline are reflected in the performance. It is therefore both a living cultural art and a demanding physical practice."
     },
     "schoolInfo": {
       "title": "The school:",
@@ -630,7 +640,7 @@
         "day": "Day",
         "wingchun": "Wing Chun",
         "lion": "Lion Dance",
-        "note": "Schedules may vary during special events.",
+        "note": "Schedules may vary during special events, vacation and holidays.",
 
         "wingchunRows": [
           { "day": "Monday", "time": "7:00 pm – 9:00 pm" },
