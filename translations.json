@@ -10,7 +10,8 @@
     },
     "school": {
       "name": "Institut d'arts Martiaux Chinois de la rive sud de Montréal",
-      "tagline": "Enseignement traditionnel du Kung Fu Wing Chun depuis 1991",
+      "tagline1": "Enseignement traditionnel du Kung Fu Wing Chun depuis 1991",
+      "tagline2": "(...)",
       "phone": "(438) 725-4918",
       "phone2": "What's App",
       "membership": "Membre de l'association YIP Man de Hong Kong"
@@ -362,7 +363,8 @@
     },
     "school": {
       "name": "South Shore Montreal Chinese Martial Arts Institute",
-      "tagline": "Traditional teaching of Wing Chun Kung-Fu since 1991.",
+      "tagline1": "Traditional teaching of Wing Chun Kung-Fu since 1991.",
+      "tagline2": "(...)",
       "phone": "(438) 725-4918",
       "membership": "Member of the YIP Man Association of Hong Kong"
     },
