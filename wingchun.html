@@ -3,27 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Histoire du Wing Chun</title>
-  <link rel="stylesheet" href="styles/main.css" />
+  <title data-i18n="wingChunHistory.title">Wing Chun</title>
 
-  <!-- Override: make the bottom part of hero-card match the page background -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Optional: same hero-bottom override you use on index -->
   <style>
-    /* Ensure the hero card clips the bottom section nicely */
     .hero-card { overflow: hidden; }
 
     .hero-bottom{
-      background: #f6f7fb;           /* <-- matches page background sample */
+      background: #f6f7fb;
       padding: 18px 20px;
       margin-top: 14px;
     }
-
-    /* Improve readability in the light area */
     .hero-bottom .address span,
-    .hero-bottom .address{
-      color: #64748b;
-    }
+    .hero-bottom .address{ color: #64748b; }
 
-    /* Optional: make non-primary button readable on light bg */
     .hero-bottom .btn{
       color: #0f172a;
       border-color: rgba(15,23,42,.12);
@@ -34,15 +30,12 @@
       color: white;
     }
 
-    /* CSS styling for FontAwesome */
-    .icon {
-      height: 1em;
-      width: 1em;
-    }
+    /* Make the hero note readable on the dark hero */
+    .hero .muted { color: rgba(255,255,255,.75); }
   </style>
 
-    <script src="scripts/site.js" defer></script>
-    
+  <!-- Your shared site logic (menu + i18n + fused list render + feather replace) -->
+  <script src="scripts/site.js" defer></script>
 </head>
 
 <body>
@@ -56,7 +49,6 @@
           <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
         </div>
       </div>
-
 
       <div class="actions">
         <button class="btn" id="langToggle" type="button">English</button>
@@ -81,51 +73,83 @@
 
     <a href="index.html" data-i18n="menu.home">Accueil</a>
     <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
-    <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du lion?</a>
-    <a href="a-propos.html" data-i18n="menu.about">À propos de l'école</a>
+    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
     <a href="contact.html" data-i18n="menu.contact">Contact</a>
   </nav>
 
-  <!-- Hero (use same homepage hero style) -->
+  <!-- HERO: matches index.html -->
   <header class="hero">
     <div class="container">
       <div class="hero-card">
-        <div>
-          <h1 data-i18n="wingChunHistory.title">Histoire du Wing Chun — figures clés et contexte historique</h1>
-          <p class="muted" data-i18n="wingChunHistory.legendNote">...</p>
+
+        <div class="hero-head">
+          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
+
+          <div class="hero-head-text">
+            <h1 class="hero-title">
+              <span data-i18n="wingChunHistory.title">Qu'est-ce que le Wing Chun, ses figures clés et contexte historique</span>
+            </h1>
+
+            <p class="hero-tagline muted" data-i18n="wingChunHistory.legendNote">
+              Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (figures légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.
+            </p>
+
+            <!-- pills row like index -->
+            <div class="hero-meta">
+              <a class="pill" href="tel:4387254918">
+                <i data-feather="phone"></i>
+                <span data-i18n="school.phone">(438) 725-4918</span>
+              </a>
+
+              <a class="pill" href="https://wa.me/14387254918" target="_blank" rel="noopener">
+                <i data-feather="message-circle"></i>
+                <span data-i18n="school.phone2">What's App</span>
+              </a>
+
+              <a class="pill" href="contact.html">
+                <i data-feather="calendar"></i>
+                <span data-i18n="cta.trial">Cours d'essai gratuit</span>
+              </a>
+
+              <a class="pill" href="index.html">
+                <i data-feather="home"></i>
+                <span data-i18n="cta.home">Accueil</span>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
-          <a class="btn btn-primary" href="index.html" data-i18n="cta.home">Accueil</a>
+        <!-- optional light bottom block like index -->
+        <div class="hero-bottom">
+          <div class="address">
+            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
+            <span data-i18n="address.line2">Brossard, Québec</span><br/>
+            <span data-i18n="address.line3">J4W 3J2 Canada</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
+            <a class="btn" href="a-propos.html#ecole">Voir l’école</a>
+          </div>
         </div>
+
       </div>
     </div>
   </header>
 
-  <section>
-    <div class="container">
-        <div class="card">
-            <h2 data-i18n="wingChunHistory.whatIsWingChunTitle">Qu'est-ce que le Wing Chun?</h2>
-            <p data-i18n="wingChunHistory.whatIsP1"></p>
-            <p data-i18n="wingChunHistory.whatIsP2"></p>
-            <p data-i18n="wingChunHistory.whatIsP3"></p>
-        </div>
-    </div>
-  </section>
-  <!-- Fused list -->
+  <!-- What is Wing Chun (text) -->
   <section>
     <div class="container">
       <div class="card">
-        <h2 data-i18n="wingChunHistory.figuresTitle">Maitres du Wing Chun</h2>
-        <div id="fusedListContainer">
-          <p class="muted">Chargement…</p>
-        </div>
+        <h2 data-i18n="wingChunHistory.whatIsWingChunTitle">Qu'est-ce que le Wing Chun?</h2>
+        <p data-i18n="wingChunHistory.whatIsP1"></p>
+        <p data-i18n="wingChunHistory.whatIsP2"></p>
+        <p data-i18n="wingChunHistory.whatIsP3"></p>
       </div>
     </div>
   </section>
 
-  <!-- Optional: periods + figures (existing structures) -->
+  <!-- Context + figures (optional) -->
   <section>
     <div class="container">
       <div class="grid grid-2">
@@ -137,174 +161,39 @@
         </div>
 
         <div class="card">
-          <h2 data-i18n="wingChunHistory.figuresTitle">Maitres du Wing Chun</h2>
+          <h2 data-i18n="wingChunHistory.figuresTitle">Maitres de Wing Chun</h2>
           <ul class="list" data-i18n-figures="wingChunHistory.figures">
             <li>…</li>
           </ul>
         </div>
       </div>
+          <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du lion?</a>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard 2025</div>
+  <div class="container">
+    <div class="social-links" aria-label="Réseaux sociaux">
+      <a class="social-link" href="https://www.facebook.com/michelorchardwingchun" target="_blank" rel="noopener" aria-label="Facebook">
+        <i data-feather="facebook"></i>
+      </a>
+
+      <a class="social-link" href="https://x.com/michaelorchard7" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <i data-feather="twitter"></i>
+      </a>
+
+      <a class="social-link" href="https://www.instagram.com/wingchun.michelorchard/" target="_blank" rel="noopener" aria-label="Instagram">
+        <i data-feather="instagram"></i>
+      </a>
     </div>
-  </footer>
+
+    <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard (2026)</div>
+  </div>
 
   <script>
-    // ---------- Menu ----------
-    const menuBtn = document.getElementById('menuBtn');
-    const menuClose = document.getElementById('menuClose');
-    const menuBackdrop = document.getElementById('menuBackdrop');
-
-    function openMenu(){
-      document.body.classList.add('menu-open');
-      menuBtn.setAttribute('aria-expanded', 'true');
-    }
-    function closeMenu(){
-      document.body.classList.remove('menu-open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    }
-    menuBtn.addEventListener('click', () => {
-      document.body.classList.contains('menu-open') ? closeMenu() : openMenu();
-    });
-    menuClose.addEventListener('click', closeMenu);
-    menuBackdrop.addEventListener('click', closeMenu);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-    document.getElementById('menuPanel').addEventListener('click', (e) => {
-      if (e.target.closest('a')) closeMenu();
-    });
-
-    // ---------- i18n ----------
-    const langToggle = document.getElementById('langToggle');
-    let I18N = null;
-
-    const $all = (sel) => Array.from(document.querySelectorAll(sel));
-    const get = (obj, path) => path.split('.').reduce((a,k) => (a && k in a) ? a[k] : undefined, obj);
-
-    function setHtmlLang(lang){
-      document.documentElement.setAttribute('lang', lang);
-    }
-
-    function populatePeriods(ul, periods){
-      if (!Array.isArray(periods)) return;
-      ul.innerHTML = '';
-      periods.slice(0, 6).forEach(p => {
-        const li = document.createElement('li');
-        li.innerHTML = `<strong>${p.name}</strong> — ${p.summary}`;
-        ul.appendChild(li);
-      });
-    }
-
-    function populateFigures(ul, figures){
-      if (!Array.isArray(figures)) return;
-      ul.innerHTML = '';
-      figures.slice(0, 12).forEach(f => {
-        const born = f.born ? f.born : '';
-        const died = (f.died && f.died !== '—') ? (' – ' + f.died) : '';
-        const role = f.wingChunRole ? f.wingChunRole : '';
-        const li = document.createElement('li');
-        li.innerHTML = `<strong>${f.name || ''}</strong> <span class="muted">(${born}${died})</span> — ${role}`;
-        ul.appendChild(li);
-      });
-    }
-
-    function renderFusedList(items){
-      const container = document.getElementById('fusedListContainer');
-      if (!Array.isArray(items) || items.length === 0){
-        container.innerHTML = `<p class="muted">Aucun contenu.</p>`;
-        return;
-      }
-
-      const list = document.createElement('div');
-      list.style.display = 'grid';
-      list.style.gap = '14px';
-
-      items.forEach(it => {
-        const block = document.createElement('div');
-        block.style.border = '1px solid #e8ecf3';
-        block.style.borderRadius = '14px';
-        block.style.padding = '14px 14px';
-        block.style.background = '#fff';
-
-        const h = document.createElement('div');
-        h.style.fontWeight = '800';
-        h.style.marginBottom = '6px';
-        h.textContent = it.title || '';
-
-        const p = document.createElement('div');
-        p.style.color = '#334155';
-        p.textContent = it.text || '';
-
-        block.appendChild(h);
-        block.appendChild(p);
-        list.appendChild(block);
-      });
-
-      container.innerHTML = '';
-      container.appendChild(list);
-    }
-
-    function applyTranslations(lang){
-      if (!I18N || !I18N[lang]) return;
-      const dict = I18N[lang];
-      setHtmlLang(lang);
-
-      $all('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const val = get(dict, key);
-        if (typeof val === 'string') el.textContent = val;
-      });
-
-      $all('[data-i18n-periods]').forEach(ul => {
-        populatePeriods(ul, get(dict, ul.getAttribute('data-i18n-periods')));
-      });
-
-      $all('[data-i18n-figures]').forEach(ul => {
-        populateFigures(ul, get(dict, ul.getAttribute('data-i18n-figures')));
-      });
-
-      // fused list
-      renderFusedList(get(dict, 'wingChunHistory.fusedList'));
-
-      langToggle.textContent = (lang === 'fr') ? 'English' : 'Français';
-
-      try { localStorage.setItem('siteLang', lang); } catch(e) {}
-    }
-
-    async function initI18n(){
-      let lang = 'fr';
-      try {
-        const saved = localStorage.getItem('siteLang');
-        if (saved === 'fr' || saved === 'en') lang = saved;
-        else {
-          const nav = (navigator.language || 'fr').toLowerCase();
-          lang = nav.startsWith('en') ? 'en' : 'fr';
-        }
-      } catch(e) {}
-
-      try{
-        const res = await fetch('./translation.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        I18N = await res.json();
-      } catch(err){
-        console.warn('Unable to load translation.json', err);
-        I18N = { fr:{}, en:{} };
-      }
-
-      setHtmlLang(lang);
-      applyTranslations(lang);
-
-      langToggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('lang') || 'fr';
-        const next = (current === 'fr') ? 'en' : 'fr';
-        setHtmlLang(next);
-        applyTranslations(next);
-      });
-    }
-
-    initI18n();
+    // ensure icons render (especially after i18n changes)
+    if (window.feather) feather.replace();
   </script>
+</footer>
 </body>
 </html>

@@ -4,12 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact</title>
+
   <link rel="stylesheet" href="styles/main.css" />
 
+  <!-- Feather icons for the hero pills -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Shared menu + i18n -->
+  <script src="scripts/site.js" defer></script>
+  <script src="scripts/validate-form.js" defer></script>
+  
 </head>
 
 <body>
-   <!-- Topbar -->
+  <!-- Topbar -->
   <div class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
@@ -19,7 +27,6 @@
           <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
         </div>
       </div>
-
 
       <div class="actions">
         <button class="btn" id="langToggle" type="button">English</button>
@@ -44,23 +51,60 @@
 
     <a href="index.html" data-i18n="menu.home">Accueil</a>
     <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
-    <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du lion?</a>
-    <a href="a-propos.html" data-i18n="menu.about">À propos de l'école</a>
+    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
     <a href="contact.html" data-i18n="menu.contact">Contact</a>
   </nav>
 
-  <!-- Hero -->
-  <header class="page-hero">
+  <!-- HERO (same structure as index.html) -->
+  <header class="hero">
     <div class="container">
       <div class="hero-card">
-        <h1 data-i18n="contactPage.title">Contact</h1>
-        <p data-i18n="contactPage.subtitle">Écrivez-nous et nous vous répondrons rapidement.</p>
+        <div class="hero-head">
+          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
+
+          <div class="hero-head-text">
+            <h1 class="hero-title">
+              <span data-i18n="contactPage.title">Contact</span>
+            </h1>
+
+            <p class="hero-tagline" data-i18n="contactPage.subtitle">
+              Vous cherchez à vous inscrire? Vous êtes à la bonne place. Écrivez-nous et nous vous répondrons rapidement.
+            </p>
+
+            <!-- Same style pills as index -->
+            <div class="hero-meta">
+              <a class="pill" href="tel:4387254918">
+                <i data-feather="phone"></i>
+                <span data-i18n="school.phone">(438) 725-4918</span>
+              </a>
+
+              <a class="pill" href="https://wa.me/14387254918" target="_blank" rel="noopener">
+                <i data-feather="message-circle"></i>
+                <span data-i18n="school.phone2">What's App</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Light bottom part like index -->
+        <div class="hero-bottom">
+          <div class="address">
+            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
+            <span data-i18n="address.line2">Brossard, Québec</span><br/>
+            <span data-i18n="address.line3">J4W 3J2 Canada</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#formulaire" data-i18n="contactPage.jumpForm">Aller au formulaire</a>
+            <a class="btn btn-primary" href="#carte" data-i18n="contactPage.jumpMap">Aller à la carte</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Top: Contact form -->
-  <section>
+  <!-- Form -->
+  <section id="formulaire">
     <div class="container">
       <div class="card">
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -72,20 +116,23 @@
           <div class="form-grid">
             <div class="field">
               <label for="prenom" data-i18n="contactPage.fields.firstName.label">Prénom</label>
-              <input id="prenom" name="prenom" type="text" autocomplete="given-name" required
+              <input id="prenom" name="prenom" type="text" autocomplete="given-name" required minlength="2" maxlength="50"
                      data-i18n-placeholder="contactPage.fields.firstName.placeholder" placeholder="Votre prénom" />
+              <small class="error" data-error-for="prenom"></small>
             </div>
 
             <div class="field">
               <label for="nom" data-i18n="contactPage.fields.lastName.label">Nom</label>
-              <input id="nom" name="nom" type="text" autocomplete="family-name" required
+              <input id="nom" name="nom" type="text" autocomplete="family-name" required minlength="2" maxlength="50"
                      data-i18n-placeholder="contactPage.fields.lastName.placeholder" placeholder="Votre nom" />
+              <small class="error" data-error-for="nom"></small>
             </div>
 
             <div class="field">
               <label for="telephone" data-i18n="contactPage.fields.phone.label">Téléphone</label>
-              <input id="telephone" name="telephone" type="tel" autocomplete="tel"
+              <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" minlength="10" maxlength="20" required
                      data-i18n-placeholder="contactPage.fields.phone.placeholder" placeholder="(999) 999-9999" />
+              <small class="error" data-error-for="telephone"></small>       
             </div>
 
             <div class="field">
@@ -104,7 +151,7 @@
 
             <div class="field full">
               <label for="message" data-i18n="contactPage.fields.message.label">Message</label>
-              <textarea id="message" name="message" required
+              <textarea id="message" name="message" required maxlength="2000"
                         data-i18n-placeholder="contactPage.fields.message.placeholder"
                         placeholder="Écrivez votre message…"></textarea>
               <div class="help" data-i18n="contactPage.help">
@@ -114,14 +161,14 @@
           </div>
 
           <div class="form-actions">
-            <button class="btn-primary" type="submit" data-i18n="contactPage.submit">Envoyer</button>
+            <button class="btn btn-primary" type="submit" data-i18n="contactPage.submit">Envoyer</button>
           </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Middle: Address -->
+  <!-- Address card -->
   <section>
     <div class="container">
       <div class="card">
@@ -145,8 +192,8 @@
     </div>
   </section>
 
-  <!-- Bottom: Google Map -->
-  <section>
+  <!-- Google map -->
+  <section id="carte">
     <div class="container">
       <div class="map-wrap">
         <iframe class="map"
@@ -160,132 +207,24 @@
   </section>
 
   <footer>
-    <div class="container">
-      <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard 2025</div>
+  <div class="container">
+    <div class="social-links" aria-label="Réseaux sociaux">
+      <a class="social-link" href="https://www.facebook.com/michelorchardwingchun" target="_blank" rel="noopener" aria-label="Facebook">
+        <i data-feather="facebook"></i>
+      </a>
+
+      <a class="social-link" href="https://x.com/michaelorchard7" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <i data-feather="twitter"></i>
+      </a>
+
+      <a class="social-link" href="https://www.instagram.com/wingchun.michelorchard/" target="_blank" rel="noopener" aria-label="Instagram">
+        <i data-feather="instagram"></i>
+      </a>
     </div>
-  </footer>
 
-  <script>
-    // ---------- Menu ----------
-    const menuBtn = document.getElementById('menuBtn');
-    const menuClose = document.getElementById('menuClose');
-    const menuBackdrop = document.getElementById('menuBackdrop');
+    <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard (2026)</div>
+  </div>
+</footer>
 
-    function openMenu(){
-      document.body.classList.add('menu-open');
-      menuBtn.setAttribute('aria-expanded', 'true');
-    }
-    function closeMenu(){
-      document.body.classList.remove('menu-open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    }
-    menuBtn.addEventListener('click', () => {
-      document.body.classList.contains('menu-open') ? closeMenu() : openMenu();
-    });
-    menuClose.addEventListener('click', closeMenu);
-    menuBackdrop.addEventListener('click', closeMenu);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-    document.getElementById('menuPanel').addEventListener('click', (e) => {
-      if (e.target.closest('a')) closeMenu();
-    });
-
-    // ---------- i18n (match index.html robust behavior) ----------
-    const langToggle = document.getElementById('langToggle');
-    let I18N = null;
-
-    const $all = (sel) => Array.from(document.querySelectorAll(sel));
-    const get = (obj, path) => path.split('.').reduce((a,k) => (a && k in a) ? a[k] : undefined, obj);
-
-    function populateOptions(selectEl, options){
-      if (!Array.isArray(options)) return;
-      const current = selectEl.value;
-
-      selectEl.innerHTML = '';
-      const empty = document.createElement('option');
-      empty.value = '';
-      empty.textContent = '—';
-      selectEl.appendChild(empty);
-
-      options.forEach(o => {
-        const opt = document.createElement('option');
-        opt.value = o.value;
-        opt.textContent = o.label;
-        selectEl.appendChild(opt);
-      });
-
-      if (current) selectEl.value = current;
-    }
-
-    function applyTranslations(lang){
-      console.log("applyTranslations(contact):", lang, "I18N loaded:", !!I18N?.fr, !!I18N?.en);
-      if (!I18N || !I18N[lang]) return;
-
-      const dict = I18N[lang];
-      document.documentElement.setAttribute('lang', lang);
-
-      // text
-      $all('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const val = get(dict, key);
-        if (typeof val === 'string') el.textContent = val;
-      });
-
-      // placeholders
-      $all('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        const val = get(dict, key);
-        if (typeof val === 'string') el.setAttribute('placeholder', val);
-      });
-
-      // select options
-      $all('[data-i18n-options]').forEach(el => {
-        const key = el.getAttribute('data-i18n-options');
-        populateOptions(el, get(dict, key));
-      });
-
-      // toggle label
-      langToggle.textContent = (lang === 'fr') ? 'English' : 'Français';
-
-      try { localStorage.setItem('siteLang', lang); } catch(e) {}
-    }
-
-    async function initI18n(){
-      // Determine language from localStorage first
-      let lang = 'fr';
-      try {
-        const saved = localStorage.getItem('siteLang');
-        if (saved === 'fr' || saved === 'en') lang = saved;
-        else {
-          const nav = (navigator.language || 'fr').toLowerCase();
-          lang = nav.startsWith('en') ? 'en' : 'fr';
-        }
-      } catch(e){}
-
-      // Load translations.json
-      try{
-        const res = await fetch('./translation.json', { cache:'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        I18N = await res.json();
-        console.log("translation.json loaded OK (contact):", Object.keys(I18N || {}));
-      } catch(err){
-        console.error('Unable to load translation.json (contact):', err);
-        I18N = { fr:{}, en:{} };
-      }
-
-      // Apply now
-      document.documentElement.setAttribute('lang', lang);
-      applyTranslations(lang);
-
-      // Toggle
-      langToggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('lang') || 'fr';
-        const next = (current === 'fr') ? 'en' : 'fr';
-        document.documentElement.setAttribute('lang', next);
-        applyTranslations(next);
-      });
-    }
-
-    initI18n();
-  </script>
 </body>
 </html>

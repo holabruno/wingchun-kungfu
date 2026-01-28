@@ -23,7 +23,7 @@
     },
     "cta": {
       "trial": "Cours d'essai gratuit",
-      "registration": "Inscriptions en tout temps.",
+      "registration": "Inscriptions en tout temps!",
       "home": "Accueil"
     },
     "benefits": {
@@ -52,8 +52,8 @@
       "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial."
     },
     "wingChunHistory": {
-      "title": "Qu'est-ce que le Wing Chun, ses figures clés et contexte historique",
-      "legendNote": "Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (figures légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.",
+      "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
+      "legendNote": "Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (acteurs légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.",
       "historicContextTitle": "Contexte historique",
       "moreButton": "Plus sur le Wing Chun...",
       "figuresTitle": "Maitres de Wing Chun",
@@ -246,7 +246,7 @@
       "title": "À propos de l'école",
       "subtitle": "Découvrez nos professeurs, nos disciplines et nos horaires.",
       "backHome": "Accueil",
-
+      "note-private-group": "Cours de groupe et cours privés disponibles.",
       "teachers": {
         "title": "Professeurs",
         "michel": {
@@ -279,7 +279,7 @@
       },
 
       "schedule": {
-        "title": "Horaires (7 jours)",
+        "title": "Horaire (7 jours)",
         "day": "Jour",
         "wingchun": "Wing Chun",
         "lion": "Danse du lion",
@@ -309,7 +309,9 @@
 
     "contactPage": {
       "title": "Contact",
-      "subtitle": "Écrivez-nous et nous vous répondrons rapidement.",
+      "subtitle": "Vous cherchez à vous inscrire!?? - Vous êtes à la bonne place.  Écrivez-nous et nous vous répondrons rapidement.",
+      "jumpForm": "Aller au formulaire",
+      "jumpMap": "Aller à la carte",
       "fields": {
         "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
         "lastName": { "label": "Nom", "placeholder": "Votre nom" },
@@ -355,7 +357,7 @@
     },
     "school": {
       "name": "South Shore Montreal Chinese Martial Arts Institute",
-      "tagline": "We offer private lessons and group classes.",
+      "tagline": "Traditional teaching of Wing Chun Kung-Fu since 1991.",
       "phone": "(438) 725-4918",
       "membership": "Member of the YIP Man Association of Hong Kong"
     },
@@ -367,7 +369,7 @@
     },
     "cta": {
       "trial": "Free trial class",
-      "registration": "Registration open year-round.",
+      "registration": "Registration open year-round!",
       "home": "Home"
     },
     "benefits": {
@@ -590,7 +592,7 @@
       "title": "About the school",
       "subtitle": "Meet our instructors, our disciplines, and our schedule.",
       "backHome": "Home",
-
+      "note-private-group": "Group classes and private lessons available.",
       "teachers": {
         "title": "Instructors",
         "michel": {
@@ -653,7 +655,9 @@
     },
     "contactPage": {
       "title": "Contact",
-      "subtitle": "Send us a message and we’ll get back to you shortly.",
+      "subtitle": "You want to start learning?  - You are at the right place!  Send us a message and we’ll get back to you shortly.",
+      "jumpForm": "Go to the form",
+      "jumpMap": "Go to the Map",
       "fields": {
         "firstName": { "label": "First name", "placeholder": "Your first name" },
         "lastName": { "label": "Last name", "placeholder": "Your last name" },
