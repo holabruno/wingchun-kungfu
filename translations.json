@@ -269,6 +269,7 @@
         }
       },
       "schools": {
+        "scheduleTitle": "Horaires",
         "wingchun": {
           "title": "Kung Fu Wing Chun",
           "p1": "L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong, l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité, économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité (Chi Sao), discipline et respect.",
@@ -318,6 +319,7 @@
       "subtitle": "Vous cherchez à vous inscrire!?? - Vous êtes à la bonne place.  Écrivez-nous et nous vous répondrons rapidement.",
       "jumpForm": "Aller au formulaire",
       "jumpMap": "Aller à la carte",
+      "formTitle": "Formulaire de contact",
       "fields": {
         "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
         "lastName": { "label": "Nom", "placeholder": "Votre nom" },
@@ -622,6 +624,7 @@
       },
 
       "schools": {
+        "scheduleTitle": "Schedules",
         "wingchun": {
           "title": "Wing Chun Kung Fu",
           "p1": "The Wing Chun Kung Fu – Michel Orchard (South Shore) school is a place dedicated to traditional Wing Chun, taught in a structured and welcoming way, where students develop both technical skill and personal character. Affiliated with the Yip Man Association of Hong Kong, the school emphasizes a transmission faithful to the spirit of Wing Chun: efficiency, simplicity, economy of motion, centerline control, and adaptability. Beyond self-defense, the approach supports long-term progress through posture and structure, timing, sensitivity training (Chi Sao), discipline, and respect.",
@@ -670,6 +673,7 @@
       "subtitle": "You want to start learning?  - You are at the right place!  Send us a message and we’ll get back to you shortly.",
       "jumpForm": "Go to the form",
       "jumpMap": "Go to the Map",
+      "formTitle": "Contact form",
       "fields": {
         "firstName": { "label": "First name", "placeholder": "Your first name" },
         "lastName": { "label": "Last name", "placeholder": "Your last name" },

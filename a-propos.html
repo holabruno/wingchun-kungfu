@@ -18,7 +18,7 @@
       <div class="brand">
         <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
         <div class="brand-text">
-          <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong>
+          <h1 style="font-size: 0.9em;"><strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong></h1>
           <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
         </div>
       </div>
@@ -57,9 +57,9 @@
           <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
 
           <div class="hero-head-text">
-            <h1 class="hero-title">
+            <h2 class="hero-title">
               <span data-i18n="aproposPage.title">À propos de l'école</span>
-            </h1>
+            </h2>
 
             <p class="hero-tagline" data-i18n="aproposPage.subtitle">
               Découvrez nos professeurs, nos disciplines et nos horaires.
@@ -95,7 +95,10 @@
 
           <div class="cta-row">
             <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
-            <a class="btn" href="index.html" data-i18n="cta.home">Accueil</a>
+            <a class="btn btn-primary" href="a-propos.html#professeurs" data-i18n="cta.teachers">Professeurs</a>
+            <a class="btn btn-primary" href="a-propos.html#ecole" data-i18n="cta.school">École</a>
+            <a class="btn btn-primary" href="a-propos.html#horaires" data-i18n="cta.schedule">Horaires</a>
+            <a class="btn btn-primary" href="index.html" data-i18n="cta.home">Accueil</a>
           </div>
         </div>
       </div>
@@ -106,22 +109,31 @@
   <section>
     <div class="container">
       <div class="card">
-        <h2 data-i18n="aproposPage.teachers.title">Professeurs</h2>
+        <h3 id="professeurs" data-i18n="aproposPage.teachers.title">Professeurs</h3>
 
         <div class="grid grid-3 teacher-grid" style="margin-top:14px;">
           <div class="card">
-            <h3 data-i18n="aproposPage.teachers.michel.name">Michel Orchard</h3>
-            <p class="muted" data-i18n="aproposPage.teachers.michel.bio">Lorem ipsum…</p>
+            <h4 data-i18n="aproposPage.teachers.michel.name">Michel Orchard</h4>
+            <div class="teacher-bio">
+              <img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" height="120px" />
+              <p class="muted" data-i18n="aproposPage.teachers.michel.bio">Lorem ipsum…</p>
+            </div>
           </div>
 
           <div class="card">
-            <h3 data-i18n="aproposPage.teachers.antoine.name">Antoine X.</h3>
-            <p class="muted" data-i18n="aproposPage.teachers.antoine.bio">Lorem ipsum…</p>
+            <h4 data-i18n="aproposPage.teachers.antoine.name">Antoine X.</h4>
+            <div class="teacher-bio">
+              <img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" />
+              <p class="muted" data-i18n="aproposPage.teachers.antoine.bio">Lorem ipsum…</p>
+            </div>    
           </div>
 
           <div class="card">
-            <h3 data-i18n="aproposPage.teachers.ming.name">Mr. Ming</h3>
-            <p class="muted" data-i18n="aproposPage.teachers.ming.bio">Lorem ipsum…</p>
+            <h4 data-i18n="aproposPage.teachers.ming.name">Mr. Ming</h4>
+            <div class="teacher-bio">
+              <img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" />
+              <p class="muted" data-i18n="aproposPage.teachers.ming.bio">Lorem ipsum…</p>
+            </div>
           </div>
         </div>
       </div>
@@ -132,7 +144,7 @@
   <section>
     <div class="container">
       <div class="card">
-        <h2 id="ecole" class="anchor-offset" data-i18n="aproposPage.schoolsSectionTitle">École</h2>
+        <h3 id="ecole" class="anchor-offset" data-i18n="aproposPage.schoolsSectionTitle">École</h3>
         <p class="muted" data-i18n="aproposPage.schoolsSectionSubtitle">Philosophie, histoire et horaires de nos disciplines.</p>
         <p data-i18n="aproposPage.schools.wingchun.p1">L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong, l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité, économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité (Chi Sao), discipline et respect.</p>
         <p data-i18n="aproposPage.schools.wingchun.p2">Sifu Michel Orchard est un instructeur passionné, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années d’expérience, il s’est illustré en compétition en remportant plusieurs distinctions (catégories selon événements), tout en conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.</p>
@@ -143,16 +155,19 @@
   </section>
 
   <!-- Disciplines + horaires -->
-  <section>
+   <section>
     <div class="container">
+      <div class="card">
+
+      <h2 id="horaires" data-i18n="aproposPage.scheduleTitle">Horaires</h2>
       <div class="grid grid-2">
         <!-- Wing Chun -->
         <div class="card">
-          <h2 data-i18n="aproposPage.schools.wingchun.title">Kung Fu Wing Chun</h2>
+          <h3 data-i18n="aproposPage.schools.wingchun.title">Kung Fu Wing Chun</h3>
           <p class="muted" data-i18n="aproposPage.schools.wingchun.philosophy">…</p>
           <p class="muted" data-i18n="aproposPage.schools.wingchun.history">…</p>
 
-          <h3 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h3>
+          <h4 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h4>
           <div style="overflow:auto;">
             <table class="schedule-table">
               <thead>
@@ -168,11 +183,11 @@
 
         <!-- Lion Dance -->
         <div class="card">
-          <h2 data-i18n="aproposPage.schools.lion.title">Danse du lion</h2>
+          <h3 data-i18n="aproposPage.schools.lion.title">Danse du lion</h3>
           <p class="muted" data-i18n="aproposPage.schools.lion.philosophy">…</p>
           <p class="muted" data-i18n="aproposPage.schools.lion.history">…</p>
 
-          <h3 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h3>
+          <h4 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h4>
           <div style="overflow:auto;">
             <table class="schedule-table">
               <thead>
@@ -186,7 +201,7 @@
           </div>
         </div>
       </div>
-
+      </div>
       <p class="muted" style="margin-top:10px;" data-i18n="aproposPage.schedule.note">Les horaires peuvent varier selon les événements spé.</p>
     </div>
   </section>

@@ -9,32 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
   <!-- Optional: same hero-bottom override you use on index -->
-  <style>
-    .hero-card { overflow: hidden; }
-
-    .hero-bottom{
-      background: #f6f7fb;
-      padding: 18px 20px;
-      margin-top: 14px;
-    }
-    .hero-bottom .address span,
-    .hero-bottom .address{ color: #64748b; }
-
-    .hero-bottom .btn{
-      color: #0f172a;
-      border-color: rgba(15,23,42,.12);
-      background: rgba(255,255,255,.70);
-    }
-    .cta-row .btn:hover{
-      background: rgba(0,0,255,.95);
-      color: white;
-    }
-
-    /* Make the hero note readable on the dark hero */
-    .hero .muted { color: rgba(255,255,255,.75); }
-  </style>
-
-  <!-- Your shared site logic (menu + i18n + fused list render + feather replace) -->
+  <!-- shared site logic (menu + i18n + fused list render + feather replace) -->
   <script src="scripts/site.js" defer></script>
 </head>
 
@@ -45,7 +20,7 @@
       <div class="brand">
         <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
         <div class="brand-text">
-          <strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong>
+          <h1 style="font-size: 0.9em;"><strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong></h1>
           <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
         </div>
       </div>
@@ -86,9 +61,9 @@
           <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
 
           <div class="hero-head-text">
-            <h1 class="hero-title">
+            <h2 class="hero-title">
               <span data-i18n="wingChunHistory.title">Qu'est-ce que le Wing Chun, ses figures clés et contexte historique</span>
-            </h1>
+            </h2>
 
             <p class="hero-tagline muted" data-i18n="wingChunHistory.legendNote">
               Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (figures légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.
@@ -141,7 +116,7 @@
   <section>
     <div class="container">
       <div class="card">
-        <h2 data-i18n="wingChunHistory.whatIsWingChunTitle">Qu'est-ce que le Wing Chun?</h2>
+        <h3 data-i18n="wingChunHistory.whatIsWingChunTitle">Qu'est-ce que le Wing Chun?</h3>
         <p data-i18n="wingChunHistory.whatIsP1"></p>
         <p data-i18n="wingChunHistory.whatIsP2"></p>
         <p data-i18n="wingChunHistory.whatIsP3"></p>
@@ -154,14 +129,14 @@
     <div class="container">
       <div class="grid grid-2">
         <div class="card">
-          <h2 data-i18n="wingChunHistory.historicContextTitle">Contexte historique chinois</h2>
+          <h3 data-i18n="wingChunHistory.historicContextTitle">Contexte historique chinois</h3>
           <ul class="list" data-i18n-periods="wingChunHistory.periods">
             <li>…</li>
           </ul>
         </div>
 
         <div class="card">
-          <h2 data-i18n="wingChunHistory.figuresTitle">Maîtres en Wing Chun</h2>
+          <h3 data-i18n="wingChunHistory.figuresTitle">Maîtres en Wing Chun</h3>
           <ul class="list" data-i18n-figures="wingChunHistory.figures">
             <li>…</li>
           </ul>

@@ -215,6 +215,7 @@ a:hover{ text-decoration: underline; }
   height: auto;
   border-radius: 10px;
   display: block;
+  margin-bottom: 18px;
 }
 
 .hero-head-text{ min-width: 0; }
@@ -327,9 +328,23 @@ section{ padding: 42px 0; }
   gap: 18px;
 }
 
-@media (min-width: 900px){
-  .grid-2{ grid-template-columns: 1fr 1fr; }
-  .grid-3{ grid-template-columns: 1fr 1fr 1fr; }
+/* Parent grid: 2 columns, equal width, with gap */
+.grid.grid-2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* IMPORTANT */
+  gap: 18px;
+}
+
+/* Allow cards to shrink inside grid (prevents overflow) */
+.grid.grid-2 > .card{
+  min-width: 0;           /* IMPORTANT */
+}
+
+/* On smaller screens, stack them */
+@media (max-width: 900px){
+  .grid.grid-2{
+    grid-template-columns: 1fr;
+  }
 }
 
 .card{
@@ -414,6 +429,24 @@ header.page-hero{
   background: transparent !important;
   padding: 0 !important;
 }
+
+/* a-propos.html > professeurs */
+.teacher-bio::after{
+  content:"";
+  display:block;
+  clear:both;  /* clears the float so the card height is correct */
+}
+
+.teacher-photo{
+  float:left;
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border:1px solid #000;
+  border-radius:10px;
+  margin: 0 12px 8px 0; /* right + bottom spacing */
+}
+
 
 /* Contact form layout */
 .form-grid{
