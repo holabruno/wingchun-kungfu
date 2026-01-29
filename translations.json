@@ -5,7 +5,7 @@
     },
     "menu": {
       "home": "Accueil",
-      "about": "À propos de notre école",
+      "about": "À propos de l'école",
       "school": "École",
       "whatWingChun": "Qu'est-ce que le Wing Chun?",
       "whatLionDance": "Qu'est-ce que la danse du lion?",
@@ -28,10 +28,11 @@
     },
     "cta": {
       "trial": "Cours d'essai gratuit",
-      "registration": "Évènements & formation en entreprise!",
+      "entreprise": "Évènements & formation en entreprise",
       "home": "Accueil",
       "school": "École",
-      "teachers": "Professeurs"
+      "teachers": "Professeurs",
+      "reserve": "Réservez votre place!"
     },
     "benefits": {
       "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
@@ -84,11 +85,11 @@
     },
     "schoolInfo": {
       "title": "L'école:",
-      "p1": "L'école de \"Wing Chun Kung Fu - Michel Orchard Kung Fu Rive-Sud\" est dirigée par Sifu Michel Orchard, un expert en arts martiaux avec plus de 35 ans d'expérience dans le domaine. Sifu Orchard croit en l'approche traditionnelle de l'enseignement du Wing Chun, tel qu'il l'a appris de ses maîtres."
+      "p1": "L'école de \"Wing Chun Kung Fu - Michel Orchard Kung Fu Rive-Sud\" est dirigée par Sifu Michel Orchard, un expert certifié en arts martiaux avec plus de 35 ans d'expérience dans le domaine. Sifu Orchard croit en l'approche traditionnelle de l'enseignement du Wing Chun, tel qu'il l'a appris de ses maîtres."
     },
     "sifu": {
       "title": "Sifu Michel Orchard:",
-      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial."
+      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition, en plus d'être certifié. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial."
     },
     "wingChunHistory": {
       "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
@@ -295,7 +296,7 @@
         "title": "Professeurs",
         "michel": {
           "name": "Michel Orchard",
-          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa."
+          "bio": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix et compétitions. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.  Professeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement."
         },
         "antoine": {
           "name": "Antoine X.",
@@ -311,7 +312,7 @@
         "wingchun": {
           "title": "Kung Fu Wing Chun",
           "p1": "L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong, l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité, économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité (Chi Sao), discipline et respect.",
-          "p2": "Sifu Michel Orchard est un instructeur passionné, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années d’expérience, il s’est illustré en compétition en remportant plusieurs distinctions (catégories selon événements), tout en conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.",
+          "p2": "Sifu Michel Orchard est un instructeur passionné et certifié, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années d’expérience, il s’est illustré en compétition en remportant plusieurs prix et compétitions, tout en conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.",
           "p3": "La philosophie de l’école s’inspire des valeurs associées à la lignée Yip Man : respect des traditions, travail rigoureux, humilité, esprit de communauté et transmission honnête. Les élèves y trouvent un environnement motivant, où l’on apprend à se protéger, à gagner en confiance, à gérer le stress et à se dépasser, tout en cultivant une pratique respectueuse et responsable.",
           "philosophy": "Philosophie : discipline, respect, efficacité et développement personnel. L'entraînement vise la maîtrise de soi, la précision et l'amélioration continue.",
           "history": "Histoire : enseignement traditionnel inspiré des grandes lignées du Wing Chun, avec une approche progressive et structurée."
@@ -356,7 +357,7 @@
       "subtitle": "Vous cherchez à vous inscrire!?? - Vous êtes à la bonne place.  Écrivez-nous et nous vous répondrons rapidement.",
       "jumpForm": "Aller au formulaire",
       "jumpMap": "Aller à la carte",
-      "formTitle": "Formulaire de contact",
+      "formTitle": "Formulaire de contact & d'inscription",
       "fields": {
         "email": { "label": "Courriel", "placeholder": "Votre courriel" },
         "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
@@ -428,10 +429,11 @@
     },
     "cta": {
       "trial": "Free trial class",
-      "registration": "Corporate events & training!",
+      "entreprise": "Corporate events & training",
       "home": "Home",
       "school": "School",
-      "teacher": "Teachers"
+      "teacher": "Instructors",
+      "reserve": "Reserve your spot now!”"
     },
     "benefits": {
       "title": "What you will gain from practicing Wing Chun:",
@@ -482,11 +484,11 @@
     },
     "schoolInfo": {
       "title": "The school:",
-      "p1": "The \"Wing Chun Kung Fu - Michel Orchard Kung Fu Rive-Sud\" school is led by Sifu Michel Orchard, a martial arts expert with over 35 years of experience. Sifu Orchard believes in a traditional approach to teaching Wing Chun, as he learned it from his masters."
+      "p1": "The \"Wing Chun Kung Fu - Michel Orchard Kung Fu Rive-Sud\" school is led by Sifu Michel Orchard, a certified martial arts expert with over 35 years of experience. Sifu Orchard believes in a traditional approach to teaching Wing Chun, as he learned it from his masters."
     },
     "sifu": {
       "title": "Sifu Michel Orchard:",
-      "p1": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art."
+      "p1": "Sifu Michel Orchard is a certified Wing Chun Kung Fu instructor, is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art."
     },
     "wingChunHistory": {
       "title": "Wing Chun: What it is, key figures and historical context",
@@ -685,7 +687,7 @@
       "backHome": "Home",
       "note-private-group": "Group classes and private lessons available.",
       "nav": {
-        "teachers": "Teachers",
+        "teachers": "Instructors",
         "school": "School",
         "schedule": "Schedule"
       },
@@ -693,7 +695,7 @@
         "title": "Instructors",
         "michel": {
           "name": "Michel Orchard",
-          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa."
+          "bio": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several awards in competitions. He does everything he can to pass on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art. A certified and dedicated instructor, Michel teaches a self-defense approach accessible to everyone, focused on efficiency, simplicity, and intelligent movement."
         },
         "antoine": {
           "name": "Antoine X.",
@@ -710,7 +712,7 @@
         "wingchun": {
           "title": "Wing Chun Kung Fu",
           "p1": "The Wing Chun Kung Fu – Michel Orchard (South Shore) school is a place dedicated to traditional Wing Chun, taught in a structured and welcoming way, where students develop both technical skill and personal character. Affiliated with the Yip Man Association of Hong Kong, the school emphasizes a transmission faithful to the spirit of Wing Chun: efficiency, simplicity, economy of motion, centerline control, and adaptability. Beyond self-defense, the approach supports long-term progress through posture and structure, timing, sensitivity training (Chi Sao), discipline, and respect.",
-          "p2": "Sifu Michel Orchard is a passionate instructor known for his professionalism and commitment to his students. With many years of experience, he has also distinguished himself in competition by earning several awards (depending on events and categories), while keeping a clear perspective: performance can be valuable, but the priority remains technical mastery, safety, and personal development. His teaching focuses on precision, understanding core principles, and realistic application within a structured framework.",
+          "p2": "Sifu Michel Orchard is a passionate and certified instructor known for his professionalism and commitment to his students. With many years of experience, he has also distinguished himself in competition by earning several awards, while keeping a clear perspective: performance can be valuable, but the priority remains technical mastery, safety, and personal development. His teaching focuses on precision, understanding core principles, and realistic application within a structured framework.",
           "p3": "The school’s philosophy reflects values associated with the Yip Man lineage: respect for tradition, rigorous practice, humility, community spirit, and honest transmission. Students benefit from a motivating environment where they learn practical self-defense, build confidence, manage stress, and push their limits—while maintaining a respectful and responsible practice.",
           "philosophy": "Philosophy: discipline, respect, efficiency, and personal development. Training focuses on self-control, precision, and continuous improvement.",
           "history": "History: traditional teaching inspired by major Wing Chun lineages, with a progressive and structured approach."
@@ -752,10 +754,10 @@
     },
     "contactPage": {
       "title": "Contact",
-      "subtitle": "You want to start learning?  - You are at the right place!  Send us a message and we’ll get back to you shortly.",
+      "subtitle": "You want to start learning?  - You've come to the right place!  Send us a message and we’ll get back to you shortly.",
       "jumpForm": "Go to the form",
       "jumpMap": "Go to the Map",
-      "formTitle": "Contact form",
+      "formTitle": "Contact & registration form",
       "fields": {
         "email": { "label": "Email", "placeholder": "Your email" },
         "firstName": { "label": "First name", "placeholder": "Your first name" },
