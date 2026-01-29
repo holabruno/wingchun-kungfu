@@ -1,5 +1,8 @@
 {
   "fr": {
+    "nav": {
+      "register": "S'inscrire!"
+    },
     "menu": {
       "home": "Accueil",
       "about": "À propos de notre école",
@@ -25,7 +28,7 @@
     },
     "cta": {
       "trial": "Cours d'essai gratuit",
-      "registration": "Corporate events & training!",
+      "registration": "Évènements & formation en entreprise!",
       "home": "Accueil",
       "school": "École",
       "teachers": "Professeurs"
@@ -398,6 +401,9 @@
     }
   },
   "en": {
+    "nav": {
+      "register": "Register!"
+    },
      "menu": {
       "home": "Home",
       "about": "About our school",
@@ -422,7 +428,7 @@
     },
     "cta": {
       "trial": "Free trial class",
-      "registration": "Registration open year-round!",
+      "registration": "Corporate events & training!",
       "home": "Home",
       "school": "School",
       "teacher": "Teachers"

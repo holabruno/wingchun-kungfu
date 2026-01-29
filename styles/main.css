@@ -387,6 +387,37 @@ section{ padding: 42px 0; }
 
 .anchor-offset{ scroll-margin-top: 90px; }
 
+.card-michel-ecole{
+  position: relative;
+  min-height: 170px;      /* ensures space for the button */
+  margin-top: 12px;
+}
+
+.index-michel-photo{
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* button bottom-right inside the card */
+.lien-michel-inscrire{
+  position: absolute;
+  left: 50%;
+  top: 60px;                 /* half of 120px image height */
+  transform: translate(-50%, -50%);
+}
+
+/* prevent global .btn:active transform from overriding centering */
+.lien-michel-inscrire:active{
+  transform: translate(-50%, -50%) !important;
+}
+
+/* optional: still show a pressed effect without breaking centering */
+.lien-michel-inscrire:active{
+  top: 61px; /* tiny press-down */
+}
+
 /* ===========================
    Internal pages hero (contact etc.)
    =========================== */
@@ -561,4 +592,10 @@ footer{
 
 .social-link:hover {
   text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
 }
