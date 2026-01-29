@@ -25,6 +25,11 @@
   </url>
 
   <url>
+    <loc>https://wingchun-kungfu.ca/taichi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wingchun-kungfu.ca/a-propos.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -34,5 +39,11 @@
     <loc>https://wingchun-kungfu.ca/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+    <url>
+    <loc>https://wingchun-kungfu.ca/evenements-corporatifs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

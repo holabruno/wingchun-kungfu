@@ -116,6 +116,13 @@
           <div class="form-grid">
             
             <div class="field">
+              <label for="source" data-i18n="contactPage.fields.discipline.label">Art martial / discipline</label>
+              <select id="source" name="source" data-i18n-options="contactPage.fields.discipline.options" required>
+                <option value="">—</option>
+              </select>
+            </div>
+
+            <div class="field">
               <label for="prenom" data-i18n="contactPage.fields.firstName.label">Prénom</label>
               <input id="prenom" name="prenom" type="text" autocomplete="given-name" required minlength="2" maxlength="50"
                      data-i18n-placeholder="contactPage.fields.firstName.placeholder" placeholder="Votre prénom" />

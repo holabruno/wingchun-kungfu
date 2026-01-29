@@ -6,6 +6,7 @@
       "school": "École",
       "whatWingChun": "Qu'est-ce que le Wing Chun?",
       "whatLionDance": "Qu'est-ce que la danse du lion?",
+      "whatTaiChi": "Qu'est-ce que le Tai Chi?",
       "contact": "Contactez-nous"
     },
     "school": {
@@ -25,7 +26,9 @@
     "cta": {
       "trial": "Cours d'essai gratuit",
       "registration": "Inscriptions en tout temps!",
-      "home": "Accueil"
+      "home": "Accueil",
+      "school": "École",
+      "teachers": "Professeurs"
     },
     "benefits": {
       "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
@@ -36,6 +39,12 @@
         "Santé et mise en forme",
         "Prévention contre l'intimidation"
       ]
+    },
+    "corpo": {
+      "title": "Évênements corporatifs et cliniques de formation externes",
+      "p1": "", 
+      "p2": "",
+      "p3": ""
     },
     "whatIsLion": {
       "title": "Qu'est-ce que la danse du lion?",
@@ -48,6 +57,13 @@
       "p1": "Le Wing Chun est basé sur une esquive et une contre-attaque rapide et puissante. Le pratiquant utilise la force de son adversaire à son avantage et le neutralise avec des coups extrêmement rapides, secs et précis.",
       "p2": "L'une des particularités du Wing Chun est le développement de la sensibilité aux mouvements de l'adversaire. À travers la pratique du Chi Sao (un exercice de sensibilité), le pratiquant apprend à sentir les gestes de son adversaire et à anticiper ses actions pour contre-attaquer avec une rapidité fulgurante.",
       "p3": "En plus d'améliorer la forme physique, le Wing Chun favorise la concentration, la volonté, la confiance en soi et permet le dépassement de soi-même."
+    },
+    "whatIsTai": {
+      "title": "Qu'est-ce que le Tai Chi?",
+      "subtitle": "Le Wing Chun est l'art de devenir insaisissable:",
+      "p1": "Le tai-chi (taiji) est un art martial chinois devenu, pour beaucoup, une pratique “corps–esprit” faite de mouvements lents, fluides et continus. On le pratique avec une force détendue, une posture alignée et une respiration coordonnée, afin de développer l’équilibre, la conscience du corps et un esprit calme — on parle souvent de “méditation en mouvement”. Le terme “taiji” renvoie à l’idée du “suprême ultime” dans la pensée chinoise : l’équilibre dynamique du yin et du yang, visible dans l’alternance souplesse/fermeté, céder/émettre, immobile/mouvement.",
+      "p2": "Le tai-chi provient des traditions martiales chinoises, et ses racines les mieux documentées sont associées au village des Chen (Chenjiagou), où Chen Wangting (XVIIe siècle) est souvent crédité d’avoir structuré des routines anciennes. Plus tard, Yang Luchan (1799–1872) a largement popularisé la pratique et fondé l’influent style Yang. D’autres grandes lignées incluent les styles Wu/Hao (Wu Yuxiang), Wu (Wu Jianquan) et Sun (Sun Lutang), chacun mettant l’accent sur des méthodes différentes tout en conservant les principes de base. Une légende attribue l’origine du tai-chi au sage taoïste Zhang Sanfeng, mais cette version est généralement considérée comme non vérifiée sur le plan historique.",
+      "p3": "L’entraînement met l’accent sur la détente (song), l’alignement, l’enracinement et une puissance “globale” du corps, plutôt que la force brute. Des synthèses de recherches (NIH/NCCIH) indiquent que le tai-chi peut améliorer l’équilibre et aider à réduire le risque de chutes chez les personnes âgées, et qu’il peut aussi apporter des bénéfices psychologiques (par exemple une diminution de l’anxiété dans certaines études). Il est également pratiqué comme activité physique douce pour améliorer force, souplesse et coordination."
     },
     "schoolInfo": {
       "title": "L'école:",
@@ -253,6 +269,11 @@
       "subtitle": "Découvrez nos professeurs, nos disciplines et nos horaires.",
       "backHome": "Accueil",
       "note-private-group": "Cours de groupe et cours privés disponibles.",
+      "nav": {
+        "teachers": "Professeurs",
+        "school": "École",
+        "schedule": "Horaires"
+      },
       "teachers": {
         "title": "Professeurs",
         "michel": {
@@ -336,6 +357,14 @@
             { "value": "50+", "label": "50 ans et plus" }
           ]
         },
+        "discipline": {
+          "label": "Art martial / discipline",
+          "options": [
+            { "value": "wingchun", "label": "Wing Chun (Kung Fu)" },
+            { "value": "danselion", "label": "Danse du lion" },
+            { "value": "taichi", "label": "Tai Chi" }
+          ]
+        },
         "source": {
           "label": "Référé par",
           "options": [
@@ -361,6 +390,7 @@
       "school": "Our school",
       "whatWingChun": "Wing Chun: What is it?",
       "whatLionDance": "Lion dance: What is it?",
+      "whatTaiChi": "Tai Chi: What is it?",
       "contact": "Contact us"
     },
     "school": {
@@ -379,7 +409,9 @@
     "cta": {
       "trial": "Free trial class",
       "registration": "Registration open year-round!",
-      "home": "Home"
+      "home": "Home",
+      "school": "School",
+      "teacher": "Teachers"
     },
     "benefits": {
       "title": "What you will gain from practicing Wing Chun:",
@@ -390,6 +422,12 @@
         "Health and fitness",
         "Anti-bullying prevention"
       ]
+    },
+    "corpo": {
+      "title": "Corporate events and external training clinics",
+      "p1": "", 
+      "p2": "",
+      "p3": ""
     },
     "whatIs": {
       "title": "What is Wing Chun?",
@@ -402,6 +440,12 @@
       "title": "What is the Lion Dance ?",
       "p1": "Lion dance is a Chinese cultural and performing tradition often presented during Lunar New Year, grand openings, weddings, and festivals. Two performers wear a lion costume (head and body) and bring it to life through rhythmic movements accompanied by drums, gongs, and cymbals. The lion symbolizes good fortune, protection, and prosperity; it is believed to drive away negative spirits and bring positive energy to the community and to the businesses it visits.",
       "p2": "Beyond the show, lion dance requires serious training. It combines balance, strength, flexibility, coordination, and teamwork, because the two performers must move as one—sometimes through jumps, low stances, and even on raised platforms. In many schools, lion dance is closely connected to martial arts (such as kung fu): the same foundations of posture, leg power, and mental discipline are reflected in the performance. It is therefore both a living cultural art and a demanding physical practice."
+    },
+    "whatIsTai": {
+      "title": "What is Tai Chi ?",
+      "p1": "Tai chi (taiji) is a Chinese “mind–body” martial art often practiced today as slow, flowing exercise. Movements are performed with relaxed strength, upright posture, and coordinated breathing, aiming to develop balance, body awareness, and calm attention—sometimes described as “meditation in motion.” The name “taiji” refers to the “supreme ultimate” concept in Chinese thought: the dynamic balance of yin and yang, expressed in alternating softness/hardness, yielding/issuing, and stillness/movement.",
+      "p2": "Tai chi emerged from Chinese martial traditions, with the earliest well-documented roots in the Chen family village (Chenjiagou), where Chen Wangting (17th century) is often credited with systematizing early routines. Later, Yang Luchan (1799–1872) popularized the art widely and founded the influential Yang style. Other major lineages include Wu/Hao (Wu Yuxiang), Wu (Wu Jianquan), and Sun (Sun Lutang), each emphasizing different training methods while preserving core principles. A famous origin story attributes tai chi to the Daoist immortal Zhang Sanfeng, but historians generally treat this as legend rather than verified history.",
+      "p3": "Training emphasizes softness (song), alignment, rooting, and efficient whole-body power rather than brute force. Research summaries from the U.S. NIH’s NCCIH indicate tai chi may improve balance and help prevent falls in older adults, and may offer psychological benefits such as reduced anxiety in some studies. It’s also widely used as a gentle form of physical activity that can build strength, flexibility, and coordination."
     },
     "schoolInfo": {
       "title": "The school:",
@@ -607,6 +651,11 @@
       "subtitle": "Meet our instructors, our disciplines, and our schedule.",
       "backHome": "Home",
       "note-private-group": "Group classes and private lessons available.",
+      "nav": {
+        "teachers": "Teachers",
+        "school": "School",
+        "schedule": "Schedule"
+      },
       "teachers": {
         "title": "Instructors",
         "michel": {
@@ -688,6 +737,14 @@
             { "value": "30-39", "label": "30–39 years" },
             { "value": "40-49", "label": "40–49 years" },
             { "value": "50+", "label": "50+ years" }
+          ]
+        },
+        "discipline": {
+          "label": "Martial art / discipline",
+          "options": [
+            { "value": "wingchun", "label": "Wing Chun (Kung Fu)" },
+            { "value": "danselion", "label": "Lion Danse" },
+            { "value": "taichi", "label": "Tai Chi" }
           ]
         },
         "source": {

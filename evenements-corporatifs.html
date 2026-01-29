@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="wingChunHistory.title">Wing Chun</title>
+  <title>Danse du lion</title>
 
   <link rel="stylesheet" href="styles/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-  <!-- Optional: same hero-bottom override you use on index -->
-  <!-- shared site logic (menu + i18n + fused list render + feather replace) -->
+  <!-- Shared menu + i18n -->
   <script src="scripts/site.js" defer></script>
+
 </head>
 
 <body>
@@ -52,24 +52,22 @@
     <a href="contact.html" data-i18n="menu.contact">Contact</a>
   </nav>
 
-  <!-- HERO: matches index.html -->
+  <!-- HERO -->
   <header class="hero">
     <div class="container">
       <div class="hero-card">
-
         <div class="hero-head">
-          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
+          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Lion Dance" />
 
           <div class="hero-head-text">
             <h2 class="hero-title">
-              <span data-i18n="wingChunHistory.title">Qu'est-ce que le Wing Chun, ses figures clés et contexte historique</span>
+              <span data-i18n="corpo.title">Évênements corporatifs et cliniques de formation externes</span>
             </h2>
 
-            <p class="hero-tagline muted" data-i18n="wingChunHistory.legendNote">
-              Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (figures légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.
+            <p class="hero-tagline" data-i18n="school.tagline2">
+              (...)
             </p>
 
-            <!-- pills row like index -->
             <div class="hero-meta">
               <a class="pill" href="tel:4387254918">
                 <i data-feather="phone"></i>
@@ -81,20 +79,18 @@
                 <span data-i18n="school.phone2">What's App</span>
               </a>
 
-              <a class="pill" href="contact.html">
-                <i data-feather="calendar"></i>
+              <a class="pill" href="index.html">
+                <i data-feather="arrow-right-circle"></i>
                 <span data-i18n="cta.trial">Cours d'essai gratuit</span>
               </a>
-
               <a class="pill" href="index.html">
                 <i data-feather="home"></i>
-                <span data-i18n="cta.home">Accueil</span>
+                <span data-i18n="menu.home">Accueil</span>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- optional light bottom block like index -->
         <div class="hero-bottom">
           <div class="address">
             <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
@@ -104,76 +100,31 @@
 
           <div class="cta-row">
             <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
-            <a class="btn" href="a-propos.html#ecole" data-i18n="cta.school">École</a>
+            <a class="btn" href="a-propos.html#ecole" data-i18n="menu.about">À propos</a>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
-  <!-- What is Wing Chun (text) -->
+  <!-- Content -->
   <section>
     <div class="container">
       <div class="card">
-        <h3 data-i18n="wingChunHistory.whatIsWingChunTitle">Qu'est-ce que le Wing Chun?</h3>
-        <p data-i18n="wingChunHistory.whatIsP1"></p>
-        <p data-i18n="wingChunHistory.whatIsP2"></p>
-        <p data-i18n="wingChunHistory.whatIsP3"></p>
-      </div>
-    </div>
-  </section>
+        <h3 data-i18n="corpo.title">Évênements corporatifs et cliniques de formation externes</h3>
 
-  <!-- Context + figures (optional) -->
-  <section>
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="card">
-          <h3 data-i18n="wingChunHistory.historicContextTitle">Contexte historique chinois</h3>
-          <ul class="list" data-i18n-periods="wingChunHistory.periods">
-            <li>…</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="wingChunHistory.figuresTitle">Maîtres en Wing Chun</h3>
-          <ul class="list" data-i18n-figures="wingChunHistory.figures">
-            <li>…</li>
-          </ul>
-        </div>
+        <p data-i18n="corpo.p1"></p>
+        <p data-i18n="corpo.p2"></p>
+        <p data-i18n="corpo.p3"></p>
       </div>
-      <div class="container">
-        <div style="display: inline-flex; align-items: center; gap: 18px; padding-top: 18px;">
-          <a href="taichi.html" data-i18n="menu.whatTaiChi">Qu'est-ce que le Tai Chi?</a>
-          <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du Lion ?</a>
-        </div>
-      </div>
-    </div>
+    
   </section>
 
   <footer>
-  <div class="container">
-    <div class="social-links" aria-label="Réseaux sociaux">
-      <a class="social-link" href="https://www.facebook.com/michelorchardwingchun" target="_blank" rel="noopener" aria-label="Facebook">
-        <i data-feather="facebook"></i>
-      </a>
-
-      <a class="social-link" href="https://x.com/michaelorchard7" target="_blank" rel="noopener" aria-label="X (Twitter)">
-        <i data-feather="twitter"></i>
-      </a>
-
-      <a class="social-link" href="https://www.instagram.com/wingchun.michelorchard/" target="_blank" rel="noopener" aria-label="Instagram">
-        <i data-feather="instagram"></i>
-      </a>
+    <div class="container">
+      <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard (2026)</div>
     </div>
+  </footer>
 
-    <div data-i18n="footer.copy">© Kung-Fu Wing Chun Michel Orchard (2026)</div>
-  </div>
-
-  <script>
-    // ensure icons render (especially after i18n changes)
-    if (window.feather) feather.replace();
-  </script>
-</footer>
 </body>
 </html>
