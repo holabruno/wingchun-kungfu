@@ -261,7 +261,7 @@
 
     // Load translations
     try {
-      const res = await fetch('../translations.json', { cache: 'no-store' }); // ✅ plural
+      const res = await fetch('../translations.json', { cache: 'no-store' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       I18N = await res.json();
     } catch (err) {
