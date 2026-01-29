@@ -25,7 +25,7 @@
     },
     "cta": {
       "trial": "Cours d'essai gratuit",
-      "registration": "Inscriptions en tout temps!",
+      "registration": "Corporate events & training!",
       "home": "Accueil",
       "school": "École",
       "teachers": "Professeurs"
@@ -41,10 +41,24 @@
       ]
     },
     "corpo": {
-      "title": "Évênements corporatifs et cliniques de formation externes",
-      "p1": "", 
-      "p2": "",
-      "p3": ""
+      "title": "Évènements corporatifs et cliniques de formation en entreprise",
+      "resume": "Michel Orchard est professeur certifié de Kung Fu Wing Chun, spécialisé dans la formation en auto-défense appliquée au milieu corporatif. Grâce à une solide expérience en enseignement, il propose des formations structurées, professionnelles et adaptées aux réalités organisationnelles actuelles.",
+      "p1": "Avec Michel Orchard, le Wing Chun devient bien plus qu’un art martial : c’est un outil de confiance, de présence et de maîtrise de soi. Professeur diplômé et passionné, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement.  Aucune performance, aucune compétition — seulement des outils concrets pour se sentir plus solide, plus calme et plus en contrôle.",
+      "p2": "Ses cliniques corporatives d’auto-défense s’adressent aux entreprises souhaitant offrir à leurs équipes un outil concret favorisant :",
+      "p3": "Les contenus sont ajustés selon le profil du groupe et ne requièrent aucune expérience préalable. L’approche pédagogique de Michel Orchard privilégie l’efficacité, la prévention et l’application pratique, dans un cadre sécuritaire et professionnel.  👉 Une solution idéale pour les programmes de bien-être au travail, journées santé-sécurité et activités de développement des équipes.",
+      "p4": "En entreprise, ses formations d’auto-défense pour groupes de 10 personnes et plus, offertes en sessions d’1 ou 2 heures, créent un moment fort, mobilisateur et fédérateur.",
+      "format": "Les formations sont offertes à des groupes de 10 participants et plus, en format :",
+      "duration": [
+        "1 heure (initiation ciblée)", 
+        "2 heures (formation approfondie)"
+      ], 
+      "reservation": "Réservez votre place dès maintenant",
+      "pros": [
+        "mieux gérer la pression et le stress", 
+        "développer des réflexes utiles au quotidien",
+        "renforcer son assurance et sa sécurité personnelle", 
+        "reconnecter le corps et l’esprit"
+      ]
     },
     "whatIsLion": {
       "title": "Qu'est-ce que la danse du lion?",
@@ -334,7 +348,6 @@
         ]
       }
     },
-
     "contactPage": {
       "title": "Contact",
       "subtitle": "Vous cherchez à vous inscrire!?? - Vous êtes à la bonne place.  Écrivez-nous et nous vous répondrons rapidement.",
@@ -342,6 +355,7 @@
       "jumpMap": "Aller à la carte",
       "formTitle": "Formulaire de contact",
       "fields": {
+        "email": { "label": "Courriel", "placeholder": "Votre courriel" },
         "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
         "lastName": { "label": "Nom", "placeholder": "Votre nom" },
         "phone": { "label": "Téléphone", "placeholder": "(999) 999-9999" },
@@ -365,7 +379,7 @@
             { "value": "taichi", "label": "Tai Chi" }
           ]
         },
-        "source": {
+        "reference": {
           "label": "Référé par",
           "options": [
             { "value": "facebook", "label": "Facebook" },
@@ -377,7 +391,7 @@
           ]
         }
       },
-      "help": "Indiquez votre objectif (cours privé/groupe), disponibilité et niveau.",
+      "help": "Indiquez votre objectif (cours privé/groupe/entrerprise), disponibilité et niveau.",
       "submit": "Envoyer",
       "addressTitle": "Adresse de l’école",
       "openMaps": "Ouvrir dans Google Maps"
@@ -424,10 +438,23 @@
       ]
     },
     "corpo": {
-      "title": "Corporate events and external training clinics",
-      "p1": "", 
-      "p2": "",
-      "p3": ""
+      "title": "Corporate events and in-company training clinics",
+      "resume": "Michel Orchard is a certified Wing Chun Kung Fu instructor specializing in self-defense training for corporate environments. With strong teaching experience, he offers structured, professional sessions tailored to today’s organizational realities.",
+      "p1": "With Michel Orchard, Wing Chun becomes much more than a martial art: it’s a tool for confidence, presence, and self-mastery. A qualified and passionate instructor, Michel teaches a self-defense approach accessible to everyone, focused on efficiency, simplicity, and intelligent movement. No performance, no competition—just practical tools to feel stronger, calmer, and more in control.",
+      "p2": "His corporate self-defense clinics are designed for organizations that want to offer their teams a concrete tool that helps to:",
+      "p3": "Content is adapted to the group’s profile and requires no prior experience. Michel Orchard’s teaching approach emphasizes efficiency, prevention, and practical application in a safe and professional setting. 👉 An ideal solution for workplace wellness programs, health-and-safety days, and team development activities.",
+      "p4": "In a corporate setting, his self-defense training sessions for groups of 10 or more people, offered in 1- or 2-hour formats, create a powerful, engaging, and unifying experience.",
+      "format": "Training sessions are offered to groups of 10 participants or more, in the following format:",
+      "duration": [
+        "1 hour (focused introduction)",
+        "2 hours (in-depth training)"
+      ],
+      "pros": [
+        "manage pressure and stress better",
+        "develop practical everyday reflexes",
+        "build confidence and personal safety",
+        "reconnect body and mind"
+      ]
     },
     "whatIs": {
       "title": "What is Wing Chun?",
@@ -724,6 +751,7 @@
       "jumpMap": "Go to the Map",
       "formTitle": "Contact form",
       "fields": {
+        "email": { "label": "Email", "placeholder": "Your email" },
         "firstName": { "label": "First name", "placeholder": "Your first name" },
         "lastName": { "label": "Last name", "placeholder": "Your last name" },
         "phone": { "label": "Phone", "placeholder": "(999) 999-9999" },
@@ -747,7 +775,7 @@
             { "value": "taichi", "label": "Tai Chi" }
           ]
         },
-        "source": {
+        "reference": {
           "label": "How did you hear about us?",
           "options": [
             { "value": "facebook", "label": "Facebook" },
@@ -759,7 +787,7 @@
           ]
         }
       },
-      "help": "Tell us your goal (private/group), availability, and experience level.",
+      "help": "Tell us your goal (private/group/corporate), availability, and experience level.",
       "submit": "Send",
       "addressTitle": "School address",
       "openMaps": "Open in Google Maps"
@@ -783,4 +811,5 @@
     "prc_1949": ["https://en.wikipedia.org/wiki/Proclamation_of_the_People%27s_Republic_of_China", "https://history.state.gov/milestones/1945-1952/chinese-rev"],
     "british_hk": ["https://en.wikipedia.org/wiki/British_Hong_Kong"]
   }
+
 }

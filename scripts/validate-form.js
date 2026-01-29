@@ -7,8 +7,10 @@
     nom: form.querySelector('#nom'),
     telephone: form.querySelector('#telephone'),
     age: form.querySelector('#age'),
-    source: form.querySelector('#source'),
-    message: form.querySelector('#message')
+    reference: form.querySelector('#reference'),
+    message: form.querySelector('#message'),
+    email:  form.querySelector('#email'),
+    discipline:  form.querySelector('#discipline')
   };
 
   const errorEls = {
@@ -16,8 +18,10 @@
     nom: form.querySelector('[data-error-for="nom"]'),
     telephone: form.querySelector('[data-error-for="telephone"]'),
     age: form.querySelector('[data-error-for="age"]'),
-    source: form.querySelector('[data-error-for="source"]'),
-    message: form.querySelector('[data-error-for="message"]')
+    reference: form.querySelector('[data-error-for="reference"]'),
+    message: form.querySelector('[data-error-for="message"]'),
+    email: form.querySelector('[data-error-for="email"]'),
+    discipline: form.querySelector('[data-error-for="discipline"]')
   };
 
   function lang() {
@@ -28,6 +32,7 @@
     fr: {
       required: 'Champ obligatoire.',
       nameInvalid: 'Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes).',
+      emailInvalid: 'Veuillez entrer un courriel valide (doit contenir un @)',
       nameLen: 'Doit contenir entre 2 et 50 caractères.',
       phoneInvalid: 'Seulement les chiffres sont permis pour le champ téléphone.',
       phoneLen: 'Le téléphone doit contenir 10 à 15 chiffres.',
@@ -37,6 +42,7 @@
     en: {
       required: 'This field is required.',
       nameInvalid: 'Please enter a valid name (letters, spaces, hyphens, apostrophes).',
+      emailInvalid: 'Please enter a valid email (must contain a @)',
       nameLen: 'Must be between 2 and 50 characters.',
       phoneInvalid: 'Only digits are allowed in the phone field.',
       phoneLen: 'Phone must contain 10–15 digits.',
@@ -87,6 +93,18 @@
   function validate() {
     const L = lang();
     let ok = true;
+
+    // Discipline (required select)
+    if (!fields.discipline.value) { setError('discipline', MSG[L].selectRequired); ok = false; }
+    else clearError('discipline');
+
+    // Email (required + regex)
+    const email = cleanText(fields.email.value).toLowerCase();
+    fields.email.value = email;
+    if (!email) { setError('email', MSG[L].required); ok = false; }
+    else if (email.length < 6 || email.length > 254) { setError('email', MSG[L].emailInvalid); ok = false; }
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { setError('email', MSG[L].emailInvalid); ok = false; }
+    else clearError('email');
 
     // Prenom
     const prenom = cleanName(fields.prenom.value);
@@ -141,8 +159,8 @@
     else clearError('age');
 
     // Source select required
-    if (!fields.source.value) { setError('source', MSG[L].selectRequired); ok = false; }
-    else clearError('source');
+    if (!fields.reference.value) { setError('reference', MSG[L].selectRequired); ok = false; }
+    else clearError('reference');
 
     // Message required + sanitize
     const msg = stripHtml(fields.message.value);

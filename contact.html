@@ -116,10 +116,18 @@
           <div class="form-grid">
             
             <div class="field">
-              <label for="source" data-i18n="contactPage.fields.discipline.label">Art martial / discipline</label>
-              <select id="source" name="source" data-i18n-options="contactPage.fields.discipline.options" required>
+              <label for="discipline" data-i18n="contactPage.fields.discipline.label">Art martial / discipline</label>
+              <select id="discipline" name="discipline" data-i18n-options="contactPage.fields.discipline.options" required>
                 <option value="">—</option>
               </select>
+              <small class="error" data-error-for="discipline"></small>
+            </div>
+
+            <div class="field">
+              <label for="email" data-i18n="contactPage.fields.email.label">Courriel</label>
+              <input id="email" name="email" type="email" autocomplete="email" required minlength="10" maxlength="50"
+                     data-i18n-placeholder="contactPage.fields.email.placeholder" placeholder="Votre courriel" />
+              <small class="error" data-error-for="email"></small>
             </div>
 
             <div class="field">
@@ -148,13 +156,15 @@
               <select id="age" name="age" data-i18n-options="contactPage.fields.age.options" required>
                 <option value="">—</option>
               </select>
+              <small class="error" data-error-for="age"></small>
             </div>
 
             <div class="field">
-              <label for="source" data-i18n="contactPage.fields.source.label">Référé par</label>
-              <select id="source" name="source" data-i18n-options="contactPage.fields.source.options" required>
+              <label for="reference" data-i18n="contactPage.fields.reference.label">Référé par</label>
+              <select id="reference" name="reference" data-i18n-options="contactPage.fields.reference.options" required>
                 <option value="">—</option>
               </select>
+              <small class="error" data-error-for="reference"></small>
             </div>
 
             <div class="field full">
@@ -162,8 +172,9 @@
               <textarea id="message" name="message" required maxlength="2000"
                         data-i18n-placeholder="contactPage.fields.message.placeholder"
                         placeholder="Écrivez votre message…"></textarea>
+              <small class="error" data-error-for="message"></small>                        
               <div class="help" data-i18n="contactPage.help">
-                Indiquez votre objectif (cours privé/groupe), disponibilité et niveau.
+                Indiquez votre objectif (cours privé/groupe/entreprise), disponibilité et niveau.
               </div>
             </div>
           </div>
