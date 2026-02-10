@@ -9,6 +9,8 @@
   --shadow: 0 14px 40px rgba(0,0,0,.20);
   --radius: 5px;
   --max: 1100px;
+
+  --card-pad: 22px; /* hero-card padding (used for full-width bleed) */
 }
 
 *{ box-sizing: border-box; }
@@ -46,7 +48,6 @@ a:hover{ text-decoration: underline; }
   gap: 12px;
 }
 
-/* Brand: image left, text right */
 .brand{
   display: flex;
   align-items: center;
@@ -55,7 +56,7 @@ a:hover{ text-decoration: underline; }
 }
 
 .brand-logo{
-  height: 52px;      /* 66px was taller than the 64px topbar */
+  height: 52px;
   width: auto;
   display: block;
   flex: 0 0 auto;
@@ -76,7 +77,6 @@ a:hover{ text-decoration: underline; }
   text-overflow: ellipsis;
   color: var(--white);
 }
-
 .brand-text span{ color: rgba(255,255,255,.75); }
 
 .actions{
@@ -98,9 +98,14 @@ a:hover{ text-decoration: underline; }
   transition: transform .05s ease, background .15s ease;
   line-height: 1;
 }
-
 .btn:hover{ background: rgba(255,255,255,.16); }
 .btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  background: var(--accent);
+  border-color: rgba(37,99,235,.35);
+}
+.btn-primary:hover{ background: #1d4ed8; }
 
 .icon-btn{
   width: 44px; height: 44px;
@@ -111,7 +116,6 @@ a:hover{ text-decoration: underline; }
   cursor:pointer;
   color: #fff;
 }
-
 .icon-btn:hover{ background: rgba(255,255,255,.16); }
 
 .hamburger{
@@ -157,7 +161,6 @@ a:hover{ text-decoration: underline; }
   justify-content:space-between;
   padding: 8px 8px 6px;
 }
-
 .menu header strong{ font-size: 14px; }
 
 .menu a{
@@ -168,7 +171,6 @@ a:hover{ text-decoration: underline; }
   text-decoration:none;
   border: 1px solid transparent;
 }
-
 .menu a:hover{
   background: rgba(255,255,255,.10);
   border-color: rgba(255,255,255,.10);
@@ -178,7 +180,7 @@ a:hover{ text-decoration: underline; }
 .menu-open .menu-backdrop{ display:block; }
 
 /* ===========================
-   Hero (index + shared hero cards)
+   Hero
    =========================== */
 .hero{
   background:
@@ -187,38 +189,108 @@ a:hover{ text-decoration: underline; }
     linear-gradient(180deg, #0b1220 0%, #0b1220 55%, #f6f7fb 55%);
   color: var(--white);
   padding: 42px 0 0;
+  position: relative;
 }
 
+/* Banner image on dark hero background (left/right of hero-card) */
+.hero.hero--banner::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 45%;
+  background: url("../images/banner-wingchun.png") center / cover no-repeat;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero > .container{
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   Hero card (no gap between head and bottom)
+   =========================== */
 .hero-card{
   margin-top: 14px;
   border-radius: var(--radius);
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.12);
   box-shadow: 0 18px 50px rgba(0,0,0,.25);
-  padding: 22px;
-  display:grid;
-  gap: 16px;
+  padding: var(--card-pad);
+  display: grid;
+  gap: 0;          /* ✅ no gap between hero-head and hero-bottom */
   overflow: hidden;
 }
 
-/* Hero head layout (logo left, text right) */
+/* ===========================
+   Hero head (full width like hero-bottom, pale overlay, black text)
+   =========================== */
 .hero-head{
+  /* full-width inside card */
+  margin-left: calc(var(--card-pad) * -1);
+  margin-right: calc(var(--card-pad) * -1);
+  margin-top: calc(var(--card-pad) * -1);
+
+  padding: 18px var(--card-pad) 14px;
+
+  /* very white panel */
+  background: rgba(255,255,255,0.92);
+  color: #0f172a;
+
+  border-radius: 0;
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 18px;
   align-items: start;
-  padding-bottom: 18px;
+
+  position: relative;
+  overflow: hidden;
 }
+
+/* faint "contours" image inside hero-head */
+.hero-head::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/banner-wingchun.png") center / cover no-repeat;
+  opacity: 0.10;             /* <-- very faint contours */
+  filter: grayscale(1) contrast(1.2);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* strong white wash on top (keeps it very white) */
+.hero-head::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(255,255,255,0.0.20);
+  pointer-events:none;
+  z-index: 0;
+}
+
+/* content above overlays */
+.hero-head > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* tagline softer */
+.hero-tagline{ color: rgba(15,23,42,0.70); }
+
+
+.hero-head-text{ min-width: 0; }
 
 .hero-logo{
   width: 140px;
   height: auto;
   border-radius: 10px;
   display: block;
-  margin-bottom: 18px;
 }
-
-.hero-head-text{ min-width: 0; }
 
 .hero-title{ margin: 0; }
 .hero-title span{
@@ -229,15 +301,11 @@ a:hover{ text-decoration: underline; }
 
 .hero-tagline{
   margin: 10px 0 0;
-  color: rgba(255,255,255,.82);
+  color: rgba(15, 23, 42, 0.75);
   font-size: 16px;
 }
 
-/* Muted text on dark hero cards */
-.hero .muted,
-.hero-card .muted { color: rgba(255,255,255,.75); }
-
-/* Pills row (desktop default) */
+/* Pills row (keep pills styling as-is) */
 .hero-meta{
   margin-top: 14px;
   display:flex;
@@ -247,6 +315,7 @@ a:hover{ text-decoration: underline; }
   align-items:center;
 }
 
+/* Pill styling stays dark (unchanged) */
 .pill{
   display:inline-flex;
   gap:8px;
@@ -257,16 +326,57 @@ a:hover{ text-decoration: underline; }
   border: 1px solid rgba(255,255,255,.14);
   font-size: 14px;
   white-space: nowrap;
+  color: var(--white);
 }
-
 .pill svg{ width: 18px; height: 18px; }
 
-/* Hero bottom (light area under the dark hero card) */
-.hero-bottom{
-  background: #f6f7fb;
-  padding: 18px 20px;
-  margin-top: 14px;
+
+/* Alternate pill theme ONLY inside hero-head */
+.hero-head .pill{
+  background: rgba(11, 18, 32, 0.75);      /* darker */
+  border-color: rgba(11, 18, 32, 0.85);    /* stronger border */
+  color: rgba(255,255,255,0.95);           /* brighter text */
 }
+
+.hero-head .pill:hover{
+  background: rgba(11, 18, 32, 0.85);
+  border-color: rgba(255,255,255,0.20);
+  text-decoration: none;
+}
+
+/* Feather icons inside those pills */
+.hero-head .pill svg{
+  stroke: rgba(255,255,255,0.95);
+}
+
+/* If you use <i data-feather> and it becomes <svg>, this is enough.
+   But if any nested element inherits black, force white inside hero-head pills: */
+.hero-head .pill *{
+  color: inherit;
+}
+
+/* ===========================
+   Hero bottom (single definition)
+   =========================== */
+.hero-bottom{
+  /* full-width inside hero-card */
+  margin-left: calc(var(--card-pad) * -1);
+  margin-right: calc(var(--card-pad) * -1);
+
+  margin-top: 0;
+  border-top: 1px solid #e8ecf3;
+  background: #f6f7fb;
+  padding: 18px var(--card-pad);
+
+  color: #0f172a;
+}
+
+.hero-bottom h3{
+  margin: 0 0 10px 0;
+  color: #0f172a;
+}
+
+.hero-bottom p{ color: #334155; }
 
 .hero-bottom .address,
 .hero-bottom .address span{ color: #64748b; }
@@ -277,21 +387,6 @@ a:hover{ text-decoration: underline; }
   background: rgba(255,255,255,.70);
 }
 
-/* Hero-bottom is on a light background: force dark text */
-.hero-bottom{
-  color: #0f172a; /* dark text */
-}
-
-.hero-bottom h3{
-  color: #0f172a;
-  margin-top: 0;
-}
-
-.hero-bottom p{
-  color: #334155; /* slightly softer than pure black */
-}
-
-
 /* CTA row */
 .cta-row{
   display:flex;
@@ -300,26 +395,20 @@ a:hover{ text-decoration: underline; }
   margin-top: 6px;
 }
 
-.btn-primary{
-  background: var(--accent);
-  border-color: rgba(37,99,235,.35);
-}
-
-.btn-primary:hover{ background: #1d4ed8; }
-
-/* Keep your hover override if you really want it */
+/* Optional hover override */
 .cta-row .btn:hover{
   background: rgba(0,0,255,.95);
   color: white;
 }
 
-/* Mobile tweaks */
+/* Responsive hero */
 @media (max-width: 760px){
-  .hero-head{ grid-template-columns: 110px 1fr; }
+  .hero-head{
+    grid-template-columns: 110px 1fr;
+  }
   .hero-logo{ width: 110px; }
 }
 
-/* Stack pills on small screens (this now works reliably) */
 @media (max-width: 640px){
   .hero-meta{
     flex-direction: column;
@@ -343,23 +432,14 @@ section{ padding: 42px 0; }
   gap: 18px;
 }
 
-/* Parent grid: 2 columns, equal width, with gap */
 .grid.grid-2{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* IMPORTANT */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
+.grid.grid-2 > .card{ min-width: 0; }
 
-/* Allow cards to shrink inside grid (prevents overflow) */
-.grid.grid-2 > .card{
-  min-width: 0;           /* IMPORTANT */
-}
-
-/* On smaller screens, stack them */
 @media (max-width: 900px){
-  .grid.grid-2{
-    grid-template-columns: 1fr;
-  }
+  .grid.grid-2{ grid-template-columns: 1fr; }
 }
 
 .card{
@@ -368,11 +448,6 @@ section{ padding: 42px 0; }
   border-radius: var(--radius);
   box-shadow: 0 10px 26px rgba(15, 23, 42, .08);
   padding: 22px;
-}
-
-.card h2{
-  margin: 0 0 10px;
-  font-size: 22px;
 }
 
 .muted{ color: var(--muted); }
@@ -391,7 +466,6 @@ section{ padding: 42px 0; }
   border-collapse: collapse;
   min-width: 520px;
 }
-
 .schedule-table th, .schedule-table td{
   padding:10px;
   border-bottom: 1px solid #f1f5f9;
@@ -402,9 +476,10 @@ section{ padding: 42px 0; }
 
 .anchor-offset{ scroll-margin-top: 90px; }
 
+/* Michel card/button */
 .card-michel-ecole{
   position: relative;
-  min-height: 170px;      /* ensures space for the button */
+  min-height: 170px;
   margin-top: 12px;
 }
 
@@ -415,74 +490,56 @@ section{ padding: 42px 0; }
   object-fit: cover;
 }
 
-/* button bottom-right inside the card */
 .lien-michel-inscrire{
   position: absolute;
   left: 50%;
-  top: 60px;                 /* half of 120px image height */
+  top: 60px;
   transform: translate(-50%, -50%);
 }
 
-/* prevent global .btn:active transform from overriding centering */
-.lien-michel-inscrire:active{
-  transform: translate(-50%, -50%) !important;
+/* Keep centering on click without !important (override by specificity) */
+a.btn.btn-primary.lien-michel-inscrire:active{
+  transform: translate(-50%, -50%);
+  top: 61px;
 }
 
-/* optional: still show a pressed effect without breaking centering */
-.lien-michel-inscrire:active{
-  top: 61px; /* tiny press-down */
+/* Media grid (2x2) */
+.media-grid-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.media-item{
+  border: 1px solid #e8ecf3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+.media-image img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+.video-wrap{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.video-wrap iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 800px){
+  .media-grid-2x2{ grid-template-columns: 1fr; }
 }
 
-/* a-propos.html > videos youtube... */ 
-/* 2x2 grid */
-  .media-grid-2x2{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin-top: 12px;
-  }
-
-  /* each cell */
-  .media-item{
-    border: 1px solid #e8ecf3;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  /* image should fill its cell nicely */
-  .media-image img{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 16 / 9; /* matches video ratio so the grid looks balanced */
-  }
-
-  /* responsive 16:9 iframe */
-  .video-wrap{
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-  .video-wrap iframe{
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  /* mobile: stack to 1 column */
-  @media (max-width: 800px){
-    .media-grid-2x2{
-      grid-template-columns: 1fr;
-    }
-  }
-
-/* ===========================
-   Internal pages hero (contact etc.)
-   =========================== */
+/* Internal pages hero (contact etc.) */
 header.page-hero{
   background:
     radial-gradient(900px 400px at 20% 0%, rgba(37,99,235,.18), transparent 60%),
@@ -502,34 +559,23 @@ header.page-hero{
   position: relative;
 }
 
-.page-hero .hero-card::before,
-.page-hero .hero-card::after{
-  content: none !important;
-  display: none !important;
-  background: none !important;
-}
-
 .page-hero .hero-card h1{
   margin: 0 0 10px 0;
   font-size: clamp(26px, 4vw, 40px);
   line-height: 1.1;
   color: rgba(255,255,255,.95);
 }
-
 .page-hero .hero-card p{
   margin: 0;
   color: rgba(255,255,255,.82);
-  background: transparent !important;
-  padding: 0 !important;
 }
 
-/* a-propos.html > professeurs */
+/* a-propos teachers wrap */
 .teacher-bio::after{
   content:"";
   display:block;
-  clear:both;  /* clears the float so the card height is correct */
+  clear:both;
 }
-
 .teacher-photo{
   float:left;
   width:120px;
@@ -537,9 +583,8 @@ header.page-hero{
   object-fit:cover;
   border:1px solid #000;
   border-radius:10px;
-  margin: 0 12px 8px 0; /* right + bottom spacing */
+  margin: 0 12px 8px 0;
 }
-
 
 /* Contact form layout */
 .form-grid{
@@ -548,18 +593,15 @@ header.page-hero{
   gap: 16px;
   margin-top: 14px;
 }
-
 @media (min-width: 900px){
   .form-grid{ grid-template-columns: 1fr 1fr; }
   .full{ grid-column: 1 / -1; }
 }
-
 .field{
   display:flex;
   flex-direction:column;
   gap: 6px;
 }
-
 label{ font-weight: 700; }
 
 input, select, textarea{
@@ -586,22 +628,18 @@ input:focus, select:focus, textarea:focus{
   gap: 10px;
   margin-top: 4px;
 }
-
 .help{
   color: var(--muted);
   font-size: .95rem;
   margin-top: 8px;
 }
 
-/* Address block */
 .address-block{
   display:grid;
   gap: 8px;
 }
-
 .address-lines{ color: var(--muted); }
 
-/* Map */
 .map-wrap{
   overflow:hidden;
   border-radius: var(--radius);
@@ -609,7 +647,6 @@ input:focus, select:focus, textarea:focus{
   box-shadow: 0 10px 26px rgba(15, 23, 42, .08);
   background:#fff;
 }
-
 .map{
   width:100%;
   height: min(420px, 60vh);
@@ -619,89 +656,42 @@ input:focus, select:focus, textarea:focus{
 
 /* Errors */
 small.error{
-  color: #dc2626 !important;
+  color: #dc2626;
   font-size: .9rem;
   min-height: 1.1rem;
   display: block;
   margin-top: 6px;
 }
 .invalid{
-  border-color:#dc2626 !important;
-  box-shadow: 0 0 0 4px rgba(220,38,38,.14) !important;
+  border-color:#dc2626;
+  box-shadow: 0 0 0 4px rgba(220,38,38,.14);
 }
 
-/* ===========================
-   Footer
-   =========================== */
+/* Footer */
 footer{
   padding: 28px 0 46px;
   color: #64748b;
   text-align:center;
 }
 
-/* small helper */
+.social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.social-link{
+  color: rgba(37,99,235,.35);
+}
+.social-link:hover{ text-decoration:none; }
+
+/* helper */
 .sr-only{
   position:absolute!important;
   width:1px;height:1px;
   padding:0;margin:-1px;
   overflow:hidden;clip:rect(0,0,0,0);
   white-space:nowrap;border:0;
-}
-
-.social-link {
-  color: rgba(37,99,235,.35);
-}
-
-.social-link:hover {
-  text-decoration: none;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center; /* vertical */
-}
-
-/* Make hero-bottom full-width inside hero-card (no dark side gutters) */
-.hero-card{
-  /* keep your existing padding: 22px; */
-  overflow: hidden;
-}
-
-/* Pull the white section to the card edges, and start it higher */
-.hero-bottom{
-  margin-top: 0 !important;        /* start right after hero-head */
-  margin-left: -22px !important;   /* cancel hero-card padding */
-  margin-right: -22px !important;  /* cancel hero-card padding */
-  border-top: 1px solid #e8ecf3;   /* border line starts higher */
-  background: #f6f7fb;             /* keep your light bg */
-  padding: 18px 22px;              /* restore nice inner padding */
-}
-
-/* Optional: reduce space between the hero-head and bottom */
-.hero-head{
-  padding-bottom: 12px; /* was 18px; makes border move up */
-}
-
-/* Banner image inside the light bottom part of the hero */
-.hero-bottom--banner{
-  position: relative;
-  overflow: hidden; /* clips banner inside rounded card */
-}
-
-/* Banner image layer */
-.hero-bottom--banner::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../images/banner-wingchun.png") center / cover no-repeat;
-  opacity: 0.6;              /* 60% transparency */
-  pointer-events: none;      /* clicks go to links/buttons */
-  z-index: 0;
-}
-
-/* Keep the actual content above the banner */
-.hero-bottom--banner > *{
-  position: relative;
-  z-index: 1;
 }
