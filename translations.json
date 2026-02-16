@@ -10,6 +10,7 @@
       "whatWingChun": "Qu'est-ce que le Wing Chun?",
       "whatLionDance": "Qu'est-ce que la danse du lion?",
       "whatTaiChi": "Qu'est-ce que le Tai Chi?",
+      "schedules": "Horaires",
       "contact": "Contactez-nous"
     },
     "school": {
@@ -28,7 +29,7 @@
     },
     "cta": {
       "trial": "Cours d'essai gratuit",
-      "entreprise": "Évènements & formation en entreprise",
+      "entreprise": "Formation en entreprise",
       "home": "Accueil",
       "school": "École",
       "teachers": "Professeurs",
@@ -412,6 +413,7 @@
       "whatWingChun": "Wing Chun: What is it?",
       "whatLionDance": "Lion dance: What is it?",
       "whatTaiChi": "Tai Chi: What is it?",
+      "schedules": "Schedules",
       "contact": "Contact us"
     },
     "school": {
@@ -429,7 +431,7 @@
     },
     "cta": {
       "trial": "Free trial class",
-      "entreprise": "Corporate events & training",
+      "entreprise": "Corporate training",
       "home": "Home",
       "school": "School",
       "teacher": "Instructors",

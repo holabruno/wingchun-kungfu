@@ -1,0 +1,42 @@
+<!-- Topbar -->
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div class="brand">
+            <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
+            <div class="brand-text">
+                <h1 style="font-size: 1.2em; margin: 0px;" data-i18n="school.name">Institut d'arts Martiaux Chinois de
+                    la rive sud de Montréal</h1>
+                <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
+            </div>
+        </div>
+
+
+        <div class="actions">
+            <button class="btn" id="langToggle" type="button">English</button>
+
+            <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel"
+                aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <div class="hamburger" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
+    <header>
+        <strong>Menu</strong>
+        <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
+    </header>
+
+    <a href="index.html" data-i18n="menu.home">Accueil</a>
+    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
+    <a href="horaires.html" data-i18n="menu.schedules">Horaires</a>
+    <a href="a-propos.html" data-i18n="menu.about">À propos de l'école</a>
+    <a href="evenements-corporatifs.html" data-i18n="cta.entreprise">Formation en entreprise</a>
+    <a href="contact.html" data-i18n="menu.contact">Contact</a>
+</nav>
