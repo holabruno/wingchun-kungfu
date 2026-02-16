@@ -540,6 +540,30 @@ header.page-hero{
   margin: 0 12px 8px 0; /* right + bottom spacing */
 }
 
+/* Contact page wide desktop layout */
+.contact-split{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.contact-map-card .map-wrap{
+  margin-top: 14px;
+}
+
+@media (min-width: 1024px){
+  .contact-split{
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1200px){
+  .contact-wide{
+    max-width: 1240px;
+  }
+}
+
 
 /* Contact form layout */
 .form-grid{

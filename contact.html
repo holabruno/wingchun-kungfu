@@ -16,7 +16,7 @@
   
 </head>
 
-<body>
+<body class="contact-page">
   <!-- Topbar -->
   <div class="topbar">
     <div class="container topbar-inner">
@@ -57,7 +57,7 @@
   </nav>
 
   <header class="hero">
-    <div class="container">
+    <div class="container contact-wide">
       <div class="hero-card">
         <div class="hero-head">
           <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
@@ -110,131 +110,123 @@
     </div>
   </header>
 
-  <!-- Form -->
-  <section id="formulaire">
-    <div class="container">
-      <div class="card">
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="position:absolute;left:-9999px;opacity:0;">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
+  <!-- Contact main: form + map -->
+  <section>
+    <div class="container contact-wide">
+      <div class="contact-split">
+        <div class="card" id="formulaire">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="position:absolute;left:-9999px;opacity:0;">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
 
-          <div><h3 data-i18n="contactPage.formTitle" style="font-size: 1.5rem; color: #2563eb;;">Formulaire de contact</h3></div>
-          <div class="form-grid">
-            
-            <div class="field">
-              <label for="discipline" data-i18n="contactPage.fields.discipline.label">Art martial / discipline</label>
-              <select id="discipline" name="discipline" data-i18n-options="contactPage.fields.discipline.options" required>
-                <option value="">—</option>
-              </select>
-              <small class="error" data-error-for="discipline"></small>
-            </div>
+            <div><h3 data-i18n="contactPage.formTitle" style="font-size: 1.5rem; color: #2563eb;;">Formulaire de contact</h3></div>
+            <div class="form-grid">
+              
+              <div class="field">
+                <label for="discipline" data-i18n="contactPage.fields.discipline.label">Art martial / discipline</label>
+                <select id="discipline" name="discipline" data-i18n-options="contactPage.fields.discipline.options" required>
+                  <option value="">—</option>
+                </select>
+                <small class="error" data-error-for="discipline"></small>
+              </div>
 
-            <div class="field">
-              <label for="email" data-i18n="contactPage.fields.email.label">Courriel</label>
-              <input id="email" name="email" type="email" autocomplete="email" required minlength="10" maxlength="50"
-                     data-i18n-placeholder="contactPage.fields.email.placeholder" placeholder="Votre courriel" />
-              <small class="error" data-error-for="email"></small>
-            </div>
+              <div class="field">
+                <label for="email" data-i18n="contactPage.fields.email.label">Courriel</label>
+                <input id="email" name="email" type="email" autocomplete="email" required minlength="10" maxlength="50"
+                       data-i18n-placeholder="contactPage.fields.email.placeholder" placeholder="Votre courriel" />
+                <small class="error" data-error-for="email"></small>
+              </div>
 
-            <div class="field">
-              <label for="prenom" data-i18n="contactPage.fields.firstName.label">Prénom</label>
-              <input id="prenom" name="prenom" type="text" autocomplete="given-name" required minlength="2" maxlength="50"
-                     data-i18n-placeholder="contactPage.fields.firstName.placeholder" placeholder="Votre prénom" />
-              <small class="error" data-error-for="prenom"></small>
-            </div>
+              <div class="field">
+                <label for="prenom" data-i18n="contactPage.fields.firstName.label">Prénom</label>
+                <input id="prenom" name="prenom" type="text" autocomplete="given-name" required minlength="2" maxlength="50"
+                       data-i18n-placeholder="contactPage.fields.firstName.placeholder" placeholder="Votre prénom" />
+                <small class="error" data-error-for="prenom"></small>
+              </div>
 
-            <div class="field">
-              <label for="nom" data-i18n="contactPage.fields.lastName.label">Nom</label>
-              <input id="nom" name="nom" type="text" autocomplete="family-name" required minlength="2" maxlength="50"
-                     data-i18n-placeholder="contactPage.fields.lastName.placeholder" placeholder="Votre nom" />
-              <small class="error" data-error-for="nom"></small>
-            </div>
+              <div class="field">
+                <label for="nom" data-i18n="contactPage.fields.lastName.label">Nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="family-name" required minlength="2" maxlength="50"
+                       data-i18n-placeholder="contactPage.fields.lastName.placeholder" placeholder="Votre nom" />
+                <small class="error" data-error-for="nom"></small>
+              </div>
 
-            <div class="field">
-              <label for="telephone" data-i18n="contactPage.fields.phone.label">Téléphone</label>
-              <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" minlength="10" maxlength="20" required
-                     data-i18n-placeholder="contactPage.fields.phone.placeholder" placeholder="(999) 999-9999" />
-              <small class="error" data-error-for="telephone"></small>       
-            </div>
+              <div class="field">
+                <label for="telephone" data-i18n="contactPage.fields.phone.label">Téléphone</label>
+                <input id="telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" minlength="10" maxlength="20" required
+                       data-i18n-placeholder="contactPage.fields.phone.placeholder" placeholder="(999) 999-9999" />
+                <small class="error" data-error-for="telephone"></small>
+              </div>
 
-            <div class="field">
-              <label for="age" data-i18n="contactPage.fields.age.label">Âge</label>
-              <select id="age" name="age" data-i18n-options="contactPage.fields.age.options" required>
-                <option value="">—</option>
-              </select>
-              <small class="error" data-error-for="age"></small>
-            </div>
+              <div class="field">
+                <label for="age" data-i18n="contactPage.fields.age.label">Âge</label>
+                <select id="age" name="age" data-i18n-options="contactPage.fields.age.options" required>
+                  <option value="">—</option>
+                </select>
+                <small class="error" data-error-for="age"></small>
+              </div>
 
-            <div class="field">
-              <label for="reference" data-i18n="contactPage.fields.reference.label">Référé par</label>
-              <select id="reference" name="reference" data-i18n-options="contactPage.fields.reference.options" required>
-                <option value="">—</option>
-              </select>
-              <small class="error" data-error-for="reference"></small>
-            </div>
+              <div class="field">
+                <label for="reference" data-i18n="contactPage.fields.reference.label">Référé par</label>
+                <select id="reference" name="reference" data-i18n-options="contactPage.fields.reference.options" required>
+                  <option value="">—</option>
+                </select>
+                <small class="error" data-error-for="reference"></small>
+              </div>
 
-            <div class="field full">
-              <label for="message" data-i18n="contactPage.fields.message.label">Message</label>
-              <textarea id="message" name="message" required maxlength="2000"
-                        data-i18n-placeholder="contactPage.fields.message.placeholder"
-                        placeholder="Écrivez votre message…"></textarea>
-              <small class="error" data-error-for="message"></small>                        
-              <div class="help" data-i18n="contactPage.help">
-                Indiquez votre objectif (cours privé/groupe/entreprise), disponibilité et niveau.
+              <div class="field full">
+                <label for="message" data-i18n="contactPage.fields.message.label">Message</label>
+                <textarea id="message" name="message" required maxlength="2000"
+                          data-i18n-placeholder="contactPage.fields.message.placeholder"
+                          placeholder="Écrivez votre message…"></textarea>
+                <small class="error" data-error-for="message"></small>
+                <div class="help" data-i18n="contactPage.help">
+                  Indiquez votre objectif (cours privé/groupe/entreprise), disponibilité et niveau.
+                </div>
               </div>
             </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" data-i18n="contactPage.submit">Envoyer</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card contact-map-card" id="carte">
+          <h2 data-i18n="contactPage.addressTitle">Adresse de l’école</h2>
+          <div class="address-block">
+            <div class="address-lines">
+              <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
+              <span data-i18n="address.line2">Brossard, Québec</span><br/>
+              <span data-i18n="address.line3">J4W 3J2 Canada</span>
+            </div>
+
+            <div class="help">
+              <a target="_blank" rel="noopener"
+                 href="https://www.google.com/maps?q=6400+Boulevard+Taschereau,+Brossard,+QC+J4W+3J2"
+                 data-i18n="contactPage.openMaps">
+                Ouvrir dans Google Maps
+              </a>
+            </div>
           </div>
 
-          <div class="form-actions">
-            <button class="btn btn-primary" type="submit" data-i18n="contactPage.submit">Envoyer</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Address card -->
-  <section>
-    <div class="container">
-      <div class="card">
-        <h2 data-i18n="contactPage.addressTitle">Adresse de l’école</h2>
-        <div class="address-block">
-          <div class="address-lines">
-            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
-            <span data-i18n="address.line2">Brossard, Québec</span><br/>
-            <span data-i18n="address.line3">J4W 3J2 Canada</span>
-          </div>
-
-          <div class="help">
-            <a target="_blank" rel="noopener"
-               href="https://www.google.com/maps?q=6400+Boulevard+Taschereau,+Brossard,+QC+J4W+3J2"
-               data-i18n="contactPage.openMaps">
-              Ouvrir dans Google Maps
-            </a>
+          <div class="map-wrap">
+            <iframe class="map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=6400%20Boulevard%20Taschereau%2C%20Brossard%2C%20QC%20J4W%203J2&output=embed"
+              title="Google Map - 6400 boulevard Taschereau, Brossard">
+            </iframe>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Google map -->
-  <section id="carte">
-    <div class="container">
-      <div class="map-wrap">
-        <iframe class="map"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=6400%20Boulevard%20Taschereau%2C%20Brossard%2C%20QC%20J4W%203J2&output=embed"
-          title="Google Map - 6400 boulevard Taschereau, Brossard">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
   <div id="site-footer"></div>
   <script src="scripts/include-footer.js" defer></script>
 
 </body>
 </html>
+

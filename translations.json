@@ -32,7 +32,7 @@
       "entreprise": "Formation en entreprise",
       "home": "Accueil",
       "school": "École",
-      "teachers": "Professeurs",
+      "teachers": "Instructeurs",
       "reserve": "Réservez votre place!"
     },
     "benefits": {
@@ -289,12 +289,12 @@
       "backHome": "Accueil",
       "note-private-group": "Cours de groupe et cours privés disponibles.",
       "nav": {
-        "teachers": "Professeurs",
+        "teachers": "Instructeurs",
         "school": "École",
         "schedule": "Horaires"
       },
       "teachers": {
-        "title": "Professeurs",
+        "title": "Instructeurs",
         "michel": {
           "name": "Michel Orchard",
           "bio": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix et compétitions. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.  Professeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement."
