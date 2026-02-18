@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Institut d'arts Martiaux Chinois de la rive-sud de Montréal — Wing Chun (Michel Orchard)</title>
+
+	<!-- Primary SEO -->
+	<meta name="description"
+		content="Institut d’arts martiaux chinois de la Rive-Sud de Montréal (Wing Chun par Michel Orchard). Cours de Kung Fu Wing Chun (lignée Yip Man), cours de groupe et privés. Essai gratuit. Inscriptions en tout temps.  Offres corporatives disponibles.">
+	<meta name="keywords"
+		content="Michel Orchard, Wing Chun, Wing Chun Montréal, Wing Chun Brossard, Wing Chun Greenfield Park, Kung Fu Wing Chun, arts martiaux chinois, art martial chinois, école de Wing Chun, Rive-Sud Montréal, cours d’autodéfense, chi sao, Yip Man, kung fu, lion dance, danse lion, self defense, auto-défense, sifu, association YIP Man de Hong Kong, yip man association">
+
+	<!-- Open Graph (Facebook/LinkedIn) -->
+	<meta property="og:type" content="website">
+	<meta property="og:locale" content="fr_CA">
+	<meta property="og:title"
+		content="Institut d’arts Martiaux Chinois de la Rive-Sud de Montréal — Wing Chun par Michel Orchard">
+	<meta property="og:description"
+		content="Cours de Kung Fu Wing Chun (lignée Yip Man) à Brossard. Cours de groupe et privés. Essai gratuit. Inscriptions en tout temps.">
+	<meta property="og:url" content="https://wingchun-kungfu.ca/">
+	<meta property="og:image" content="https://wingchun-kungfu.ca/images/armoiries.jpg">
+
+	<!-- Twitter/X cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Kung-Fu Wing Chun à Brossard — Rive-Sud de Montréal">
+	<meta name="twitter:description"
+		content="Cours de Kung Fu Wing Chun (lignée Yip Man). Essai gratuit. Inscriptions en tout temps.">
+	<meta name="twitter:image" content="https://wingchun-kungfu.ca/images/armoiries.jpg">
+
+	<!-- Optional: tell search engines your canonical URL -->
+	<link rel="canonical" href="https://wingchun-kungfu.ca/">
+
+	<!-- Optional: helps mobile browsers theme the address bar -->
+	<meta name="theme-color" content="#0b1220">
+
+	<link rel="stylesheet" href="styles/main2.css" />
+	<style>
+		.gallery-wrapper {
+			max-width: 1200px;
+			margin: 2rem auto;
+			padding: 0 1rem;
+		}
+
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 1rem;
+		}
+
+		.gallery-grid img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		.gallery-modal {
+			position: fixed;
+			inset: 0;
+			background: rgba(0, 0, 0, 0.88);
+			display: none;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
+			z-index: 9999;
+		}
+
+		.gallery-modal.is-open {
+			display: flex;
+		}
+
+		.gallery-modal__dialog {
+			position: relative;
+			width: min(96vw, 1400px);
+			height: min(92vh, 92vh);
+			background: #0f0f0f;
+			border: 3px solid #ffffff;
+			border-radius: 12px;
+			padding: 2.5rem 1rem 1rem;
+		}
+
+		.gallery-modal__close {
+			position: absolute;
+			top: 0.4rem;
+			right: 0.6rem;
+			border: 0;
+			background: transparent;
+			color: #fff;
+			font-size: 2rem;
+			line-height: 1;
+			cursor: pointer;
+		}
+
+		.gallery-modal__image {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+		}
+
+		@media (max-width: 1024px) {
+			.gallery-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+		}
+
+		@media (max-width: 640px) {
+			.gallery-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+	<script src="scripts/site.js" defer></script>
+
+</head>
+
+<body>	
+    
+    <div id="site-topbar_menu"></div>
+	<script src="scripts/include-topbar_menu.js" defer></script>
+
+	<main class="gallery-wrapper" aria-label="Galerie photos">
+		<section class="gallery-grid">
+			<img src="images/gallerie/IMG_3057.png" alt="Photo de galerie 1" class="gallery-item">
+			<img src="images/gallerie/IMG_3058.png" alt="Photo de galerie 2" class="gallery-item">
+			<img src="images/gallerie/IMG_3059.png" alt="Photo de galerie 3" class="gallery-item">
+			<img src="images/gallerie/IMG_3060.png" alt="Photo de galerie 4" class="gallery-item">
+			<img src="images/gallerie/IMG_3061.png" alt="Photo de galerie 5" class="gallery-item">
+			<img src="images/gallerie/IMG_3062.png" alt="Photo de galerie 6" class="gallery-item">
+			<img src="images/gallerie/IMG_3122.png" alt="Photo de galerie 7" class="gallery-item">
+			<img src="images/gallerie/IMG_3123.png" alt="Photo de galerie 8" class="gallery-item">
+		</section>
+	</main>
+
+	<div id="gallery-modal" class="gallery-modal" role="dialog" aria-modal="true" aria-label="Image en plein ecran">
+		<div class="gallery-modal__dialog">
+			<button type="button" id="gallery-close" class="gallery-modal__close" aria-label="Fermer">X</button>
+			<img id="gallery-modal-image" class="gallery-modal__image" src="" alt="">
+		</div>
+	</div>
+
+    <div id="site-footer"></div>
+	<script src="scripts/include-footer.js" defer></script>
+	<script>
+		(function () {
+			var galleryItems = document.querySelectorAll(".gallery-item");
+			var modal = document.getElementById("gallery-modal");
+			var modalImage = document.getElementById("gallery-modal-image");
+			var closeButton = document.getElementById("gallery-close");
+
+			function openModal(src, alt) {
+				modalImage.src = src;
+				modalImage.alt = alt || "";
+				modal.classList.add("is-open");
+			}
+
+			function closeModal() {
+				modal.classList.remove("is-open");
+				modalImage.src = "";
+			}
+
+			galleryItems.forEach(function (item) {
+				item.addEventListener("click", function () {
+					openModal(item.src, item.alt);
+				});
+			});
+
+			closeButton.addEventListener("click", closeModal);
+		})();
+	</script>
+</body>
+</html>
