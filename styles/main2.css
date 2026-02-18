@@ -478,29 +478,38 @@ section{ padding: 42px 0; }
 
 /* Michel card/button */
 .card-michel-ecole{
-  position: relative;
-  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
   margin-top: 12px;
 }
 
 .index-michel-photo{
   display: block;
-  width: 120px;
-  height: 120px;
+  flex: 0 0 30%;
+  width: 30%;
+  max-width: 180px;
+  height: auto;
   object-fit: cover;
 }
 
 .lien-michel-inscrire{
-  position: absolute;
-  left: 50%;
-  top: 60px;
-  transform: translate(-50%, -50%);
+  flex: 0 0 30%;
+  width: 30%;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  position: static;
+  top: auto;
+  left: auto;
+  transform: none;
 }
 
 /* Keep centering on click without !important (override by specificity) */
 a.btn.btn-primary.lien-michel-inscrire:active{
-  transform: translate(-50%, -50%);
-  top: 61px;
+  transform: translateY(1px);
+  top: auto;
 }
 
 /* Media grid (2x2) */

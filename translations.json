@@ -1,7 +1,9 @@
 {
   "fr": {
     "nav": {
-      "register": "S'inscrire!"
+      "register": "S'inscrire!",
+      "schedules": "Horaires",
+      "next": "Suite..."
     },
     "menu": {
       "home": "Accueil",
@@ -90,7 +92,17 @@
     },
     "sifu": {
       "title": "Sifu Michel Orchard:",
-      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition, en plus d'être certifié. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial."
+      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition, en plus d'être certifié. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.",
+      "p2": "Sifu Michel Orchard possède plus de 40 ans d'expérience dans la pratique du Wing-Chun, incluant 35 ans dans l'enseignement de celui-ci et 50 ans dans les arts martiaux.  Il étudie les styles de combat chinois depuis 1979 et croit en l'approche traditionnelle de l'enseignement du Wing Chun tel qu'il l'a appirs de son Sifu Ma Yuk Ping qui était un élève de Tam Lai, lui-même élève du grand Ip Man."
+    },
+    "awards-michel":{
+      "1989": "3ième place - Montréal International",
+      "1991": "1ère place - Championnat annuel canadien de Kung-Fu",
+      "1993": "Médaille d'or et de bronze - Fédération Sino-Canadienne de Kao Shu",
+      "1994": "1ère place - Karaté Plus International",
+      "1995": "Médaille d'or - Fédération Sino-Canadienne de Kao Shu",
+      "2013": "Médaille de bronze - 4ième Compétition d'arts martiaux traditionnels chinois NTD",
+      "2016": "Semi-Finales - 5ième Compétition d'arts martiaux traditionnels chinois NTD"      
     },
     "wingChunHistory": {
       "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
@@ -291,7 +303,8 @@
       "nav": {
         "teachers": "Instructeurs",
         "school": "École",
-        "schedule": "Horaires"
+        "schedule": "Horaires",
+        "next": "Suite..."
       },
       "teachers": {
         "title": "Instructeurs",
@@ -343,6 +356,15 @@
         ],
 
         "lionRows": [
+          { "day": "Lundi", "time": "—" },
+          { "day": "Mardi", "time": "—" },
+          { "day": "Mercredi", "time": "—" },
+          { "day": "Jeudi", "time": "19h00 – 20h30" },
+          { "day": "Vendredi", "time": "—" },
+          { "day": "Samedi", "time": "14h00 – 15h00" },
+          { "day": "Dimanche", "time": "13h00 – 15h30" }
+        ], 
+        "taichiRows": [
           { "day": "Lundi", "time": "—" },
           { "day": "Mardi", "time": "—" },
           { "day": "Mercredi", "time": "—" },
@@ -404,7 +426,9 @@
   },
   "en": {
     "nav": {
-      "register": "Register!"
+      "register": "Register!",
+      "schedules": "Schedules",
+      "next": "more..."
     },
      "menu": {
       "home": "Home",
@@ -490,7 +514,17 @@
     },
     "sifu": {
       "title": "Sifu Michel Orchard:",
-      "p1": "Sifu Michel Orchard is a certified Wing Chun Kung Fu instructor, is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art."
+      "p1": "Sifu Michel Orchard is a certified Wing Chun Kung Fu instructor, is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art.",
+      "p2": "Sifu Michel Orchard has over 40 years of experience practicing Wing Chun, including 35 years teaching it and more than 50 years in martial arts. He has studied Chinese fighting styles since 1979 and believes in the traditional approach to teaching Wing Chun, as he learned it from his Sifu, Ma Yuk Ping, who was a student of Tam Lai, himself a student of the great Ip Man."
+    },
+    "awards-michel": {
+      "1989": "3rd place - Montreal International",
+      "1991": "1st place - Annual Canadian Kung Fu Championship",
+      "1993": "Gold and bronze medals - Sino-Canadian Kao Shu Federation",
+      "1994": "1st place - Karate Plus International",
+      "1995": "Gold medal - Sino-Canadian Kao Shu Federation",
+      "2013": "Bronze medal - 4th NTD Traditional Chinese Martial Arts Competition",
+      "2016": "Semi-finals - 5th NTD Traditional Chinese Martial Arts Competition"
     },
     "wingChunHistory": {
       "title": "Wing Chun: What it is, key figures and historical context",
@@ -751,6 +785,15 @@
           { "day": "Friday", "time": "—" },
           { "day": "Saturday", "time": "2:00 pm – 3:00 pm" },
           { "day": "Sunday", "time": "1:00 pm – 3:30 pm" }
+        ],
+        "taichiRows": [
+          { "day": "Monday", "time": "—" },
+          { "day": "Tuesday", "time": "—" },
+          { "day": "Wednesday", "time": "—" },
+          { "day": "Thursday", "time": "19h00 – 20h30" },
+          { "day": "Friday", "time": "—" },
+          { "day": "Saturday", "time": "14h00 – 15h00" },
+          { "day": "Sunday", "time": "13h00 – 15h30" }
         ]
       }
     },
