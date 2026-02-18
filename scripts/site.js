@@ -175,6 +175,8 @@
 
     // Plain text replacement
     $all('[data-i18n]').forEach((el) => {
+      // Skip nodes that are explicitly marked for HTML injection.
+      if (el.hasAttribute('data-i18n-html')) return;
       const key = el.getAttribute('data-i18n');
       const val = get(dict, key);
       if (typeof val === 'string') el.textContent = val;
@@ -182,7 +184,10 @@
 
     // HTML replacement (optional)
     $all('[data-i18n-html]').forEach((el) => {
-      const key = el.getAttribute('data-i18n-html');
+      // Support both forms:
+      // 1) data-i18n-html="some.key"
+      // 2) data-i18n="some.key" data-i18n-html
+      const key = el.getAttribute('data-i18n-html') || el.getAttribute('data-i18n');
       const val = get(dict, key);
       if (typeof val === 'string') el.innerHTML = val;
     });

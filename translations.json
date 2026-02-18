@@ -310,7 +310,7 @@
         "title": "Instructeurs",
         "michel": {
           "name": "Michel Orchard",
-          "bio": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix et compétitions. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.  Professeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement."
+          "bio": "Sifu Michel Orchard est passionné par l'enseignement du <b>Kung Fu Wing Chun</b> et a remporté plusieurs <a href='sifu-michel-orchard.html#prix'>prix et compétitions.</a> Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial. Professeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement."
         },
         "antoine": {
           "name": "Antoine X.",
@@ -731,7 +731,7 @@
         "title": "Instructors",
         "michel": {
           "name": "Michel Orchard",
-          "bio": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several awards in competitions. He does everything he can to pass on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art. A certified and dedicated instructor, Michel teaches a self-defense approach accessible to everyone, focused on efficiency, simplicity, and intelligent movement."
+          "bio": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several <a href='sifu-michel-orchard.html#prix'>awards and competitions</a>. He does everything he can to pass on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art. A certified and dedicated instructor, Michel teaches a self-defense approach accessible to everyone, focused on efficiency, simplicity, and intelligent movement."
         },
         "antoine": {
           "name": "Antoine X.",
