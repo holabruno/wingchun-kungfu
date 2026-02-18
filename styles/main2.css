@@ -190,6 +190,12 @@ a:hover{ text-decoration: underline; }
   position: relative;
 }
 
+/* Pull index hero up so the same banner image is visible through the translucent topbar. */
+.hero.hero--banner{
+  margin-top: -64px;
+  padding-top: 170px;
+}
+
 /* Banner image on dark hero background (left/right of hero-card) */
 .hero.hero--banner::before{
   content: "";
@@ -200,7 +206,7 @@ a:hover{ text-decoration: underline; }
   bottom: 58%;
   background:
     linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.65) 100%),
-    url("../images/wingchun-banner-black.png") center 36% / cover no-repeat;
+    url("../images/wingchun-banner-black.png") center 24% / cover no-repeat;
   opacity: 0.78;
   pointer-events: none;
   z-index: 0;
