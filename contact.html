@@ -17,44 +17,9 @@
 </head>
 
 <body class="contact-page">
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
-        <div class="brand-text">
-          <h1 style="font-size: 0.9em;"><strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong></h1>
-          <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
-        </div>
-      </div>
-
-      <div class="actions">
-        <button class="btn" id="langToggle" type="button">English</button>
-
-        <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel" aria-expanded="false">
-          <span class="sr-only">Menu</span>
-          <div class="hamburger" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Menu -->
-  <div class="menu-backdrop" id="menuBackdrop"></div>
-  <nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
-    <header>
-      <strong>Menu</strong>
-      <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
-    </header>
-
-    <a href="index.html" data-i18n="menu.home">Accueil</a>
-    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
-    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
-    <a href="evenements-corporatifs.html" data-i18n="cta.entreprise">Évènements & formation en entreprise</a>
-    <a href="contact.html" data-i18n="menu.contact">Contact</a>
-  </nav>
+  <!-- Topbar & menu-->
+  <div id="site-topbar_menu"></div>
+	<script src="scripts/include-topbar_menu.js" defer></script>
 
   <header class="hero">
     <div class="container contact-wide">
@@ -126,7 +91,7 @@
               
               <div class="field">
                 <label for="discipline" data-i18n="contactPage.fields.discipline.label">Art martial / discipline</label>
-                <select id="discipline" name="discipline" data-i18n-options="contactPage.fields.discipline.options" required>
+                <select id="discipline" name="discipline" data-i18n-options="contactPage.fields.discipline.options">
                   <option value="">—</option>
                 </select>
                 <small class="error" data-error-for="discipline"></small>
@@ -134,7 +99,7 @@
 
               <div class="field">
                 <label for="email" data-i18n="contactPage.fields.email.label">Courriel</label>
-                <input id="email" name="email" type="email" autocomplete="email" required minlength="10" maxlength="50"
+                <input id="email" name="email" type="email" autocomplete="email" minlength="10" maxlength="50"
                        data-i18n-placeholder="contactPage.fields.email.placeholder" placeholder="Votre courriel" />
                 <small class="error" data-error-for="email"></small>
               </div>
@@ -160,6 +125,7 @@
                 <small class="error" data-error-for="telephone"></small>
               </div>
 
+              <!--
               <div class="field">
                 <label for="age" data-i18n="contactPage.fields.age.label">Âge</label>
                 <select id="age" name="age" data-i18n-options="contactPage.fields.age.options" required>
@@ -167,6 +133,7 @@
                 </select>
                 <small class="error" data-error-for="age"></small>
               </div>
+              -->
 
               <div class="field">
                 <label for="reference" data-i18n="contactPage.fields.reference.label">Référé par</label>
