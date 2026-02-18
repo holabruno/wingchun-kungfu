@@ -28,13 +28,18 @@ a:hover{ text-decoration: underline; }
 
 .container{ max-width: var(--max); margin: 0 auto; padding: 0 16px; }
 
+/* Keep injected topbar pinned to the viewport while scrolling. */
+#site-topbar_menu{
+  position: sticky;
+  top: 0;
+  z-index: 120;
+}
+
 /* ===========================
    Topbar + actions
    =========================== */
 .topbar{
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  position: relative;
   backdrop-filter: blur(10px);
   background: rgba(11,18,32,0.72);
   border-bottom: 1px solid rgba(255,255,255,.10);
@@ -184,7 +189,7 @@ a:hover{ text-decoration: underline; }
    Hero
    =========================== */
 .hero{
-  background: linear-gradient(180deg, #000000 0%, #000000 58%, #f6f7fb 58%);
+  background: linear-gradient(180deg, #000000 0%, #000000 46%, #f6f7fb 46%);
   color: var(--white);
   padding: 106px 0 0;
   position: relative;
@@ -203,10 +208,10 @@ a:hover{ text-decoration: underline; }
   left: 0;
   right: 0;
   top: 0;
-  bottom: 58%;
+  bottom: 46%;
   background:
     linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.65) 100%),
-    url("../images/wingchun-banner-black.png") center 24% / cover no-repeat;
+    url("../images/wingchun-banner-black.png") center 42% / cover no-repeat;
   opacity: 0.78;
   pointer-events: none;
   z-index: 0;
@@ -371,7 +376,7 @@ a:hover{ text-decoration: underline; }
   margin-right: calc(var(--card-pad) * -1);
 
   margin-top: 0;
-  border-top: 1px solid #e8ecf3;
+  border-top: 0;
   background: #f6f7fb;
   padding: 18px var(--card-pad);
 
@@ -381,8 +386,7 @@ a:hover{ text-decoration: underline; }
 .hero-bottom-top{
   margin: -18px calc(var(--card-pad) * -1) 18px;
   padding: 18px var(--card-pad);
-  background: #000;
-  opacity: 60%;
+  background: rgba(0,0,0,.38);
 }
 
 .hero-bottom .hero-bottom-top p{
