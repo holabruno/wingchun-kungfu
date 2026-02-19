@@ -1,731 +1,380 @@
-:root{
-  --bg: #0b1220;
-  --card: rgba(255,255,255,0.08);
-  --text: #0f172a;
-  --muted: #6b7280;
-  --white: #ffffff;
-  --accent: #2563eb;
-  --border: rgba(255,255,255,0.14);
-  --shadow: 0 14px 40px rgba(0,0,0,.20);
-  --radius: 5px;
-  --max: 1100px;
+:root {
+  --bg: #f3f1ec;
+  --surface: rgba(255, 255, 255, 0.9);
+  --text: #1f1f1f;
+  --muted: #555;
+  --line: rgba(0, 0, 0, 0.15);
+  --chip: #1a1a1a;
+  --chip-alt: #ffffff;
+  --shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  --radius: 24px;
+  --max: 1080px;
+  --topbar-h: 74px;
+  --hero-vpad: 2.2rem;
+  --hero-headroom: 32px;
+  --hero-image-height: 774px;
+  --hero-image-render-height: clamp(260px, 24.1875vw, var(--hero-image-height));
+  --hero-image-url: url("../images/wingchun-banner2-white-xl.png");
 }
 
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body{
+body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  font-family: "Segoe UI", Arial, sans-serif;
   color: var(--text);
-  line-height: 1.55;
-  background: #f6f7fb;
+  line-height: 1.5;
+  background: var(--bg);
 }
 
-a{ color: var(--accent); text-decoration: none; }
-a:hover{ text-decoration: underline; }
+a {
+  color: inherit;
+}
 
-.container{ max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+.container {
+  width: min(var(--max), calc(100% - 2rem));
+  margin-inline: auto;
+}
 
-/* ===========================
-   Topbar + actions
-   =========================== */
-.topbar{
+/* Sticky top bar mount */
+#site-topbar_menu {
   position: sticky;
   top: 0;
-  z-index: 50;
-  backdrop-filter: blur(10px);
-  background: rgba(11,18,32,0.72);
-  border-bottom: 1px solid rgba(255,255,255,.10);
+  z-index: 200;
 }
 
-.topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  height: 64px;
-  gap: 12px;
+/* Top bar and menu (for partials/topbar_menu.html) */
+.topbar {
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
 }
 
-/* Brand: image left, text right */
-.brand{
+.topbar-inner {
+  min-height: 74px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  min-width: 0;
+  justify-content: space-between;
+  gap: 0.8rem;
 }
 
-.brand-logo{
-  height: 52px;      /* 66px was taller than the 64px topbar */
-  width: auto;
-  display: block;
-  flex: 0 0 auto;
-}
-
-.brand-text{
+.brand {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
+  align-items: center;
+  min-width: 0;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.brand-text {
   min-width: 0;
 }
 
-.brand-text strong,
-.brand-text span{
+.brand-text h1 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.brand-text span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--white);
 }
 
-.brand-text span{ color: rgba(255,255,255,.75); }
-
-.actions{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-  flex-shrink: 0;
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
 }
 
-.btn{
-  appearance:none;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.10);
-  color: var(--white);
+.btn,
+.icon-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
   border-radius: 999px;
-  padding: 10px 12px;
-  font-weight: 600;
   cursor: pointer;
-  transition: transform .05s ease, background .15s ease;
-  line-height: 1;
 }
 
-.btn:hover{ background: rgba(255,255,255,.16); }
-.btn:active{ transform: translateY(1px); }
+.btn {
+  font-weight: 600;
+  padding: 0.55rem 0.95rem;
+}
 
-.icon-btn{
-  width: 44px; height: 44px;
-  display:grid; place-items:center;
+.icon-btn {
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.10);
-  cursor:pointer;
-  color: #fff;
+  display: inline-grid;
+  place-items: center;
 }
 
-.icon-btn:hover{ background: rgba(255,255,255,.16); }
-
-.hamburger{
-  width: 18px; height: 12px; position: relative;
+.hamburger {
+  width: 18px;
+  height: 12px;
+  position: relative;
 }
-.hamburger span{
-  position:absolute; left:0; right:0;
-  height:2px; background: #fff; border-radius:2px;
-}
-.hamburger span:nth-child(1){ top:0; }
-.hamburger span:nth-child(2){ top:5px; opacity:.9; }
-.hamburger span:nth-child(3){ bottom:0; opacity:.8; }
 
-/* ===========================
-   Menu panel
-   =========================== */
-.menu-backdrop{
+.hamburger span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 3px;
+  background: #222;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 5px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+.menu-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.45);
-  display:none;
-  z-index: 60;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 220;
 }
 
-.menu{
+.menu {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  width: min(340px, calc(100vw - 20px));
-  background: rgba(11,18,32,.94);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,.14);
+  right: 1rem;
+  top: 4.5rem;
+  width: min(330px, calc(100vw - 2rem));
   border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
   box-shadow: var(--shadow);
-  padding: 10px;
-  display:none;
-  z-index: 70;
+  padding: 0.5rem;
+  display: none;
+  z-index: 230;
 }
 
-.menu header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 8px 8px 6px;
+.menu header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem;
 }
 
-.menu header strong{ font-size: 14px; }
-
-.menu a{
-  display:flex;
-  padding: 12px 12px;
-  border-radius: 12px;
-  color: #fff;
-  text-decoration:none;
-  border: 1px solid transparent;
+.menu a {
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.65rem 0.7rem;
 }
 
-.menu a:hover{
-  background: rgba(255,255,255,.10);
-  border-color: rgba(255,255,255,.10);
+.menu a:hover {
+  background: #f4f4f4;
 }
 
 .menu-open .menu,
-.menu-open .menu-backdrop{ display:block; }
-
-/* ===========================
-   Hero (index + shared hero cards)
-   =========================== */
-.hero{
-  background:
-    radial-gradient(1200px 600px at 20% 10%, rgba(37,99,235,.25), transparent 60%),
-    radial-gradient(900px 600px at 85% 0%, rgba(255,255,255,.14), transparent 55%),
-    linear-gradient(180deg, #0b1220 0%, #0b1220 55%, #f6f7fb 55%);
-  color: var(--white);
-  padding: 42px 0 0;
+.menu-open .menu-backdrop {
+  display: block;
 }
 
-.hero-card{
-  margin-top: 14px;
-  border-radius: var(--radius);
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 18px 50px rgba(0,0,0,.25);
-  padding: 22px;
-  display:grid;
-  gap: 16px;
+/* Hero */
+.hero3 {
+  min-height: calc(var(--hero-image-render-height) + var(--hero-headroom) - (var(--hero-vpad) * 2));
+  display: flex;
+  align-items: center;
+  position: relative;
   overflow: hidden;
+  margin-top: calc(var(--topbar-h) * -1);
+  padding: calc(var(--hero-vpad) + var(--topbar-h)) 0 var(--hero-vpad);
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-/* Hero head layout (logo left, text right) */
-.hero-head{
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 18px;
-  align-items: start;
-  padding-bottom: 18px;
+.hero3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.2)) center / 100% 100% no-repeat,
+    var(--hero-image-url) center bottom / auto var(--hero-image-render-height) no-repeat;
+  pointer-events: none;
 }
 
-.hero-logo{
-  width: 140px;
-  height: auto;
+@media (max-width: 1600px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-lg.png");
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-md.png");
+  }
+}
+
+@media (max-width: 960px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-sm.png");
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-xs.png");
+  }
+}
+
+.hero3 > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero3-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.85rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.hero3-badge {
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
-  display: block;
-  margin-bottom: 18px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.hero-head-text{ min-width: 0; }
-
-.hero-title{ margin: 0; }
-.hero-title span{
-  display: block;
-  line-height: 1.05;
-  word-break: normal;
-}
-
-.hero-tagline{
-  margin: 10px 0 0;
-  color: rgba(255,255,255,.82);
-  font-size: 16px;
-}
-
-/* Muted text on dark hero cards */
-.hero .muted,
-.hero-card .muted { color: rgba(255,255,255,.75); }
-
-/* Pills row (desktop default) */
-.hero-meta{
-  margin-top: 14px;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 10px 14px;
-  align-items:center;
-}
-
-.pill{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  padding: 10px 12px;
+.chip {
+  display: inline-flex;
+  gap: 8px;
+  text-decoration: none;
   border-radius: 999px;
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.14);
-  font-size: 14px;
+  border: 1px solid var(--chip);
+  background: var(--chip);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
   white-space: nowrap;
 }
 
-.pill svg{ width: 18px; height: 18px; }
-
-/* Hero bottom (light area under the dark hero card) */
-.hero-bottom{
-  background: #f6f7fb;
-  padding: 18px 20px;
-  margin-top: 14px;
+.chip--ghost {
+  background: var(--chip-alt);
+  color: var(--chip);
 }
 
-.hero-bottom .address,
-.hero-bottom .address span{ color: #64748b; }
-
-.hero-bottom .btn{
-  color: #0f172a;
-  border-color: rgba(15,23,42,.12);
-  background: rgba(255,255,255,.70);
+/* Content */
+.content3 {
+  padding: 2rem 0 4rem;
 }
 
-/* Hero-bottom is on a light background: force dark text */
-.hero-bottom{
-  color: #0f172a; /* dark text */
+.content3-stack {
+  display: grid;
+  gap: 1.3rem;
 }
 
-.hero-bottom h3{
-  color: #0f172a;
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+}
+
+.panel h2 {
   margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
 }
 
-.hero-bottom p{
-  color: #334155; /* slightly softer than pure black */
+.panel p {
+  margin: 0.7rem 0 0;
 }
 
-
-/* CTA row */
-.cta-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap: 10px;
-  margin-top: 6px;
-}
-
-.btn-primary{
-  background: var(--accent);
-  border-color: rgba(37,99,235,.35);
-}
-
-.btn-primary:hover{ background: #1d4ed8; }
-
-/* Keep your hover override if you really want it */
-.cta-row .btn:hover{
-  background: rgba(0,0,255,.95);
-  color: white;
-}
-
-/* Mobile tweaks */
-@media (max-width: 760px){
-  .hero-head{ grid-template-columns: 110px 1fr; }
-  .hero-logo{ width: 110px; }
-}
-
-/* Stack pills on small screens (this now works reliably) */
-@media (max-width: 640px){
-  .hero-meta{
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-  .hero-meta .pill{
-    width: 100%;
-    justify-content: flex-start;
-  }
-}
-
-/* ===========================
-   Sections + cards
-   =========================== */
-section{ padding: 42px 0; }
-
-.grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-/* Parent grid: 2 columns, equal width, with gap */
-.grid.grid-2{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* IMPORTANT */
-  gap: 18px;
-}
-
-/* Allow cards to shrink inside grid (prevents overflow) */
-.grid.grid-2 > .card{
-  min-width: 0;           /* IMPORTANT */
-}
-
-/* On smaller screens, stack them */
-@media (max-width: 900px){
-  .grid.grid-2{
-    grid-template-columns: 1fr;
-  }
-}
-
-.card{
-  background: #fff;
-  border: 1px solid #e8ecf3;
-  border-radius: var(--radius);
-  box-shadow: 0 10px 26px rgba(15, 23, 42, .08);
-  padding: 22px;
-}
-
-.card h2{
-  margin: 0 0 10px;
-  font-size: 22px;
-}
-
-.muted{ color: var(--muted); }
-
-.list{
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
-.list li{ margin: 6px 0; }
-
-/* Teachers + schedule helpers */
-.teacher-grid .card h3{ margin-top: 0; }
-
-.schedule-table{
-  width:100%;
-  border-collapse: collapse;
-  min-width: 520px;
-}
-
-.schedule-table th, .schedule-table td{
-  padding:10px;
-  border-bottom: 1px solid #f1f5f9;
-  text-align:left;
-  vertical-align: top;
-}
-.schedule-table th{ border-bottom: 1px solid #e8ecf3; }
-
-.anchor-offset{ scroll-margin-top: 90px; }
-
-.card-michel-ecole{
-  position: relative;
-  min-height: 170px;      /* ensures space for the button */
-  margin-top: 12px;
-}
-
-.index-michel-photo{
-  display: block;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-}
-
-/* button bottom-right inside the card */
-.lien-michel-inscrire{
-  position: absolute;
-  left: 50%;
-  top: 60px;                 /* half of 120px image height */
-  transform: translate(-50%, -50%);
-}
-
-/* prevent global .btn:active transform from overriding centering */
-.lien-michel-inscrire:active{
-  transform: translate(-50%, -50%) !important;
-}
-
-/* optional: still show a pressed effect without breaking centering */
-.lien-michel-inscrire:active{
-  top: 61px; /* tiny press-down */
-}
-
-/* a-propos.html > videos youtube... */ 
-/* 2x2 grid */
-  .media-grid-2x2{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin-top: 12px;
-  }
-
-  /* each cell */
-  .media-item{
-    border: 1px solid #e8ecf3;
-    border-radius: 14px;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  /* image should fill its cell nicely */
-  .media-image img{
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 16 / 9; /* matches video ratio so the grid looks balanced */
-  }
-
-  /* responsive 16:9 iframe */
-  .video-wrap{
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-  .video-wrap iframe{
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  /* mobile: stack to 1 column */
-  @media (max-width: 800px){
-    .media-grid-2x2{
-      grid-template-columns: 1fr;
-    }
-  }
-
-/* ===========================
-   Internal pages hero (contact etc.)
-   =========================== */
-header.page-hero{
-  background:
-    radial-gradient(900px 400px at 20% 0%, rgba(37,99,235,.18), transparent 60%),
-    linear-gradient(180deg, #1d56c7 0%, #0b1220 100%);
-  color:#fff;
-  padding: 34px 0 0;
-}
-
-.page-hero .hero-card{
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: var(--radius);
-  box-shadow: 0 18px 50px rgba(0,0,0,.25);
-  padding: 22px;
-  margin: 16px 0 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.page-hero .hero-card::before,
-.page-hero .hero-card::after{
-  content: none !important;
-  display: none !important;
-  background: none !important;
-}
-
-.page-hero .hero-card h1{
-  margin: 0 0 10px 0;
-  font-size: clamp(26px, 4vw, 40px);
-  line-height: 1.1;
-  color: rgba(255,255,255,.95);
-}
-
-.page-hero .hero-card p{
+.benefits-list {
   margin: 0;
-  color: rgba(255,255,255,.82);
-  background: transparent !important;
-  padding: 0 !important;
+  padding-left: 1.2rem;
 }
 
-/* a-propos.html > professeurs */
-.teacher-bio::after{
-  content:"";
-  display:block;
-  clear:both;  /* clears the float so the card height is correct */
-}
-
-.teacher-photo{
-  float:left;
-  width:120px;
-  height:120px;
-  object-fit:cover;
-  border:1px solid #000;
-  border-radius:10px;
-  margin: 0 12px 8px 0; /* right + bottom spacing */
-}
-
-/* Contact page wide desktop layout */
-.contact-split{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.contact-map-card .map-wrap{
-  margin-top: 14px;
-}
-
-@media (min-width: 1024px){
-  .contact-split{
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-    align-items: start;
-  }
-}
-
-@media (min-width: 1200px){
-  .contact-wide{
-    max-width: 1240px;
-  }
-}
-
-
-/* Contact form layout */
-.form-grid{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 14px;
-}
-
-@media (min-width: 900px){
-  .form-grid{ grid-template-columns: 1fr 1fr; }
-  .full{ grid-column: 1 / -1; }
-}
-
-.field{
-  display:flex;
-  flex-direction:column;
-  gap: 6px;
-}
-
-label{ font-weight: 700; }
-
-input, select, textarea{
-  width: 100%;
-  padding: .7rem .85rem;
-  border-radius: 12px;
-  border: 1px solid #cfd5e4;
-  background: #fff;
-  font: inherit;
-  min-height: 46px;
-}
-
-textarea{ min-height: 140px; resize: vertical; }
-
-input:focus, select:focus, textarea:focus{
-  outline:none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(37,99,235,.18);
-}
-
-.form-actions{
-  display:flex;
-  justify-content:flex-end;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.help{
-  color: var(--muted);
-  font-size: .95rem;
-  margin-top: 8px;
-}
-
-/* Address block */
-.address-block{
-  display:grid;
-  gap: 8px;
-}
-
-.address-lines{ color: var(--muted); }
-
-/* Map */
-.map-wrap{
-  overflow:hidden;
-  border-radius: var(--radius);
-  border: 1px solid #e8ecf3;
-  box-shadow: 0 10px 26px rgba(15, 23, 42, .08);
-  background:#fff;
-}
-
-.map{
-  width:100%;
-  height: min(420px, 60vh);
-  border:0;
-  display:block;
-}
-
-/* Errors */
-small.error{
-  color: #dc2626 !important;
-  font-size: .9rem;
-  min-height: 1.1rem;
-  display: block;
-  margin-top: 6px;
-}
-.invalid{
-  border-color:#dc2626 !important;
-  box-shadow: 0 0 0 4px rgba(220,38,38,.14) !important;
-}
-
-/* ===========================
-   Footer
-   =========================== */
-footer{
-  padding: 28px 0 46px;
-  color: #64748b;
-  text-align:center;
-}
-
-/* small helper */
-.sr-only{
-  position:absolute!important;
-  width:1px;height:1px;
-  padding:0;margin:-1px;
-  overflow:hidden;clip:rect(0,0,0,0);
-  white-space:nowrap;border:0;
-}
-
-.social-link {
-  color: rgba(37,99,235,.35);
-}
-
-.social-link:hover {
-  text-decoration: none;
+.benefits-list li {
+  margin: 0.45rem 0;
 }
 
 .social-links {
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center; /* vertical */
+  justify-content: center;
+  gap: 0.9rem;
+  margin-bottom: 0.7rem;
 }
 
-/* Make hero-bottom full-width inside hero-card (no dark side gutters) */
-.hero-card{
-  /* keep your existing padding: 22px; */
-  overflow: hidden;
+footer {
+  padding: 1.5rem 0 2.3rem;
+  text-align: center;
+  color: #555;
 }
 
-/* Pull the white section to the card edges, and start it higher */
-.hero-bottom{
-  margin-top: 0 !important;        /* start right after hero-head */
-  margin-left: -22px !important;   /* cancel hero-card padding */
-  margin-right: -22px !important;  /* cancel hero-card padding */
-  border-top: 1px solid #e8ecf3;   /* border line starts higher */
-  background: #f6f7fb;             /* keep your light bg */
-  padding: 18px 22px;              /* restore nice inner padding */
+.social-link {
+  color: #3d3d3d;
 }
 
-/* Optional: reduce space between the hero-head and bottom */
-.hero-head{
-  padding-bottom: 12px; /* was 18px; makes border move up */
-}
-
-/* Banner image inside the light bottom part of the hero */
-.hero-bottom--banner{
-  position: relative;
-  overflow: hidden; /* clips banner inside rounded card */
-}
-
-/* Banner image layer */
-.hero-bottom--banner::before{
-  content: "";
+.sr-only {
   position: absolute;
-  inset: 0;
-  background: url("../images/banner-wingchun.png") center / cover no-repeat;
-  opacity: 0.6;              /* 60% transparency */
-  pointer-events: none;      /* clicks go to links/buttons */
-  z-index: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* Keep the actual content above the banner */
-.hero-bottom--banner > *{
-  position: relative;
-  z-index: 1;
+/* Mobile: force stacked one-column layout */
+@media (max-width: 768px) {
+  :root {
+    --topbar-h: 66px;
+    --hero-headroom: 18px;
+    --hero-image-render-height: clamp(240px, 52vw, 420px);
+  }
+
+  .topbar-inner {
+    min-height: 66px;
+  }
+
+  .brand-text span {
+    display: none;
+  }
+
+  .hero3-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero3-badge {
+    width: 62px;
+    height: 62px;
+  }
+
+  .chip {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content3-stack {
+    grid-template-columns: 1fr;
+  }
 }
