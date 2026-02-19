@@ -11,8 +11,10 @@
   --max: 1080px;
   --topbar-h: 74px;
   --hero-vpad: 2.2rem;
+  --hero-headroom: 32px;
   --hero-image-height: 774px;
   --hero-image-render-height: clamp(260px, 24.1875vw, var(--hero-image-height));
+  --hero-image-url: url("../images/wingchun-banner2-white-xl.png");
 }
 
 * {
@@ -188,7 +190,7 @@ a {
 
 /* Hero */
 .hero3 {
-  min-height: calc(var(--hero-image-render-height) - (var(--hero-vpad) * 2));
+  min-height: calc(var(--hero-image-render-height) + var(--hero-headroom) - (var(--hero-vpad) * 2));
   display: flex;
   align-items: center;
   position: relative;
@@ -205,8 +207,32 @@ a {
   inset: 0;
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.2)) center / 100% 100% no-repeat,
-    url("../images/wingchun-banner2-white.png") center bottom / auto var(--hero-image-render-height) no-repeat;
+    var(--hero-image-url) center bottom / auto var(--hero-image-render-height) no-repeat;
   pointer-events: none;
+}
+
+@media (max-width: 1600px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-lg.png");
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-md.png");
+  }
+}
+
+@media (max-width: 960px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-sm.png");
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --hero-image-url: url("../images/wingchun-banner2-white-xs.png");
+  }
 }
 
 .hero3 > .container {
@@ -319,6 +345,7 @@ footer {
 @media (max-width: 768px) {
   :root {
     --topbar-h: 66px;
+    --hero-headroom: 18px;
     --hero-image-render-height: clamp(240px, 52vw, 420px);
   }
 
