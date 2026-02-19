@@ -9,6 +9,10 @@
   --shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
   --radius: 24px;
   --max: 1080px;
+  --topbar-h: 74px;
+  --hero-vpad: 2.2rem;
+  --hero-image-width: 2700px;
+  --hero-image-height: 774px;
 }
 
 * {
@@ -41,10 +45,9 @@ a {
 
 /* Top bar and menu (for partials/topbar_menu.html) */
 .topbar {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
-  opacity: 60%;
 }
 
 .topbar-inner {
@@ -185,14 +188,30 @@ a {
 
 /* Hero */
 .hero3 {
-  min-height: clamp(260px, 45vw, 430px);
+  min-height: calc(var(--hero-image-height) - var(--topbar-h) - (var(--hero-vpad) * 2));
   display: flex;
   align-items: center;
-  padding: 2.2rem 0;
-  background:
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.28), rgba(0, 0, 0, 0.4)),
-    url("../images/wingchun-banner2-white.png") center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  margin-top: calc(var(--topbar-h) * -1);
+  padding: calc(var(--hero-vpad) + var(--topbar-h)) 0 var(--hero-vpad);
+  background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.hero3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.2)),
+    url("../images/wingchun-banner2-white.png") center bottom / var(--hero-image-width) auto no-repeat;
+  pointer-events: none;
+}
+
+.hero3 > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero3-actions {
@@ -298,6 +317,10 @@ footer {
 
 /* Mobile: force stacked one-column layout */
 @media (max-width: 768px) {
+  :root {
+    --topbar-h: 66px;
+  }
+
   .topbar-inner {
     min-height: 66px;
   }
