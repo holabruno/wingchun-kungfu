@@ -189,44 +189,58 @@ a:hover{ text-decoration: underline; }
    Hero
    =========================== */
 .hero{
-  background: linear-gradient(180deg, #000000 0%, #000000 46%, #f6f7fb 46%);
+  background: #f6f7fb;
   color: var(--white);
-  padding: 106px 0 0;
+  padding: 0;
   position: relative;
 }
 
-/* Pull index hero up so the same banner image is visible through the translucent topbar. */
+/* Let the hero image sit behind the translucent sticky topbar. */
 .hero.hero--banner{
   margin-top: -64px;
-  padding-top: 170px;
+  padding-top: 64px;
+}
+
+.hero-banner-media{
+  position: relative;
+  height: clamp(210px, 31vw, 320px);
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-banner-image{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center -200px;
+  opacity: 0.86;
+}
+
+.hero-banner-media::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.62) 100%);
+  pointer-events: none;
 }
 
 /* Banner image on dark hero background (left/right of hero-card) */
 .hero.hero--banner::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 46%;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.65) 100%),
-    url("../images/wingchun-banner-black.png") center 42% / cover no-repeat;
-  opacity: 0.78;
-  pointer-events: none;
-  z-index: 0;
+  content: none;
 }
 
 .hero > .container{
   position: relative;
   z-index: 1;
+  margin-top: -170px;
 }
 
 /* ===========================
    Hero card (no gap between head and bottom)
    =========================== */
 .hero-card{
-  margin-top: 14px;
+  margin-top: 0;
   border-radius: var(--radius);
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.12);
@@ -375,18 +389,12 @@ a:hover{ text-decoration: underline; }
   margin-left: calc(var(--card-pad) * -1);
   margin-right: calc(var(--card-pad) * -1);
 
-  margin-top: 0;
+  margin-top: 100px;
   border-top: 0;
   background: #f6f7fb;
-  padding: 18px var(--card-pad);
+  padding: 18px var(--card-pad) 56px;
 
   color: #0f172a;
-}
-
-.hero-bottom-top{
-  margin: -18px calc(var(--card-pad) * -1) 18px;
-  padding: 18px var(--card-pad);
-  background: rgba(0,0,0,.38);
 }
 
 .hero-bottom .hero-bottom-top p{
