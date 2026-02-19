@@ -1,7 +1,9 @@
 {
   "fr": {
     "nav": {
-      "register": "S'inscrire!"
+      "register": "S'inscrire!",
+      "schedules": "Horaires",
+      "next": "Suite..."
     },
     "menu": {
       "home": "Accueil",
@@ -10,6 +12,7 @@
       "whatWingChun": "Qu'est-ce que le Wing Chun?",
       "whatLionDance": "Qu'est-ce que la danse du lion?",
       "whatTaiChi": "Qu'est-ce que le Tai Chi?",
+      "schedules": "Horaires",
       "contact": "Contactez-nous"
     },
     "school": {
@@ -28,10 +31,10 @@
     },
     "cta": {
       "trial": "Cours d'essai gratuit",
-      "entreprise": "Évènements & formation en entreprise",
+      "entreprise": "Formation en entreprise",
       "home": "Accueil",
       "school": "École",
-      "teachers": "Professeurs",
+      "teachers": "Instructeurs",
       "reserve": "Réservez votre place!"
     },
     "benefits": {
@@ -47,7 +50,7 @@
     "corpo": {
       "title": "Évènements corporatifs et cliniques de formation en entreprise",
       "resume": "Michel Orchard est professeur certifié de Kung Fu Wing Chun, spécialisé dans la formation en auto-défense appliquée au milieu corporatif. Grâce à une solide expérience en enseignement, il propose des formations structurées, professionnelles et adaptées aux réalités organisationnelles actuelles.",
-      "p1": "Avec Michel Orchard, le Wing Chun devient bien plus qu’un art martial : c’est un outil de confiance, de présence et de maîtrise de soi. Professeur diplômé et passionné, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement.  Aucune performance, aucune compétition — seulement des outils concrets pour se sentir plus solide, plus calme et plus en contrôle.",
+      "p1": "Avec Michel Orchard, le Wing Chun devient bien plus qu’un art martial : c’est un outil de confiance, de présence et de maîtrise de soi. Instructeur diplômé et passionné, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement.  Aucune performance, aucune compétition — seulement des outils concrets pour se sentir plus solide, plus calme et plus en contrôle.",
       "p2": "Ses cliniques corporatives d’auto-défense s’adressent aux entreprises souhaitant offrir à leurs équipes un outil concret favorisant :",
       "p3": "Les contenus sont ajustés selon le profil du groupe et ne requièrent aucune expérience préalable. L’approche pédagogique de Michel Orchard privilégie l’efficacité, la prévention et l’application pratique, dans un cadre sécuritaire et professionnel.  👉 Une solution idéale pour les programmes de bien-être au travail, journées santé-sécurité et activités de développement des équipes.",
       "p4": "En entreprise, ses formations d’auto-défense pour groupes de 10 personnes et plus, offertes en sessions d’1 ou 2 heures, créent un moment fort, mobilisateur et fédérateur.",
@@ -89,7 +92,17 @@
     },
     "sifu": {
       "title": "Sifu Michel Orchard:",
-      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition, en plus d'être certifié. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial."
+      "p1": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix en compétition, en plus d'être certifié. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.",
+      "p2": "Sifu Michel Orchard possède plus de 40 ans d'expérience dans la pratique du Wing-Chun, incluant 35 ans dans l'enseignement de celui-ci et 50 ans dans les arts martiaux.  Il étudie les styles de combat chinois depuis 1979 et croit en l'approche traditionnelle de l'enseignement du Wing Chun tel qu'il l'a appirs de son Sifu Ma Yuk Ping qui était un élève de Tam Lai, lui-même élève du grand Ip Man."
+    },
+    "awards-michel":{
+      "1989": "3ième place - Montréal International",
+      "1991": "1ère place - Championnat annuel canadien de Kung-Fu",
+      "1993": "Médaille d'or et de bronze - Fédération Sino-Canadienne de Kao Shu",
+      "1994": "1ère place - Karaté Plus International",
+      "1995": "Médaille d'or - Fédération Sino-Canadienne de Kao Shu",
+      "2013": "Médaille de bronze - 4ième Compétition d'arts martiaux traditionnels chinois NTD",
+      "2016": "Semi-Finales - 5ième Compétition d'arts martiaux traditionnels chinois NTD"      
     },
     "wingChunHistory": {
       "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
@@ -288,15 +301,16 @@
       "backHome": "Accueil",
       "note-private-group": "Cours de groupe et cours privés disponibles.",
       "nav": {
-        "teachers": "Professeurs",
+        "teachers": "Instructeurs",
         "school": "École",
-        "schedule": "Horaires"
+        "schedule": "Horaires",
+        "next": "Suite..."
       },
       "teachers": {
-        "title": "Professeurs",
+        "title": "Instructeurs",
         "michel": {
           "name": "Michel Orchard",
-          "bio": "Sifu Michel Orchard est passionné par l'enseignement du Kung Fu Wing Chun et a remporté plusieurs prix et compétitions. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.  Professeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement."
+          "bio": "Sifu Michel Orchard est passionné par l'enseignement du <b>Kung Fu Wing Chun</b> et a remporté plusieurs <a href='sifu-michel-orchard.html#prix'>prix et compétitions.</a> Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial. Instructeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement."
         },
         "antoine": {
           "name": "Antoine X.",
@@ -349,6 +363,15 @@
           { "day": "Vendredi", "time": "—" },
           { "day": "Samedi", "time": "14h00 – 15h00" },
           { "day": "Dimanche", "time": "13h00 – 15h30" }
+        ], 
+        "taichiRows": [
+          { "day": "Lundi", "time": "—" },
+          { "day": "Mardi", "time": "—" },
+          { "day": "Mercredi", "time": "—" },
+          { "day": "Jeudi", "time": "19h00 – 20h30" },
+          { "day": "Vendredi", "time": "—" },
+          { "day": "Samedi", "time": "14h00 – 15h00" },
+          { "day": "Dimanche", "time": "13h00 – 15h30" }
         ]
       }
     },
@@ -357,7 +380,7 @@
       "subtitle": "Vous cherchez à vous inscrire!?? - Vous êtes à la bonne place.  Écrivez-nous et nous vous répondrons rapidement.",
       "jumpForm": "Aller au formulaire",
       "jumpMap": "Aller à la carte",
-      "formTitle": "Formulaire de contact & d'inscription",
+      "formTitle": "Formulaire de contact",
       "fields": {
         "email": { "label": "Courriel", "placeholder": "Votre courriel" },
         "firstName": { "label": "Prénom", "placeholder": "Votre prénom" },
@@ -403,7 +426,9 @@
   },
   "en": {
     "nav": {
-      "register": "Register!"
+      "register": "Register!",
+      "schedules": "Schedules",
+      "next": "more..."
     },
      "menu": {
       "home": "Home",
@@ -412,6 +437,7 @@
       "whatWingChun": "Wing Chun: What is it?",
       "whatLionDance": "Lion dance: What is it?",
       "whatTaiChi": "Tai Chi: What is it?",
+      "schedules": "Schedules",
       "contact": "Contact us"
     },
     "school": {
@@ -429,7 +455,7 @@
     },
     "cta": {
       "trial": "Free trial class",
-      "entreprise": "Corporate events & training",
+      "entreprise": "Corporate training",
       "home": "Home",
       "school": "School",
       "teacher": "Instructors",
@@ -488,7 +514,17 @@
     },
     "sifu": {
       "title": "Sifu Michel Orchard:",
-      "p1": "Sifu Michel Orchard is a certified Wing Chun Kung Fu instructor, is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art."
+      "p1": "Sifu Michel Orchard is a certified Wing Chun Kung Fu instructor, is passionate about teaching Wing Chun Kung Fu and has won several competition awards. He is dedicated to passing on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art.",
+      "p2": "Sifu Michel Orchard has over 40 years of experience practicing Wing Chun, including 35 years teaching it and more than 50 years in martial arts. He has studied Chinese fighting styles since 1979 and believes in the traditional approach to teaching Wing Chun, as he learned it from his Sifu, Ma Yuk Ping, who was a student of Tam Lai, himself a student of the great Ip Man."
+    },
+    "awards-michel": {
+      "1989": "3rd place - Montreal International",
+      "1991": "1st place - Annual Canadian Kung Fu Championship",
+      "1993": "Gold and bronze medals - Sino-Canadian Kao Shu Federation",
+      "1994": "1st place - Karate Plus International",
+      "1995": "Gold medal - Sino-Canadian Kao Shu Federation",
+      "2013": "Bronze medal - 4th NTD Traditional Chinese Martial Arts Competition",
+      "2016": "Semi-finals - 5th NTD Traditional Chinese Martial Arts Competition"
     },
     "wingChunHistory": {
       "title": "Wing Chun: What it is, key figures and historical context",
@@ -695,7 +731,7 @@
         "title": "Instructors",
         "michel": {
           "name": "Michel Orchard",
-          "bio": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several awards in competitions. He does everything he can to pass on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art. A certified and dedicated instructor, Michel teaches a self-defense approach accessible to everyone, focused on efficiency, simplicity, and intelligent movement."
+          "bio": "Sifu Michel Orchard is passionate about teaching Wing Chun Kung Fu and has won several <a href='sifu-michel-orchard.html#prix'>awards and competitions</a>. He does everything he can to pass on his knowledge and passion to his students, following in the footsteps of the great masters of this martial art. A certified and dedicated instructor, Michel teaches a self-defense approach accessible to everyone, focused on efficiency, simplicity, and intelligent movement."
         },
         "antoine": {
           "name": "Antoine X.",
@@ -749,6 +785,15 @@
           { "day": "Friday", "time": "—" },
           { "day": "Saturday", "time": "2:00 pm – 3:00 pm" },
           { "day": "Sunday", "time": "1:00 pm – 3:30 pm" }
+        ],
+        "taichiRows": [
+          { "day": "Monday", "time": "—" },
+          { "day": "Tuesday", "time": "—" },
+          { "day": "Wednesday", "time": "—" },
+          { "day": "Thursday", "time": "14h00 – 16h30" },
+          { "day": "Friday", "time": "—" },
+          { "day": "Saturday", "time": "11h00 – 13h00" },
+          { "day": "Sunday", "time": "15h00 – 17h30" }
         ]
       }
     },
@@ -757,7 +802,7 @@
       "subtitle": "You want to start learning?  - You've come to the right place!  Send us a message and we’ll get back to you shortly.",
       "jumpForm": "Go to the form",
       "jumpMap": "Go to the Map",
-      "formTitle": "Contact & registration form",
+      "formTitle": "Contact form",
       "fields": {
         "email": { "label": "Email", "placeholder": "Your email" },
         "firstName": { "label": "First name", "placeholder": "Your first name" },

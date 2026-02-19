@@ -3,275 +3,200 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Institut d'arts Martiaux Chinois de la rive sud de Montréal - À propos</title>
+  <title>Institut d'arts Martiaux Chinois de la rive-sud de Montréal — Wing Chun (Michel Orchard)</title>
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="Institut d’arts martiaux chinois de la Rive-Sud de Montréal (Wing Chun par Michel Orchard). Cours de Kung Fu Wing Chun (lignée Yip Man), cours de groupe et privés. Essai gratuit. Inscriptions en tout temps. Offres corporatives disponibles.">
+  <meta name="keywords"
+    content="Michel Orchard, Wing Chun, Wing Chun Montréal, Wing Chun Brossard, Wing Chun Greenfield Park, Kung Fu Wing Chun, arts martiaux chinois, art martial chinois, école de Wing Chun, Rive-Sud Montréal, cours d’autodéfense, chi sao, Yip Man, kung fu, lion dance, danse lion, self defense, auto-défense, sifu, association YIP Man de Hong Kong, yip man association">
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:title"
+    content="Institut d’arts Martiaux Chinois de la Rive-Sud de Montréal — Wing Chun par Michel Orchard">
+  <meta property="og:description"
+    content="Cours de Kung Fu Wing Chun (lignée Yip Man) à Brossard. Cours de groupe et privés. Essai gratuit. Inscriptions en tout temps.">
+  <meta property="og:url" content="https://wingchun-kungfu.ca/">
+  <meta property="og:image" content="https://wingchun-kungfu.ca/images/armoiries.jpg">
+
+  <!-- Twitter/X cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kung-Fu Wing Chun à Brossard — Rive-Sud de Montréal">
+  <meta name="twitter:description"
+    content="Cours de Kung Fu Wing Chun (lignée Yip Man). Essai gratuit. Inscriptions en tout temps.">
+  <meta name="twitter:image" content="https://wingchun-kungfu.ca/images/armoiries.jpg">
+
+  <!-- Optional: tell search engines your canonical URL -->
+  <link rel="canonical" href="https://wingchun-kungfu.ca/">
+
+  <!-- Optional: helps mobile browsers theme the address bar -->
+  <meta name="theme-color" content="#0b1220">
+
   <link rel="stylesheet" href="styles/main.css" />
-  
+
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  
   <script src="scripts/site.js" defer></script>
 </head>
+<body class="apropos-page">
+  <div id="site-topbar_menu"></div>
+  <script src="scripts/include-topbar_menu.js" defer></script>
 
-<body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
-        <div class="brand-text">
-          <h1 style="font-size: 0.9em;"><strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong></h1>
-          <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
+  <main>
+    <section class="hero3" aria-label="Banniere principale">
+      <div class="container">
+        <div class="hero3-actions">
+          <img class="hero3-badge" src="images/armoiries.jpg" alt="Wing Chun Kung Fu Michel Orchard" />
+          <a class="chip chip--ghost" href="tel:4387254918">
+            <i data-feather="phone"></i>
+            <span data-i18n="school.phone">(438) 725-4918</span>
+          </a>
+          <a class="chip" href="horaires.html">
+            <i data-feather="arrow-right-circle"></i>
+            <span data-i18n="cta.trial">Cours d'essai gratuit</span>
+          </a>
+          <a class="chip" href="evenements-corporatifs.html">
+            <i data-feather="chevrons-right"></i>
+            <span data-i18n="cta.entreprise">Formation en entreprise</span>
+          </a>
+          <a class="chip chip--ghost" href="a-propos.html">
+            <i data-feather="info"></i>
+            <span data-i18n="menu.about">À propos de l'école</span>
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="actions">
-        <button class="btn" id="langToggle" type="button">English</button>
-        <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel" aria-expanded="false">
-          <span class="sr-only">Menu</span>
-          <div class="hamburger" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <!-- Menu -->
-  <div class="menu-backdrop" id="menuBackdrop"></div>
-  <nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
-    <header>
-      <strong>Menu</strong>
-      <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
-    </header>
+	<!-- Instructeurs -->
+	<section>
+		<div class="container">
+			<div class="card">
+				<h3 id="professeurs" data-i18n="aproposPage.teachers.title">Instructeurs</h3>
 
-    <a href="index.html" data-i18n="menu.home">Accueil</a>
-    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
-    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
-    <a href="evenements-corporatifs.html" data-i18n="cta.entreprise">Évènements & formation en entreprise</a>
-    <a href="contact.html" data-i18n="menu.contact">Contact</a>
-  </nav>
+				<div class="grid grid-3 teacher-grid" style="margin-top:14px;">
+					<div class="card">
+						<h4 data-i18n="aproposPage.teachers.michel.name">Michel Orchard</h4>
+						<div class="teacher-bio">
+							<img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" height="120px" />
+							<p class="muted" data-i18n="aproposPage.teachers.michel.bio" data-i18n-html>Sifu Michel Orchard est
+								passionné par l'enseignement du <b>Kung Fu Wing Chun</b> et a remporté plusieurs <a href='sifu-michel-orchard.html#prix'>prix et
+								compétitions.</a> Il met tout en œuvre pour transmettre son savoir et sa passion à ses
+								élèves, suivant ainsi les traces des grands maîtres de cet art martial. Instructeur
+								diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous,
+								axée sur l’efficacité, la simplicité et l’intelligence du mouvement.
+							</p>
+						</div>
+					</div>
+					<!-- 
+					<div class="card">
+						<h4 data-i18n="aproposPage.teachers.antoine.name">Antoine X.</h4>
+						<div class="teacher-bio">
+							<img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" />
+							<p class="muted" data-i18n="aproposPage.teachers.antoine.bio">Lorem ipsum…</p>
+						</div>
+					</div>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <div class="hero-head">
-          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
+					<div class="card">
+						<h4 data-i18n="aproposPage.teachers.ming.name">Mr. Ming</h4>
+						<div class="teacher-bio">
+							<img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" />
+							<p class="muted" data-i18n="aproposPage.teachers.ming.bio">Lorem ipsum…</p>
+						</div>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+	</section>
 
-          <div class="hero-head-text">
-            <h2 class="hero-title">
-              <span data-i18n="aproposPage.title">À propos de l'école</span>
-            </h2>
+	<!-- École (anchor) -->
+	<section>
+		<div class="container">
+			<div class="card">
+				<h3 id="ecole" class="anchor-offset" data-i18n="aproposPage.schoolsSectionTitle">École</h3>
+				<p class="muted" data-i18n="aproposPage.schoolsSectionSubtitle">Philosophie, histoire et horaires de nos
+					disciplines.</p>
+				<p data-i18n="aproposPage.schools.wingchun.p1">L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est
+					un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on
+					développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong,
+					l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité,
+					économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de
+					l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité
+					(Chi Sao), discipline et respect.</p>
+				<p data-i18n="aproposPage.schools.wingchun.p2">Sifu Michel Orchard est un instructeur passionné et
+					certifié, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années
+					d’expérience, il s’est illustré en compétition en remportant plusieurs prix et compétitions, tout en
+					conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise
+					technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité
+					d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.</p>
+				<p data-i18n="aproposPage.schools.wingchun.p3">La philosophie de l’école s’inspire des valeurs associées
+					à la lignée Yip Man : respect des traditions, travail rigoureux, humilité, esprit de communauté et
+					transmission honnête. Les élèves y trouvent un environnement motivant, où l’on apprend à se
+					protéger, à gagner en confiance, à gérer le stress et à se dépasser, tout en cultivant une pratique
+					respectueuse et responsable.</p>
+			</div>
+		</div>
+	</section>
 
-            <p class="hero-tagline" data-i18n="aproposPage.subtitle">
-              Découvrez nos professeurs, nos disciplines et nos horaires.
-            </p>
+	<!-- Video YouTube -->
+	<section>
+		<div class="container">
+			<div class="card media-grid-card">
+				<h3>Vidéos</h3>
 
-            <div class="hero-meta">
-              <a class="pill" href="tel:4387254918">
-                <i data-feather="phone"></i>
-                <span data-i18n="school.phone">(438) 725-4918</span>
-              </a>
+				<div class="media-grid-2x2">
+					<!-- 1) Image -->
+					<div class="media-item media-image">
+						<img src="images/armoiries.jpg" alt="Wing Chun Kung-Fu Rive-Sud de Montréal: Michel Orchard" />
+					</div>
 
-              <a class="pill" href="https://wa.me/14387254918" target="_blank" rel="noopener">
-                <i data-feather="message-circle"></i>
-                <span data-i18n="school.phone2">What's App</span>
-              </a>
-              <a href="contact.html" class="pill">
-                <i data-feather="arrow-right-circle"></i>
-                <span data-i18n="cta.trial">Cours d'essai gratuit</span>
-              </a>
-              <a href="evenements-corporatifs.html" class="pill">
-                <i data-feather="chevrons-right"></i>
-                <span data-i18n="cta.entreprise">Évênements & formation en entreprise.</span>
-              </a>  
-            </div>
-            <p class="muted" style="padding-top:15px;"><span data-i18n="aproposPage.note-private-group">Cours de groupe et cours privés disponibles.</span></p>
-          </div>
-        </div>
+					<!-- 2) Video 1 -->
+					<div class="media-item media-video">
+						<div class="video-wrap">
+							<iframe src="https://www.youtube.com/embed/TOOzuLwWyew?si=8dZzDvUdn1rqn1te"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+							</iframe>
+						</div>
+					</div>
 
-        <div class="hero-bottom">
-          <div class="address">
-            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
-            <span data-i18n="address.line2">Brossard, Québec</span><br/>
-            <span data-i18n="address.line3">J4W 3J2 Canada</span>
-          </div>
+					<!-- 3) Video 2 -->
+					<div class="media-item media-video">
+						<div class="video-wrap">
+							<iframe src="https://www.youtube.com/embed/81ZoQga1Oz0?si=boyXg5ga7evjIuUy"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+							</iframe>
+						</div>
+					</div>
 
-          <div class="cta-row">
-            <a class="btn btn-primary" href="a-propos.html#professeurs" data-i18n="aproposPage.nav.teachers">Professeurs</a>
-            <a class="btn btn-primary" href="a-propos.html#ecole" data-i18n="cta.school">École</a>
-            <a class="btn btn-primary" href="a-propos.html#horaires" data-i18n="aproposPage.nav.schedule">Horaires</a>
-            <a class="btn btn-primary" href="index.html" data-i18n="cta.home">Accueil</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+					<!-- 4) Video 3 -->
+					<div class="media-item media-video">
+						<div class="video-wrap">
+							<iframe src="https://www.youtube.com/embed/SBpQWrSKBeI?si=wCc0SufvcCcrQzFt"
+								title="YouTube video player" frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
 
-   
-  <!-- Professeurs -->
-  <section>
-    <div class="container">
-      <div class="card">
-        <h3 id="professeurs" data-i18n="aproposPage.teachers.title">Professeurs</h3>
+		</div>
 
-        <div class="grid grid-3 teacher-grid" style="margin-top:14px;">
-          <div class="card">
-            <h4 data-i18n="aproposPage.teachers.michel.name">Michel Orchard</h4>
-            <div class="teacher-bio">
-              <img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" height="120px" />
-              <p class="muted" data-i18n="aproposPage.teachers.michel.bio">Sifu Michel Orchard est passionné par l'enseignement du <b>Kung Fu Wing Chun</b> et a remporté plusieurs prix et compétitions. Il met tout en œuvre pour transmettre son savoir et sa passion à ses élèves, suivant ainsi les traces des grands maîtres de cet art martial.  Professeur diplômé et dévoué, Michel transmet une approche de l’auto-défense accessible à tous, axée sur l’efficacité, la simplicité et l’intelligence du mouvement.</p>
-            </div>
-          </div>
+	</section>
+	
+	<div id="schedules"></div>
+	<script src="scripts/include-schedules.js" defer></script>
 
-          <div class="card">
-            <h4 data-i18n="aproposPage.teachers.antoine.name">Antoine X.</h4>
-            <div class="teacher-bio">
-              <img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" />
-              <p class="muted" data-i18n="aproposPage.teachers.antoine.bio">Lorem ipsum…</p>
-            </div>    
-          </div>
+	<div id="site-footer"></div>
+	<script src="scripts/include-footer.js" defer></script>
 
-          <div class="card">
-            <h4 data-i18n="aproposPage.teachers.ming.name">Mr. Ming</h4>
-            <div class="teacher-bio">
-              <img class="teacher-photo" src="images/michel-orchard-1.png" width="120px" />
-              <p class="muted" data-i18n="aproposPage.teachers.ming.bio">Lorem ipsum…</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- École (anchor) -->
-  <section>
-    <div class="container">
-      <div class="card">
-        <h3 id="ecole" class="anchor-offset" data-i18n="aproposPage.schoolsSectionTitle">École</h3>
-        <p class="muted" data-i18n="aproposPage.schoolsSectionSubtitle">Philosophie, histoire et horaires de nos disciplines.</p>
-        <p data-i18n="aproposPage.schools.wingchun.p1">L’école Wing Chun Kung Fu – Michel Orchard (Rive-Sud) est un lieu d’apprentissage axé sur un Wing Chun traditionnel, structuré et accessible, où l’on développe autant la technique que le caractère. Affiliée à l’Association Yip Man de Hong Kong, l’école met l’accent sur une transmission fidèle à l’esprit du Wing Chun : efficacité, simplicité, économie de mouvement, contrôle de la ligne centrale et capacité d’adaptation. Au-delà de l’autodéfense, l’approche vise une progression durable : posture, structure, timing, sensibilité (Chi Sao), discipline et respect.</p>
-        <p data-i18n="aproposPage.schools.wingchun.p2">Sifu Michel Orchard est un instructeur passionné et certifié, reconnu pour son sérieux et son engagement envers ses élèves. Fort de nombreuses années d’expérience, il s’est illustré en compétition en remportant plusieurs prix et compétitions, tout en conservant une vision claire : la performance est utile, mais la priorité demeure la maîtrise technique, la sécurité et la progression personnelle. Son enseignement met l’accent sur la qualité d’exécution, la compréhension des principes et l’application réaliste, dans un cadre structuré.</p>
-        <p data-i18n="aproposPage.schools.wingchun.p3">La philosophie de l’école s’inspire des valeurs associées à la lignée Yip Man : respect des traditions, travail rigoureux, humilité, esprit de communauté et transmission honnête. Les élèves y trouvent un environnement motivant, où l’on apprend à se protéger, à gagner en confiance, à gérer le stress et à se dépasser, tout en cultivant une pratique respectueuse et responsable.</p>
-       </div>
-    </div>
-  </section>
-
-  <!-- Video YouTube -->
-  <section>
-    <div class="container">
-      <div class="card media-grid-card">
-  <h3>Vidéos</h3>
-
-  <div class="media-grid-2x2">
-    <!-- 1) Image -->
-    <div class="media-item media-image">
-      <img
-        src="images/armoiries.jpg"
-        alt="Wing Chun Kung-Fu Rive-Sud de Montréal: Michel Orchard"
-      />
-    </div>
-
-    <!-- 2) Video 1 -->
-    <div class="media-item media-video">
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/TOOzuLwWyew?si=8dZzDvUdn1rqn1te"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-
-    <!-- 3) Video 2 -->
-    <div class="media-item media-video">
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/81ZoQga1Oz0?si=boyXg5ga7evjIuUy"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-
-    <!-- 4) Video 3 -->
-    <div class="media-item media-video">
-      <div class="video-wrap">
-        <iframe
-          src="https://www.youtube.com/embed/SBpQWrSKBeI?si=wCc0SufvcCcrQzFt"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-
-  </section>
-  <!-- Disciplines + horaires -->
-   <section>
-    <div class="container">
-      <div class="card">
-
-      <h2 id="horaires" data-i18n="aproposPage.scheduleTitle">Horaires</h2>
-      <div class="grid grid-2">
-        <!-- Wing Chun -->
-        <div class="card">
-          <h3 data-i18n="aproposPage.schools.wingchun.title">Kung Fu Wing Chun</h3>
-          <p class="muted" data-i18n="aproposPage.schools.wingchun.philosophy">…</p>
-          <p class="muted" data-i18n="aproposPage.schools.wingchun.history">…</p>
-
-          <h4 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h4>
-          <div style="overflow:auto;">
-            <table class="schedule-table">
-              <thead>
-                <tr>
-                  <th data-i18n="aproposPage.schedule.day">Jour</th>
-                  <th data-i18n="aproposPage.schedule.wingchun">Wing Chun</th>
-                </tr>
-              </thead>
-              <tbody id="wingchunScheduleBody"></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Lion Dance -->
-        <div class="card">
-          <h3 data-i18n="aproposPage.schools.lion.title">Danse du lion</h3>
-          <p class="muted" data-i18n="aproposPage.schools.lion.philosophy">…</p>
-          <p class="muted" data-i18n="aproposPage.schools.lion.history">…</p>
-
-          <h4 style="margin-top:14px;" data-i18n="aproposPage.schedule.title">Horaires (7 jours)</h4>
-          <div style="overflow:auto;">
-            <table class="schedule-table">
-              <thead>
-                <tr>
-                  <th data-i18n="aproposPage.schedule.day">Jour</th>
-                  <th data-i18n="aproposPage.schedule.lion">Danse du lion</th>
-                </tr>
-              </thead>
-              <tbody id="lionScheduleBody"></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      </div>
-      <p class="muted" style="margin-top:10px;" data-i18n="aproposPage.schedule.note">Les horaires peuvent varier selon les événements spé.</p>
-    </div>
-  </section>
-
-  <div id="site-footer"></div>
-  <script src="scripts/include-footer.js" defer></script>
-  
 </body>
+
 </html>

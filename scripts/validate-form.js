@@ -2,27 +2,23 @@
   const form = document.querySelector('form[name="contact"]');
   if (!form) return;
 
-  const fields = {
-    prenom: form.querySelector('#prenom'),
-    nom: form.querySelector('#nom'),
-    telephone: form.querySelector('#telephone'),
-    age: form.querySelector('#age'),
-    reference: form.querySelector('#reference'),
-    message: form.querySelector('#message'),
-    email:  form.querySelector('#email'),
-    discipline:  form.querySelector('#discipline')
-  };
+  const MESSAGE_MIN_LEN = 10;
+  const PHONE_REGEX_NANP = /^(?:1)?[2-9]\d{2}[2-9]\d{6}$/;
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  const NAME_REGEX = /^[A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF' -]+$/;
 
-  const errorEls = {
-    prenom: form.querySelector('[data-error-for="prenom"]'),
-    nom: form.querySelector('[data-error-for="nom"]'),
-    telephone: form.querySelector('[data-error-for="telephone"]'),
-    age: form.querySelector('[data-error-for="age"]'),
-    reference: form.querySelector('[data-error-for="reference"]'),
-    message: form.querySelector('[data-error-for="message"]'),
-    email: form.querySelector('[data-error-for="email"]'),
-    discipline: form.querySelector('[data-error-for="discipline"]')
-  };
+  const fields = Array.from(form.querySelectorAll('input, select, textarea')).filter((el) => {
+    const type = (el.type || '').toLowerCase();
+    if (type === 'hidden' || type === 'submit' || type === 'reset' || type === 'button') return false;
+    if (el.name === 'bot-field') return false;
+    return true;
+  });
+  const fieldSet = new Set(fields);
+
+  const errorEls = new Map();
+  form.querySelectorAll('[data-error-for]').forEach((el) => {
+    errorEls.set(el.getAttribute('data-error-for'), el);
+  });
 
   function lang() {
     return (document.documentElement.getAttribute('lang') || 'fr').startsWith('en') ? 'en' : 'fr';
@@ -31,27 +27,30 @@
   const MSG = {
     fr: {
       required: 'Champ obligatoire.',
-      nameInvalid: 'Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes).',
-      emailInvalid: 'Veuillez entrer un courriel valide (doit contenir un @)',
-      nameLen: 'Doit contenir entre 2 et 50 caractères.',
-      phoneInvalid: 'Seulement les chiffres sont permis pour le champ téléphone.',
-      phoneLen: 'Le téléphone doit contenir 10 à 15 chiffres.',
       selectRequired: 'Veuillez choisir une option.',
-      msgLen: 'Le message doit contenir au moins 10 caractères (max 2000).'
+      minLen: 'Le champ est trop court.',
+      maxLen: 'Le champ est trop long.',
+      nameInvalid: 'Veuillez entrer un nom valide (lettres, espaces, tirets, apostrophes).',
+      nameLen: 'Doit contenir entre 2 et 50 caracteres.',
+      emailInvalid: 'Veuillez entrer un courriel valide (doit contenir un @).',
+      phoneInvalid: 'Seulement les chiffres sont permis pour le champ telephone.',
+      phoneLen: 'Le telephone doit contenir 10 a 15 chiffres.',
+      msgLen: 'Le message doit contenir au moins 10 caracteres (max 2000).'
     },
     en: {
       required: 'This field is required.',
-      nameInvalid: 'Please enter a valid name (letters, spaces, hyphens, apostrophes).',
-      emailInvalid: 'Please enter a valid email (must contain a @)',
-      nameLen: 'Must be between 2 and 50 characters.',
-      phoneInvalid: 'Only digits are allowed in the phone field.',
-      phoneLen: 'Phone must contain 10–15 digits.',
       selectRequired: 'Please choose an option.',
+      minLen: 'This field is too short.',
+      maxLen: 'This field is too long.',
+      nameInvalid: 'Please enter a valid name (letters, spaces, hyphens, apostrophes).',
+      nameLen: 'Must be between 2 and 50 characters.',
+      emailInvalid: 'Please enter a valid email (must contain a @).',
+      phoneInvalid: 'Only digits are allowed in the phone field.',
+      phoneLen: 'Phone must contain 10-15 digits.',
       msgLen: 'Message must be at least 10 characters (max 2000).'
     }
   };
 
-  // Sanitizers
   function cleanText(s) {
     return (s || '')
       .normalize('NFKC')
@@ -60,142 +59,187 @@
   }
 
   function cleanName(s) {
-    s = cleanText(s);
-    s = s.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ' -]/g, '');
-    s = s.replace(/[-' ]{2,}/g, ' ');
-    return s.trim();
+    return cleanText(s)
+      .replace(/[^A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF' -]/g, '')
+      .replace(/[-' ]{2,}/g, ' ')
+      .trim();
   }
 
   function stripHtml(s) {
-    return cleanText(s.replace(/<[^>]*>/g, ''));
+    return cleanText((s || '').replace(/<[^>]*>/g, ''));
   }
 
-  function digitsOnlyPhone(s) {
-    s = cleanText(s);
-    const digits = s.replace(/[^\d]/g, '');
-    return { raw: s, digits };
+  function getErrorEl(field) {
+    if (!field || !field.id) return null;
+    return errorEls.get(field.id) || null;
   }
 
-  function setError(key, msg) {
-    const el = fields[key];
-    const err = errorEls[key];
-    if (el) el.classList.add('invalid');
-    if (err) err.textContent = msg || '';
+  function setError(field, message) {
+    if (!field) return;
+    field.classList.add('invalid');
+    const err = getErrorEl(field);
+    if (err) err.textContent = message || '';
   }
 
-  function clearError(key) {
-    const el = fields[key];
-    const err = errorEls[key];
-    if (el) el.classList.remove('invalid');
+  function clearError(field) {
+    if (!field) return;
+    field.classList.remove('invalid');
+    const err = getErrorEl(field);
     if (err) err.textContent = '';
   }
 
-  function validate() {
+  function sanitizeField(field) {
+    if (!field) return '';
+    const id = field.id || '';
+    const tag = field.tagName.toLowerCase();
+    const type = (field.type || '').toLowerCase();
+
+    if (tag === 'select') return field.value || '';
+
+    const noHtml = stripHtml(field.value);
+
+    if (id === 'message') {
+      field.value = noHtml;
+      return field.value;
+    }
+
+    if (id === 'prenom' || id === 'nom') {
+      field.value = cleanName(noHtml);
+      return field.value;
+    }
+
+    if (type === 'email') {
+      field.value = cleanText(noHtml).toLowerCase();
+      return field.value;
+    }
+
+    field.value = cleanText(noHtml);
+    return field.value;
+  }
+
+  function validateTelephone(field, L, value) {
+    const required = field.hasAttribute('required');
+    const digits = (value || '').replace(/\D/g, '');
+
+    if (!value) {
+      if (required) {
+        setError(field, MSG[L].required);
+        return false;
+      }
+      clearError(field);
+      return true;
+    }
+
+    if (!digits) {
+      setError(field, MSG[L].phoneInvalid);
+      return false;
+    }
+
+    if (!PHONE_REGEX_NANP.test(digits)) {
+      setError(field, MSG[L].phoneLen);
+      return false;
+    }
+
+    clearError(field);
+    return true;
+  }
+
+  function validateRequired(field, L, value) {
+    if (!field.hasAttribute('required')) return true;
+    if (value) return true;
+
+    const tag = field.tagName.toLowerCase();
+    setError(field, tag === 'select' ? MSG[L].selectRequired : MSG[L].required);
+    return false;
+  }
+
+  function validateLengths(field, L, value) {
+    if (!value) return true;
+
+    const minLen = field.minLength;
+    const maxLen = field.maxLength;
+
+    if (minLen > -1 && value.length < minLen) {
+      setError(field, MSG[L].minLen);
+      return false;
+    }
+    if (maxLen > -1 && value.length > maxLen) {
+      setError(field, MSG[L].maxLen);
+      return false;
+    }
+    return true;
+  }
+
+  function validateField(field) {
+    if (!field) return true;
+
     const L = lang();
+    const value = sanitizeField(field);
+    const id = field.id || '';
+    const type = (field.type || '').toLowerCase();
+
+    if (id === 'telephone') return validateTelephone(field, L, value);
+
+    if (!validateRequired(field, L, value)) return false;
+
+    if (!value) {
+      clearError(field);
+      return true;
+    }
+
+    if (type === 'email' && !EMAIL_REGEX.test(value)) {
+      setError(field, MSG[L].emailInvalid);
+      return false;
+    }
+
+    if ((id === 'prenom' || id === 'nom') && !NAME_REGEX.test(value)) {
+      setError(field, MSG[L].nameInvalid);
+      return false;
+    }
+
+    if ((id === 'prenom' || id === 'nom') && (value.length < 2 || value.length > 50)) {
+      setError(field, MSG[L].nameLen);
+      return false;
+    }
+
+    if (id === 'message' && value.length < MESSAGE_MIN_LEN) {
+      setError(field, MSG[L].msgLen);
+      return false;
+    }
+
+    if (!validateLengths(field, L, value)) return false;
+
+    clearError(field);
+    return true;
+  }
+
+  function validateForm() {
     let ok = true;
-
-    // Discipline (required select)
-    if (!fields.discipline.value) { setError('discipline', MSG[L].selectRequired); ok = false; }
-    else clearError('discipline');
-
-    // Email (required + regex)
-    const email = cleanText(fields.email.value).toLowerCase();
-    fields.email.value = email;
-    if (!email) { setError('email', MSG[L].required); ok = false; }
-    else if (email.length < 6 || email.length > 254) { setError('email', MSG[L].emailInvalid); ok = false; }
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { setError('email', MSG[L].emailInvalid); ok = false; }
-    else clearError('email');
-
-    // Prenom
-    const prenom = cleanName(fields.prenom.value);
-    fields.prenom.value = prenom;
-    if (!prenom) { setError('prenom', MSG[L].required); ok = false; }
-    else if (prenom.length < 2 || prenom.length > 50) { setError('prenom', MSG[L].nameLen); ok = false; }
-    else if (!/^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$/.test(prenom)) { setError('prenom', MSG[L].nameInvalid); ok = false; }
-    else clearError('prenom');
-
-    // Nom
-    const nom = cleanName(fields.nom.value);
-    fields.nom.value = nom;
-    if (!nom) { setError('nom', MSG[L].required); ok = false; }
-    else if (nom.length < 2 || nom.length > 50) { setError('nom', MSG[L].nameLen); ok = false; }
-    else if (!/^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$/.test(nom)) { setError('nom', MSG[L].nameInvalid); ok = false; }
-    else clearError('nom');
-
-    
-    // Phone (REQUIRED) - show a specific message when letters are entered
-    const rawPhone = cleanText(fields.telephone.value);
-    const digits = rawPhone.replace(/\D/g, '');
-
-    // 1) empty => required
-    if (!rawPhone) {
-    setError('telephone', MSG[L].required);
-    ok = false;
-
-    // 2) user typed something but no digits at all => "numbers only"
-    } else if (!digits) {
-    // Use phoneInvalid to say "numbers only" (or create MSG[L].phoneDigitsOnly)
-    setError('telephone', MSG[L].phoneInvalid);
-    ok = false;
-
-    // 3) validate NANP digits (Canada/US): optional 1 + 10 digits with valid area/exchange
-    } else {
-    const NA_DIGITS_REGEX = /^(?:1)?[2-9]\d{2}[2-9]\d{6}$/;
-
-    if (!NA_DIGITS_REGEX.test(digits)) {
-        // Here you can keep phoneLen or phoneInvalid; I recommend phoneLen for length/rules
-        setError('telephone', MSG[L].phoneLen);
-        ok = false;
-    } else {
-        clearError('telephone');
-    }
-    }
-
-
-
-
-    // Age select required
-    if (!fields.age.value) { setError('age', MSG[L].selectRequired); ok = false; }
-    else clearError('age');
-
-    // Source select required
-    if (!fields.reference.value) { setError('reference', MSG[L].selectRequired); ok = false; }
-    else clearError('reference');
-
-    // Message required + sanitize
-    const msg = stripHtml(fields.message.value);
-    fields.message.value = msg;
-    if (!msg) { setError('message', MSG[L].required); ok = false; }
-    else if (msg.length < 10 || msg.length > 2000) { setError('message', MSG[L].msgLen); ok = false; }
-    else clearError('message');
-
+    fields.forEach((field) => {
+      if (!validateField(field)) ok = false;
+    });
     return ok;
   }
 
-  // Validate on submit
   form.addEventListener('submit', function (e) {
-    if (!validate()) e.preventDefault();
+    if (!validateForm()) e.preventDefault();
   });
 
-  // Live clear per-field
   form.addEventListener('input', function (e) {
-    const id = e.target && e.target.id;
-    if (!id || !(id in fields)) return;
-    clearError(id);
+    const field = e.target;
+    if (!field || !fieldSet.has(field)) return;
+    validateForm();
   });
 
-  // Revalidate on change (selects)
   form.addEventListener('change', function (e) {
-    const id = e.target && e.target.id;
-    if (!id || !(id in fields)) return;
-    validate();
+    const field = e.target;
+    if (!field || !fieldSet.has(field)) return;
+    validateForm();
   });
 
-  // Validate on blur (field lost focus)
-form.addEventListener('focusout', function (e) {
-  const id = e.target && e.target.id;
-  if (!id || !(id in fields)) return;
-  validate();
-});
-
+  form.addEventListener('focusout', function (e) {
+    const field = e.target;
+    if (!field || !fieldSet.has(field)) return;
+    validateForm();
+  });
 })();

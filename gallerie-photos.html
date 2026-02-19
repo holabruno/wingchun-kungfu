@@ -39,7 +39,7 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script src="scripts/site.js" defer></script>
 </head>
-<body>
+<body class="gallerie-photos-page">
   <div id="site-topbar_menu"></div>
   <script src="scripts/include-topbar_menu.js" defer></script>
 
@@ -67,28 +67,58 @@
         </div>
       </div>
     </section>
+    
+    <div id="site-topbar_menu"></div>
+	<script src="scripts/include-topbar_menu.js" defer></script>
 
-  <!-- Content -->
-  <section>
-    <div class="container">
-      <div class="card">
-        <h3 data-i18n="whatIsTai.title">Qu'est-ce que le Tai Chi?</h3>
+	<main class="gallery-wrapper" aria-label="Galerie photos">
+		<section class="gallery-grid">
+			<img src="images/gallerie/IMG_3057.png" alt="Photo de galerie 1" class="gallery-item">
+			<img src="images/gallerie/IMG_3058.png" alt="Photo de galerie 2" class="gallery-item">
+			<img src="images/gallerie/IMG_3059.png" alt="Photo de galerie 3" class="gallery-item">
+			<img src="images/gallerie/IMG_3060.png" alt="Photo de galerie 4" class="gallery-item">
+			<img src="images/gallerie/IMG_3061.png" alt="Photo de galerie 5" class="gallery-item">
+			<img src="images/gallerie/IMG_3062.png" alt="Photo de galerie 6" class="gallery-item">
+			<img src="images/gallerie/IMG_3122.png" alt="Photo de galerie 7" class="gallery-item">
+			<img src="images/gallerie/IMG_3123.png" alt="Photo de galerie 8" class="gallery-item">
+		</section>
+	</main>
 
-        <p data-i18n="whatIsTai.p1">Le tai-chi (taiji) est un art martial chinois devenu, pour beaucoup, une pratique “corps–esprit” faite de mouvements lents, fluides et continus. On le pratique avec une force détendue, une posture alignée et une respiration coordonnée, afin de développer l’équilibre, la conscience du corps et un esprit calme — on parle souvent de “méditation en mouvement”. Le terme “taiji” renvoie à l’idée du “suprême ultime” dans la pensée chinoise : l’équilibre dynamique du yin et du yang, visible dans l’alternance souplesse/fermeté, céder/émettre, immobile/mouvement.</p>
-        <p data-i18n="whatIsTai.p2">Le tai-chi provient des traditions martiales chinoises, et ses racines les mieux documentées sont associées au village des Chen (Chenjiagou), où Chen Wangting (XVIIe siècle) est souvent crédité d’avoir structuré des routines anciennes. Plus tard, Yang Luchan (1799–1872) a largement popularisé la pratique et fondé l’influent style Yang. D’autres grandes lignées incluent les styles Wu/Hao (Wu Yuxiang), Wu (Wu Jianquan) et Sun (Sun Lutang), chacun mettant l’accent sur des méthodes différentes tout en conservant les principes de base. Une légende attribue l’origine du tai-chi au sage taoïste Zhang Sanfeng, mais cette version est généralement considérée comme non vérifiée sur le plan historique.</p>
-        <p data-i18n="whatIsTai.p3">L’entraînement met l’accent sur la détente (song), l’alignement, l’enracinement et une puissance “globale” du corps, plutôt que la force brute. Des synthèses de recherches (NIH/NCCIH) indiquent que le tai-chi peut améliorer l’équilibre et aider à réduire le risque de chutes chez les personnes âgées, et qu’il peut aussi apporter des bénéfices psychologiques (par exemple une diminution de l’anxiété dans certaines études). Il est également pratiqué comme activité physique douce pour améliorer force, souplesse et coordination.</p>
-      </div>
-    </div>
-    <div class="container">
-        <div style="display: inline-flex; align-items: center; gap: 18px; padding-top: 18px;">
-          <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun ?</a>
-          <a href="danselion.html" data-i18n="menu.whatLionDance">Qu'est-ce que la danse du Lion ?</a>
-        </div>
-    </div>
-  </section>
+	<div id="gallery-modal" class="gallery-modal" role="dialog" aria-modal="true" aria-label="Image en plein ecran">
+		<div class="gallery-modal__dialog">
+			<button type="button" id="gallery-close" class="gallery-modal__close" aria-label="Fermer">X</button>
+			<img id="gallery-modal-image" class="gallery-modal__image" src="" alt="">
+		</div>
+	</div>
 
-  <div id="site-footer"></div>
-  <script src="scripts/include-footer.js" defer></script>
+    <div id="site-footer"></div>
+	<script src="scripts/include-footer.js" defer></script>
+	<script>
+		(function () {
+			var galleryItems = document.querySelectorAll(".gallery-item");
+			var modal = document.getElementById("gallery-modal");
+			var modalImage = document.getElementById("gallery-modal-image");
+			var closeButton = document.getElementById("gallery-close");
 
+			function openModal(src, alt) {
+				modalImage.src = src;
+				modalImage.alt = alt || "";
+				modal.classList.add("is-open");
+			}
+
+			function closeModal() {
+				modal.classList.remove("is-open");
+				modalImage.src = "";
+			}
+
+			galleryItems.forEach(function (item) {
+				item.addEventListener("click", function () {
+					openModal(item.src, item.alt);
+				});
+			});
+
+			closeButton.addEventListener("click", closeModal);
+		})();
+	</script>
 </body>
 </html>

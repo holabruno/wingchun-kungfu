@@ -3,114 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Institut d'arts Martiaux Chinois de la rive sud de Montréal - Wing Chun</title>
+  <title>Institut d'arts Martiaux Chinois de la rive-sud de Montréal — Wing Chun (Michel Orchard)</title>
+
+  <!-- Primary SEO -->
+  <meta name="description"
+    content="Institut d’arts martiaux chinois de la Rive-Sud de Montréal (Wing Chun par Michel Orchard). Cours de Kung Fu Wing Chun (lignée Yip Man), cours de groupe et privés. Essai gratuit. Inscriptions en tout temps. Offres corporatives disponibles.">
+  <meta name="keywords"
+    content="Michel Orchard, Wing Chun, Wing Chun Montréal, Wing Chun Brossard, Wing Chun Greenfield Park, Kung Fu Wing Chun, arts martiaux chinois, art martial chinois, école de Wing Chun, Rive-Sud Montréal, cours d’autodéfense, chi sao, Yip Man, kung fu, lion dance, danse lion, self defense, auto-défense, sifu, association YIP Man de Hong Kong, yip man association">
+
+  <!-- Open Graph (Facebook/LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:title"
+    content="Institut d’arts Martiaux Chinois de la Rive-Sud de Montréal — Wing Chun par Michel Orchard">
+  <meta property="og:description"
+    content="Cours de Kung Fu Wing Chun (lignée Yip Man) à Brossard. Cours de groupe et privés. Essai gratuit. Inscriptions en tout temps.">
+  <meta property="og:url" content="https://wingchun-kungfu.ca/">
+  <meta property="og:image" content="https://wingchun-kungfu.ca/images/armoiries.jpg">
+
+  <!-- Twitter/X cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kung-Fu Wing Chun à Brossard — Rive-Sud de Montréal">
+  <meta name="twitter:description"
+    content="Cours de Kung Fu Wing Chun (lignée Yip Man). Essai gratuit. Inscriptions en tout temps.">
+  <meta name="twitter:image" content="https://wingchun-kungfu.ca/images/armoiries.jpg">
+
+  <!-- Optional: tell search engines your canonical URL -->
+  <link rel="canonical" href="https://wingchun-kungfu.ca/">
+
+  <!-- Optional: helps mobile browsers theme the address bar -->
+  <meta name="theme-color" content="#0b1220">
 
   <link rel="stylesheet" href="styles/main.css" />
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-  <!-- shared site logic (menu + i18n + fused list render + feather replace) -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script src="scripts/site.js" defer></script>
 </head>
-
 <body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">
-        <a href="index.html"><img class="brand-logo" src="images/wingchun_noir.jpg" alt="Wing Chun" /></a>
-        <div class="brand-text">
-          <h1 style="font-size: 0.9em;"><strong data-i18n="school.name">Institut d'arts Martiaux Chinois de la rive sud de Montréal</strong></h1>
-          <span data-i18n="school.membership">Membre de l'association YIP Man de Hong Kong</span>
+  <div id="site-topbar_menu"></div>
+  <script src="scripts/include-topbar_menu.js" defer></script>
+
+  <main>
+    <section class="hero3" aria-label="Banniere principale">
+      <div class="container">
+        <div class="hero3-actions">
+          <img class="hero3-badge" src="images/armoiries.jpg" alt="Wing Chun Kung Fu Michel Orchard" />
+          <a class="chip chip--ghost" href="tel:4387254918">
+            <i data-feather="phone"></i>
+            <span data-i18n="school.phone">(438) 725-4918</span>
+          </a>
+          <a class="chip" href="horaires.html">
+            <i data-feather="arrow-right-circle"></i>
+            <span data-i18n="cta.trial">Cours d'essai gratuit</span>
+          </a>
+          <a class="chip" href="evenements-corporatifs.html">
+            <i data-feather="chevrons-right"></i>
+            <span data-i18n="cta.entreprise">Formation en entreprise</span>
+          </a>
+          <a class="chip chip--ghost" href="a-propos.html">
+            <i data-feather="info"></i>
+            <span data-i18n="menu.about">À propos de l'école</span>
+          </a>
         </div>
       </div>
-
-      <div class="actions">
-        <button class="btn" id="langToggle" type="button">English</button>
-
-        <button class="icon-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuPanel" aria-expanded="false">
-          <span class="sr-only">Menu</span>
-          <div class="hamburger" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Menu -->
-  <div class="menu-backdrop" id="menuBackdrop"></div>
-  <nav class="menu" id="menuPanel" role="dialog" aria-modal="true" aria-label="Menu">
-    <header>
-      <strong>Menu</strong>
-      <button class="icon-btn" id="menuClose" type="button" aria-label="Fermer">✕</button>
-    </header>
-
-    <a href="index.html" data-i18n="menu.home">Accueil</a>
-    <a href="wingchun.html" data-i18n="menu.whatWingChun">Qu'est-ce que le Wing Chun?</a>
-    <a href="a-propos.html#ecole" data-i18n="menu.about">À propos de l'école</a>
-    <a href="evenements-corporatifs.html" data-i18n="cta.entreprise">Évènements & formation en entreprise</a>
-    <a href="contact.html" data-i18n="menu.contact">Contact</a>
-  </nav>
-
-  <!-- HERO: matches index.html -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-card">
-
-        <div class="hero-head">
-          <img class="hero-logo" src="images/wingchun-man.jpg" alt="Wing Chun" />
-
-          <div class="hero-head-text">
-            <h2 class="hero-title">
-              <span data-i18n="wingChunHistory.title">Qu'est-ce que le Wing Chun, ses figures clés et contexte historique</span>
-            </h2>
-
-            <p class="hero-tagline muted" data-i18n="wingChunHistory.legendNote">
-              Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (figures légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.
-            </p>
-
-            <!-- pills row like index -->
-            <div class="hero-meta">
-              <a class="pill" href="tel:4387254918">
-                <i data-feather="phone"></i>
-                <span data-i18n="school.phone">(438) 725-4918</span>
-              </a>
-
-              <a class="pill" href="https://wa.me/14387254918" target="_blank" rel="noopener">
-                <i data-feather="message-circle"></i>
-                <span data-i18n="school.phone2">What's App</span>
-              </a>
-
-              <a class="pill" href="contact.html">
-                <i data-feather="calendar"></i>
-                <span data-i18n="cta.trial">Cours d'essai gratuit</span>
-              </a>
-
-              <a class="pill" href="index.html">
-                <i data-feather="home"></i>
-                <span data-i18n="cta.home">Accueil</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- optional light bottom block like index -->
-        <div class="hero-bottom">
-          <div class="address">
-            <span data-i18n="address.line1">6400, boulevard Taschereau, local 209</span><br/>
-            <span data-i18n="address.line2">Brossard, Québec</span><br/>
-            <span data-i18n="address.line3">J4W 3J2 Canada</span>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn btn-primary" href="contact.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
-            <a class="btn" href="a-propos.html#ecole" data-i18n="cta.school">École</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </header>
+    </section>
 
   <!-- What is Wing Chun (text) -->
   <section>

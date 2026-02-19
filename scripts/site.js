@@ -7,6 +7,7 @@
   const get = (obj, path) => path.split('.').reduce((a, k) => (a && k in a) ? a[k] : undefined, obj);
 
   let I18N = null;
+  let i18nLoadPromise = null;
 
   // -------------------------
   // Menu (hamburger)
@@ -18,6 +19,8 @@
     const menuPanel = $('#menuPanel');
 
     if (!menuBtn || !menuClose || !menuBackdrop || !menuPanel) return;
+    if (menuPanel.dataset.menuInit === '1') return;
+    menuPanel.dataset.menuInit = '1';
 
     const openMenu = () => {
       document.body.classList.add('menu-open');
@@ -172,6 +175,8 @@
 
     // Plain text replacement
     $all('[data-i18n]').forEach((el) => {
+      // Skip nodes that are explicitly marked for HTML injection.
+      if (el.hasAttribute('data-i18n-html')) return;
       const key = el.getAttribute('data-i18n');
       const val = get(dict, key);
       if (typeof val === 'string') el.textContent = val;
@@ -179,7 +184,10 @@
 
     // HTML replacement (optional)
     $all('[data-i18n-html]').forEach((el) => {
-      const key = el.getAttribute('data-i18n-html');
+      // Support both forms:
+      // 1) data-i18n-html="some.key"
+      // 2) data-i18n="some.key" data-i18n-html
+      const key = el.getAttribute('data-i18n-html') || el.getAttribute('data-i18n');
       const val = get(dict, key);
       if (typeof val === 'string') el.innerHTML = val;
     });
@@ -224,16 +232,19 @@
 
     const wcBody = document.getElementById('wingchunScheduleBody');
     const lionBody = document.getElementById('lionScheduleBody');
+    const taichiBody = document.getElementById('taichiScheduleBody');
 
-    if (root && (wcBody || lionBody)) {
+    if (root && (wcBody || lionBody || taichiBody)) {
     const wcRows = get(dict, `${root}.schedule.wingchunRows`);
     const lionRows = get(dict, `${root}.schedule.lionRows`);
+    const taichiRows = get(dict, `${root}.schedule.taichiRows`);
 
     // optional localized empty text
     const emptyText = (lang === 'fr') ? 'Aucun horaire' : 'No schedule';
 
     populateSchedule(wcBody, wcRows, emptyText);
     populateSchedule(lionBody, lionRows, emptyText);
+    populateSchedule(taichiBody, taichiRows, emptyText);
     }
 
 
@@ -247,7 +258,7 @@
     if (window.feather) window.feather.replace();
   }
 
-  async function initI18n() {
+  function resolveLanguage() {
     // Determine language
     let lang = 'fr';
     try {
@@ -258,39 +269,59 @@
         lang = nav.startsWith('en') ? 'en' : 'fr';
       }
     } catch (e) {}
+    return lang;
+  }
 
-    // Load translations
-    try {
-      const res = await fetch('../translations.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      I18N = await res.json();
-    } catch (err) {
-      console.warn('Unable to load translations.json', err);
-      I18N = { fr: {}, en: {} };
+  async function loadTranslations() {
+    if (I18N) return;
+    if (!i18nLoadPromise) {
+      i18nLoadPromise = (async () => {
+        try {
+          const res = await fetch('translations.json', { cache: 'no-store' });
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          I18N = await res.json();
+        } catch (err) {
+          console.warn('Unable to load translations.json', err);
+          I18N = { fr: {}, en: {} };
+        }
+      })();
     }
+    await i18nLoadPromise;
+  }
 
-    // Apply initial language
-    applyTranslations(lang);
-
-    // Toggle handler
+  function bindLanguageToggle() {
     const langToggle = $('#langToggle');
-    if (langToggle) {
-      langToggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('lang') || lang;
-        const next = (current === 'fr') ? 'en' : 'fr';
-        applyTranslations(next);
-      });
-    }
+    if (!langToggle || langToggle.dataset.langInit === '1') return;
+    langToggle.dataset.langInit = '1';
+
+    langToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('lang') || resolveLanguage();
+      const next = (current === 'fr') ? 'en' : 'fr';
+      applyTranslations(next);
+    });
+  }
+
+  async function initI18n() {
+    const lang = resolveLanguage();
+    await loadTranslations();
+    applyTranslations(lang);
+    bindLanguageToggle();
+  }
+
+  async function initSiteUI() {
+    initMenu();
+    await initI18n();
+
+    // Feather initial render (safe)
+    if (window.feather) window.feather.replace();
   }
 
   // -------------------------
   // Boot
   // -------------------------
-  document.addEventListener('DOMContentLoaded', () => {
-    initMenu();
-    initI18n();
+  window.SiteUI = { init: initSiteUI };
 
-    // Feather initial render (safe)
-    if (window.feather) window.feather.replace();
+  document.addEventListener('DOMContentLoaded', () => {
+    initSiteUI();
   });
 })();
