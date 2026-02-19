@@ -232,16 +232,19 @@
 
     const wcBody = document.getElementById('wingchunScheduleBody');
     const lionBody = document.getElementById('lionScheduleBody');
+    const taichiBody = document.getElementById('taichiScheduleBody');
 
-    if (root && (wcBody || lionBody)) {
+    if (root && (wcBody || lionBody || taichiBody)) {
     const wcRows = get(dict, `${root}.schedule.wingchunRows`);
     const lionRows = get(dict, `${root}.schedule.lionRows`);
+    const taichiRows = get(dict, `${root}.schedule.taichiRows`);
 
     // optional localized empty text
     const emptyText = (lang === 'fr') ? 'Aucun horaire' : 'No schedule';
 
     populateSchedule(wcBody, wcRows, emptyText);
     populateSchedule(lionBody, lionRows, emptyText);
+    populateSchedule(taichiBody, taichiRows, emptyText);
     }
 
 
