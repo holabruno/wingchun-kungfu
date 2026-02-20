@@ -405,12 +405,12 @@
           { "day": "Dimanche", "time": "13h00 – 15h30" }
         ], 
         "taichiRows": [
-          { "day": "Lundi", "time": "—" },
-          { "day": "Mardi", "time": "—" },
-          { "day": "Mercredi", "time": "—" },
+          { "day": "Lundi", "time": "-" },
+          { "day": "Mardi", "time": "19h00 — 21h00" },
+          { "day": "Mercredi", "time": "-" },
           { "day": "Jeudi", "time": "-" },
-          { "day": "Vendredi", "time": "—" },
-          { "day": "Samedi", "time": "-" },
+          { "day": "Vendredi", "time": "-" },
+          { "day": "Samedi", "time": "10h00 - 12h00" },
           { "day": "Dimanche", "time": "-" }
         ]
       }
@@ -867,13 +867,13 @@
           { "day": "Sunday", "time": "1:00 pm – 3:30 pm" }
         ],
         "taichiRows": [
-          { "day": "Monday", "time": "—" },
-          { "day": "Tuesday", "time": "—" },
-          { "day": "Wednesday", "time": "—" },
-          { "day": "Thursday", "time": "-" },
-          { "day": "Friday", "time": "—" },
-          { "day": "Saturday", "time": "-" },
-          { "day": "Sunday", "time": "-" }
+         { "day": "Lundi", "time": "-" },
+          { "day": "Mardi", "time": "19h00 - 21h00" },
+          { "day": "Mercredi", "time": "-" },
+          { "day": "Jeudi", "time": "-" },
+          { "day": "Vendredi", "time": "-" },
+          { "day": "Samedi", "time": "10h00 - 12h00" },
+          { "day": "Dimanche", "time": "-" }
         ]
       }
     },
