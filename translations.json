@@ -29,13 +29,16 @@
       "line2": "Brossard, Québec",
       "line3": "J4W 3J2 Canada"
     },
-    "cta": {
+    "boutons-action": {
       "trial": "Cours d'essai gratuit",
       "entreprise": "Formation en entreprise",
       "home": "Accueil",
       "school": "École",
       "teachers": "Instructeurs",
-      "reserve": "Réservez votre place!"
+      "reserve": "Réservez votre place!", 
+      "gallery": "Gallerie de Photos",
+      "contact":"Contactez-nous",
+      "address": "Addresse"
     },
     "benefits": {
       "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
@@ -70,7 +73,7 @@
     "whatIsLion": {
       "title": "Qu'est-ce que la danse du lion?",
       "p1": "La danse du lion est une tradition chinoise à la fois culturelle et artistique, souvent présentée lors du Nouvel An lunaire, des inaugurations, des mariages et des festivals. Deux danseurs portent un costume de lion (tête et corps) et exécutent des mouvements rythmés au son des tambours, gongs et cymbales. Le lion symbolise la chance, la protection et la prospérité : on croit qu’il chasse les mauvais esprits et apporte une énergie positive à la communauté et aux commerces qu’il visite.",
-      "p2": "Au-delà du spectacle, la danse du lion demande un entraînement rigoureux. Elle combine équilibre, force, souplesse, coordination et esprit d’équipe, car les deux danseurs doivent bouger comme un seul corps, parfois sur des sauts, des positions basses ou des plateformes. Dans plusieurs écoles, la danse du lion est liée aux arts martiaux (comme le kung fu) : les bases de posture, de puissance des jambes et de discipline mentale se retrouvent dans la performance. C’est donc à la fois un art vivant de transmission culturelle et une pratique physique exigeante."
+      "p2": "Au-delà du speboutons-actioncle, la danse du lion demande un entraînement rigoureux. Elle combine équilibre, force, souplesse, coordination et esprit d’équipe, car les deux danseurs doivent bouger comme un seul corps, parfois sur des sauts, des positions basses ou des plateformes. Dans plusieurs écoles, la danse du lion est liée aux arts martiaux (comme le kung fu) : les bases de posture, de puissance des jambes et de discipline mentale se retrouvent dans la performance. C’est donc à la fois un art vivant de transmission culturelle et une pratique physique exigeante."
     },
     "whatIs": {
       "title": "Qu'est-ce que le Wing Chun?",
@@ -104,6 +107,42 @@
       "2013": "Médaille de bronze - 4ième Compétition d'arts martiaux traditionnels chinois NTD",
       "2016": "Semi-Finales - 5ième Compétition d'arts martiaux traditionnels chinois NTD"      
     },
+    "sifuPage": {
+      "bio": "Sifu Michel Orchard possède plus de 40 ans d'expérience dans la pratique du <strong>Wing Chun</strong>, incluant 35 ans dans l'enseignement de celui-ci et 50 ans dans les arts martiaux. Il étudie les styles de combat chinois depuis 1979 et croit en l'approche traditionnelle de l'enseignement du <strong>Wing Chun</strong> tel qu'il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève de <strong>Tam Lai</strong>, lui-même élève du grand maître <strong>Ip Man</strong>.",
+      "awardsIntro": "Il a remporté plusieurs prix en compétition tels que :",
+      "awards": [
+        "2016 - Semi-finale « NTD 5th International Chinese Traditional Martial Arts Competition »",
+        "2013 - Médaille de bronze « NTD 4th International Chinese Traditional Martial Arts Competition »",
+        "1995 - Médaille d'or « Chinese Canadian Kao Shu Federation »",
+        "1994 - 1ère place « Karaté Plus International »",
+        "1993 - Médaille d'or et de bronze « Chinese Canadian Kao Shu Federation »",
+        "1991 - 1ère place « Annual Canadian Kung Fu Championships »",
+        "1989 - 3ième place « Montréal International »"
+      ],
+      "instructors": {
+        "title": "Instructeurs du Sifu Orchard",
+        "ipMan": {
+          "name": "IP MAN, 1893 à 1972",
+          "bio": "Né à Foshan (Chine), Ip Man est considéré comme l’un des plus grands maîtres de Wing Chun Kung Fu et fut le maître du très célèbre Bruce Lee."
+        },
+        "tamLai": {
+          "name": "TAM LAI, 1920-",
+          "bio": "Élève d’Ip Man, Tam Lai est né dans les années 1920 et a commencé à étudier le Wing Chun à Tsim Sha Tsui vers 1960. Il a aussi pratiqué le Dit Da (ostéopathie chinoise). Retraité de l’enseignement actif, il a exercé sa pratique médicale à Hong Kong."
+        },
+        "maYukPing": {
+          "name": "MA YUK PING, 1950-1999",
+          "bio": "Ma Yuk Ping est le premier Sifu à transmettre l’art du Wing Chun dans la province de Québec (1978). Élève de Tam Lai, il commence très tôt son enseignement et côtoie le grand maître Ip Man. En 1965, Ma Yuk Ping remporte la médaille d’or de combat à Hong Kong."
+        },
+        "denisShink": {
+          "name": "DENIS SHINK, 1957-",
+          "bio": "Élève de Ma Yuk Ping et unique héritier de sa lignée, Denis Shink est certifié de la main de Ma Yuk Ping. Aujourd’hui, Sifu Denis Shink enseigne à son école de Lévis plusieurs styles, dont le Wing Chun, le Tai Chi, le Chi Gong et le Bagua."
+        },
+        "michelOrchard": {
+          "name": "MICHEL ORCHARD, 1960-",
+          "bio": "Élève de Ma Yuk Ping et de Denis Shink, Michel Orchard a débuté le Wing Chun dans le quartier chinois de Montréal en 1979. Plusieurs fois médaillé en compétition nationale et internationale, il perpétue l’enseignement traditionnel du Wing Chun."
+        }
+      }
+    },
     "wingChunHistory": {
       "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
       "legendNote": "Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (acteurs légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.",
@@ -111,7 +150,7 @@
       "moreButton": "Plus sur le Wing Chun...",
       "figuresTitle": "Maitres de Wing Chun",
       "whatIsWingChunTitle": "Qu'est-ce que le Wing Chun?",
-      "whatIsP1": "Le Wing Chun Kung Fu est un art martial chinois de self-défense axé sur l’efficacité, la simplicité et l’économie de mouvement. Conçu pour fonctionner à courte distance, il privilégie des actions directes plutôt que des gestes amples ou spectaculaires. Son principe central est d’occuper la ligne centrale — l’axe entre vous et l’adversaire — afin de protéger les zones vitales et de créer des ouvertures pour contre-attaquer.",
+      "whatIsP1": "Le Wing Chun Kung Fu est un art martial chinois de self-défense axé sur l’efficacité, la simplicité et l’économie de mouvement. Conçu pour fonctionner à courte distance, il privilégie des actions directes plutôt que des gestes amples ou speboutons-actionculaires. Son principe central est d’occuper la ligne centrale — l’axe entre vous et l’adversaire — afin de protéger les zones vitales et de créer des ouvertures pour contre-attaquer.",
       "whatIsP2": "Le Wing Chun mise sur la structure du corps, l’alignement, la détente et la précision. On y apprend à générer de la puissance sans force brute, en utilisant la posture, le transfert de poids et la coordination. Les techniques comprennent des frappes rapides, des coups de paume, des coudes, des genoux, ainsi que des contrôles et des déviations pour neutraliser l’attaque dès son départ.",
       "whatIsP3": "Une pratique emblématique est le Chi Sao (« mains collantes »), un exercice qui développe la sensibilité tactile, le timing et la capacité à réagir instantanément à la pression et à la direction du mouvement adverse. Au-delà du combat, le Wing Chun améliore la concentration, la confiance en soi, la gestion du stress et la condition physique, tout en cultivant discipline et maîtrise de soi.",
       "periods": [
@@ -368,10 +407,10 @@
           { "day": "Lundi", "time": "—" },
           { "day": "Mardi", "time": "—" },
           { "day": "Mercredi", "time": "—" },
-          { "day": "Jeudi", "time": "19h00 – 20h30" },
+          { "day": "Jeudi", "time": "-" },
           { "day": "Vendredi", "time": "—" },
-          { "day": "Samedi", "time": "14h00 – 15h00" },
-          { "day": "Dimanche", "time": "13h00 – 15h30" }
+          { "day": "Samedi", "time": "-" },
+          { "day": "Dimanche", "time": "-" }
         ]
       }
     },
@@ -453,13 +492,16 @@
       "line2": "Brossard, Quebec",
       "line3": "J4W 3J2 Canada"
     },
-    "cta": {
+    "boutons-action": {
       "trial": "Free trial class",
       "entreprise": "Corporate training",
       "home": "Home",
       "school": "School",
       "teacher": "Instructors",
-      "reserve": "Reserve your spot now!"
+      "reserve": "Reserve your spot now!",
+      "gallery": "Photos Gallery", 
+      "contact":"Contact us",
+      "address": "Address"
     },
     "benefits": {
       "title": "What you will gain from practicing Wing Chun:",
@@ -525,6 +567,42 @@
       "1995": "Gold medal - Sino-Canadian Kao Shu Federation",
       "2013": "Bronze medal - 4th NTD Traditional Chinese Martial Arts Competition",
       "2016": "Semi-finals - 5th NTD Traditional Chinese Martial Arts Competition"
+    },
+    "sifuPage": {
+      "bio": "Sifu Michel Orchard has over 40 years of experience practicing <strong>Wing Chun</strong>, including 35 years teaching it and more than 50 years in martial arts. He has studied Chinese fighting styles since 1979 and believes in the traditional approach to teaching <strong>Wing Chun</strong>, as he learned it from his <strong>Sifu Ma Yuk Ping</strong>, who was a student of <strong>Tam Lai</strong>, himself a student of the great master <strong>Ip Man</strong>.",
+      "awardsIntro": "He has won several competition awards such as:",
+      "awards": [
+        "2016 - Semi-finals \"NTD 5th International Chinese Traditional Martial Arts Competition\"",
+        "2013 - Bronze medal \"NTD 4th International Chinese Traditional Martial Arts Competition\"",
+        "1995 - Gold medal \"Chinese Canadian Kao Shu Federation\"",
+        "1994 - 1st place \"Karate Plus International\"",
+        "1993 - Gold and bronze medals \"Chinese Canadian Kao Shu Federation\"",
+        "1991 - 1st place \"Annual Canadian Kung Fu Championships\"",
+        "1989 - 3rd place \"Montreal International\""
+      ],
+      "instructors": {
+        "title": "Instructors of Sifu Orchard",
+        "ipMan": {
+          "name": "IP MAN, 1893 to 1972",
+          "bio": "Born in Foshan (China), Ip Man is considered one of the greatest Wing Chun Kung Fu masters and was the teacher of the famous Bruce Lee."
+        },
+        "tamLai": {
+          "name": "TAM LAI, 1920-",
+          "bio": "A student of Ip Man, Tam Lai was born in the 1920s and began studying Wing Chun in Tsim Sha Tsui around 1960. He also practiced Dit Da (Chinese osteopathy). Retired from active teaching, he practiced medicine in Hong Kong."
+        },
+        "maYukPing": {
+          "name": "MA YUK PING, 1950-1999",
+          "bio": "Ma Yuk Ping was the first Sifu to transmit Wing Chun in the province of Quebec (1978). A student of Tam Lai, he began teaching very early and trained alongside Grandmaster Ip Man. In 1965, Ma Yuk Ping won a gold medal in combat in Hong Kong."
+        },
+        "denisShink": {
+          "name": "DENIS SHINK, 1957-",
+          "bio": "A student of Ma Yuk Ping and the sole heir of his lineage, Denis Shink was certified directly by Ma Yuk Ping. Today, Sifu Denis Shink teaches several styles at his school in Lévis, including Wing Chun, Tai Chi, Chi Gong, and Bagua."
+        },
+        "michelOrchard": {
+          "name": "MICHEL ORCHARD, 1960-",
+          "bio": "A student of Ma Yuk Ping and Denis Shink, Michel Orchard began Wing Chun in Montreal’s Chinatown in 1979. A multiple medalist in national and international competitions, he continues the traditional teaching of Wing Chun."
+        }
+      }
     },
     "wingChunHistory": {
       "title": "Wing Chun: What it is, key figures and historical context",
@@ -790,10 +868,10 @@
           { "day": "Monday", "time": "—" },
           { "day": "Tuesday", "time": "—" },
           { "day": "Wednesday", "time": "—" },
-          { "day": "Thursday", "time": "14h00 – 16h30" },
+          { "day": "Thursday", "time": "-" },
           { "day": "Friday", "time": "—" },
-          { "day": "Saturday", "time": "11h00 – 13h00" },
-          { "day": "Sunday", "time": "15h00 – 17h30" }
+          { "day": "Saturday", "time": "-" },
+          { "day": "Sunday", "time": "-" }
         ]
       }
     },
