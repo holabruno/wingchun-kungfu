@@ -38,7 +38,8 @@
       "reserve": "Réservez votre place!", 
       "gallery": "Gallerie de Photos",
       "contact":"Contactez-nous",
-      "address": "Addresse"
+      "address": "Addresse",
+      "sifu": "Sifu Orchard"
     },
     "benefits": {
       "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
@@ -501,7 +502,8 @@
       "reserve": "Reserve your spot now!",
       "gallery": "Photos Gallery", 
       "contact":"Contact us",
-      "address": "Address"
+      "address": "Address", 
+      "sifu": "Sifu Orchard"
     },
     "benefits": {
       "title": "What you will gain from practicing Wing Chun:",
