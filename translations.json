@@ -107,6 +107,19 @@
       "2013": "Médaille de bronze - 4ième Compétition d'arts martiaux traditionnels chinois NTD",
       "2016": "Semi-Finales - 5ième Compétition d'arts martiaux traditionnels chinois NTD"      
     },
+    "sifuPage": {
+      "bio": "Sifu Michel Orchard possède plus de 40 ans d'expérience dans la pratique du <strong>Wing Chun</strong>, incluant 35 ans dans l'enseignement de celui-ci et 50 ans dans les arts martiaux. Il étudie les styles de combat chinois depuis 1979 et croit en l'approche traditionnelle de l'enseignement du <strong>Wing Chun</strong> tel qu'il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève de <strong>Tam Lai</strong>, lui-même élève du grand maître <strong>Ip Man</strong>.",
+      "awardsIntro": "Il a remporté plusieurs prix en compétition tels que :",
+      "awards": [
+        "2016 - Semi-finale « NTD 5th International Chinese Traditional Martial Arts Competition »",
+        "2013 - Médaille de bronze « NTD 4th International Chinese Traditional Martial Arts Competition »",
+        "1995 - Médaille d'or « Chinese Canadian Kao Shu Federation »",
+        "1994 - 1ère place « Karaté Plus International »",
+        "1993 - Médaille d'or et de bronze « Chinese Canadian Kao Shu Federation »",
+        "1991 - 1ère place « Annual Canadian Kung Fu Championships »",
+        "1989 - 3ième place « Montréal International »"
+      ]
+    },
     "wingChunHistory": {
       "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
       "legendNote": "Note: Ng Mui et Yim Wing Chun font partie des récits fondateurs (acteurs légendaires). Les dates varient selon les lignées et ne sont pas toutes vérifiables historiquement.",
@@ -531,6 +544,19 @@
       "1995": "Gold medal - Sino-Canadian Kao Shu Federation",
       "2013": "Bronze medal - 4th NTD Traditional Chinese Martial Arts Competition",
       "2016": "Semi-finals - 5th NTD Traditional Chinese Martial Arts Competition"
+    },
+    "sifuPage": {
+      "bio": "Sifu Michel Orchard has over 40 years of experience practicing <strong>Wing Chun</strong>, including 35 years teaching it and more than 50 years in martial arts. He has studied Chinese fighting styles since 1979 and believes in the traditional approach to teaching <strong>Wing Chun</strong>, as he learned it from his <strong>Sifu Ma Yuk Ping</strong>, who was a student of <strong>Tam Lai</strong>, himself a student of the great master <strong>Ip Man</strong>.",
+      "awardsIntro": "He has won several competition awards such as:",
+      "awards": [
+        "2016 - Semi-finals \"NTD 5th International Chinese Traditional Martial Arts Competition\"",
+        "2013 - Bronze medal \"NTD 4th International Chinese Traditional Martial Arts Competition\"",
+        "1995 - Gold medal \"Chinese Canadian Kao Shu Federation\"",
+        "1994 - 1st place \"Karate Plus International\"",
+        "1993 - Gold and bronze medals \"Chinese Canadian Kao Shu Federation\"",
+        "1991 - 1st place \"Annual Canadian Kung Fu Championships\"",
+        "1989 - 3rd place \"Montreal International\""
+      ]
     },
     "wingChunHistory": {
       "title": "Wing Chun: What it is, key figures and historical context",

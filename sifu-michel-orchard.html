@@ -39,7 +39,7 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
   <script src="scripts/site.js" defer></script>
 </head>
-<body>
+<body class="sifu-page">
   <div id="site-topbar_menu"></div>
   <script src="scripts/include-topbar_menu.js" defer></script>
 
@@ -68,9 +68,43 @@
       </div>
     </section>
 
+    <section>
+      <div class="container">
+        <div class="card sifu-card">
+          <h2 data-i18n="sifu.title">Sifu Michel Orchard:</h2>
 
+          <article class="sifu-flow">
+            <img class="sifu-photo sifu-photo--right" src="images/sifu-orchard-baton.jpg"
+              alt="Sifu Michel Orchard avec baton de Wing Chun">
 
-    <div id="site-footer"></div>
-	<script src="scripts/include-footer.js" defer></script>
+            <p data-i18n-html="sifuPage.bio">
+              Sifu Michel Orchard possède plus de 40 ans d’expérience dans la pratique du <strong>Wing Chun</strong>,
+              incluant 35 ans dans l’enseignement de celui-ci et 50 ans dans les arts martiaux. Il étudie les styles
+              de combat chinois depuis 1979 et croit en l’approche traditionnelle de l’enseignement du
+              <strong>Wing Chun</strong> tel qu’il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève
+              de <strong>Tam Lai</strong>, lui-même élève du grand maître <strong>Ip Man</strong>.
+            </p>
+
+            <img class="sifu-photo sifu-photo--left" src="images/sifu-orchard-manequin.jpg"
+              alt="Sifu Michel Orchard au mannequin de bois">
+
+            <p id="prix" data-i18n="sifuPage.awardsIntro">Il a remporté plusieurs prix en compétition tels que :</p>
+            <ul class="list" data-i18n-list="sifuPage.awards">
+              <li>2016 - Semi-finale « NTD 5th International Chinese Traditional Martial Arts Competition »</li>
+              <li>2013 - Médaille de bronze « NTD 4th International Chinese Traditional Martial Arts Competition »</li>
+              <li>1995 - Médaille d’or « Chinese Canadian Kao Shu Federation »</li>
+              <li>1994 - 1ère place « Karaté Plus International »</li>
+              <li>1993 - Médaille d’or et de bronze « Chinese Canadian Kao Shu Federation »</li>
+              <li>1991 - 1ère place « Annual Canadian Kung Fu Championships »</li>
+              <li>1989 - 3ième place « Montréal International »</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="scripts/include-footer.js" defer></script>
 </body>
 </html>
