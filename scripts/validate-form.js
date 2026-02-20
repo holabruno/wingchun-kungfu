@@ -71,6 +71,10 @@
     return cleanText((s || '').replace(/<[^>]*>/g, ''));
   }
 
+  function stripHtmlKeepWhitespace(s) {
+    return (s || '').replace(/<[^>]*>/g, '');
+  }
+
   function getErrorEl(field) {
     if (!field || !field.id) return null;
     return errorEls.get(field.id) || null;
@@ -101,7 +105,7 @@
     const noHtml = stripHtml(field.value);
 
     if (id === 'message') {
-      field.value = noHtml;
+      field.value = stripHtmlKeepWhitespace(field.value);
       return field.value;
     }
 
@@ -204,7 +208,7 @@
       return false;
     }
 
-    if (id === 'message' && value.length < MESSAGE_MIN_LEN) {
+    if (id === 'message' && cleanText(value).length < MESSAGE_MIN_LEN) {
       setError(field, MSG[L].msgLen);
       return false;
     }
