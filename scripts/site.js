@@ -252,6 +252,9 @@
     const langToggle = $('#langToggle');
     if (langToggle) langToggle.textContent = (lang === 'fr') ? 'English' : 'Français';
 
+    // Notify listeners that translated HTML has been injected.
+    document.dispatchEvent(new CustomEvent('i18n:applied', { detail: { lang } }));
+
     try { localStorage.setItem('siteLang', lang); } catch (e) {}
 
     // Feather icons must be re-rendered after DOM text updates

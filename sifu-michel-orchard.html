@@ -86,13 +86,21 @@
             <img class="sifu-photo sifu-photo--right" src="images/sifu-orchard-baton.jpg"
               alt="Sifu Michel Orchard avec baton de Wing Chun">
 
-            <p data-i18n-html="sifuPage.bio">
-              Sifu Michel Orchard possède plus de 40 ans d’expérience dans la pratique du <strong>Wing Chun</strong>,
-              incluant 35 ans dans l’enseignement de celui-ci et 50 ans dans les arts martiaux. Il étudie les styles
-              de combat chinois depuis 1979 et croit en l’approche traditionnelle de l’enseignement du
-              <strong>Wing Chun</strong> tel qu’il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève
-              de <strong>Tam Lai</strong>, lui-même élève du grand maître <strong>Ip Man</strong>.
+            <p data-i18n="sifuPage.bio" data-i18n-html>
+              Sifu Michel Orchard possède plus de <strong><span id="wingchunYears"></span> ans</strong> d'expérience dans la pratique du Wing Chun,
+              incluant <strong><span id="teachingYears"></span> ans</strong> dans l'enseignement de celui-ci et <strong><span id="martialYears"></span> ans</strong>
+              dans les arts martiaux.  Il étudie les styles de combat chinois depuis 1979 et croit en l’approche traditionnelle de l’enseignement du
+              <strong>Wing Chun</strong> tel qu’il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève de <strong>Tam Lai</strong>, lui-même élève
+              du grand maître <strong>Ip Man</strong>.
             </p>
+
+            <script
+              src="scripts/experience-years.js"
+              defer
+              data-wingchun-start="1979-01-01"
+              data-teaching-start="1986-01-01"
+              data-martial-start="1970-01-01"
+            ></script>
 
             <img class="sifu-photo sifu-photo--left" src="images/sifu-orchard-manequin.jpg"
               alt="Sifu Michel Orchard au mannequin de bois">
@@ -115,7 +123,7 @@
     <section>
       <div class="container">
         <div class="card sifu-lineage">
-          <h2 data-i18n="sifuPage.instructors.title">Instructeurs du Sifu Orchard</h2>
+          <h2 data-i18n="sifuPage.instructors.title">Lignée Ip Man</h2>
 
           <div class="sifu-lineage-list">
             <article class="sifu-lineage-item">
