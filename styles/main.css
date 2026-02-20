@@ -73,9 +73,7 @@ a {
 .brand-logo {
   width: 42px;
   height: 42px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid var(--line);
+  object-fit: contain;
 }
 
 .brand-text {
