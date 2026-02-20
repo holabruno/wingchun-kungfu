@@ -24,17 +24,27 @@
     if (el && typeof value === "number") el.textContent = String(value);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    // Le script tag qui charge CE fichier
+  function getStarts() {
+    // The script tag that loaded this file.
     const script = document.currentScript || document.querySelector('script[src$="experience-years.js"]');
-    if (!script) return;
+    if (!script) return null;
 
-    const wingchunStart = script.getAttribute("data-wingchun-start");
-    const teachingStart = script.getAttribute("data-teaching-start");
-    const martialStart = script.getAttribute("data-martial-start");
+    return {
+      wingchunStart: script.getAttribute("data-wingchun-start"),
+      teachingStart: script.getAttribute("data-teaching-start"),
+      martialStart: script.getAttribute("data-martial-start"),
+    };
+  }
 
-    setText("wingchunYears", yearsSince(wingchunStart));
-    setText("teachingYears", yearsSince(teachingStart));
-    setText("martialYears", yearsSince(martialStart));
-  });
+  function applyYears() {
+    const starts = getStarts();
+    if (!starts) return;
+
+    setText("wingchunYears", yearsSince(starts.wingchunStart));
+    setText("teachingYears", yearsSince(starts.teachingStart));
+    setText("martialYears", yearsSince(starts.martialStart));
+  }
+
+  document.addEventListener("DOMContentLoaded", applyYears);
+  document.addEventListener("i18n:applied", applyYears);
 })();
