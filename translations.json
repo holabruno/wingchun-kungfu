@@ -36,7 +36,9 @@
       "school": "École",
       "teachers": "Instructeurs",
       "reserve": "Réservez votre place!", 
-      "gallery": "Gallerie de Photos"
+      "gallery": "Gallerie de Photos",
+      "contact":"Contactez-nous",
+      "address": "Addresse"
     },
     "benefits": {
       "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
@@ -369,10 +371,10 @@
           { "day": "Lundi", "time": "—" },
           { "day": "Mardi", "time": "—" },
           { "day": "Mercredi", "time": "—" },
-          { "day": "Jeudi", "time": "19h00 – 20h30" },
+          { "day": "Jeudi", "time": "-" },
           { "day": "Vendredi", "time": "—" },
-          { "day": "Samedi", "time": "14h00 – 15h00" },
-          { "day": "Dimanche", "time": "13h00 – 15h30" }
+          { "day": "Samedi", "time": "-" },
+          { "day": "Dimanche", "time": "-" }
         ]
       }
     },
@@ -461,7 +463,9 @@
       "school": "School",
       "teacher": "Instructors",
       "reserve": "Reserve your spot now!",
-      "gallery": "Photos Gallery"
+      "gallery": "Photos Gallery", 
+      "contact":"Contact us",
+      "address": "Address"
     },
     "benefits": {
       "title": "What you will gain from practicing Wing Chun:",
@@ -792,10 +796,10 @@
           { "day": "Monday", "time": "—" },
           { "day": "Tuesday", "time": "—" },
           { "day": "Wednesday", "time": "—" },
-          { "day": "Thursday", "time": "14h00 – 16h30" },
+          { "day": "Thursday", "time": "-" },
           { "day": "Friday", "time": "—" },
-          { "day": "Saturday", "time": "11h00 – 13h00" },
-          { "day": "Sunday", "time": "15h00 – 17h30" }
+          { "day": "Saturday", "time": "-" },
+          { "day": "Sunday", "time": "-" }
         ]
       }
     },
