@@ -118,7 +118,30 @@
         "1993 - Médaille d'or et de bronze « Chinese Canadian Kao Shu Federation »",
         "1991 - 1ère place « Annual Canadian Kung Fu Championships »",
         "1989 - 3ième place « Montréal International »"
-      ]
+      ],
+      "instructors": {
+        "title": "Instructeurs du Sifu Orchard",
+        "ipMan": {
+          "name": "IP MAN, 1893 à 1972",
+          "bio": "Né à Foshan (Chine), Ip Man est considéré comme l’un des plus grands maîtres de Wing Chun Kung Fu et fut le maître du très célèbre Bruce Lee."
+        },
+        "tamLai": {
+          "name": "TAM LAI, 1920-",
+          "bio": "Élève d’Ip Man, Tam Lai est né dans les années 1920 et a commencé à étudier le Wing Chun à Tsim Sha Tsui vers 1960. Il a aussi pratiqué le Dit Da (ostéopathie chinoise). Retraité de l’enseignement actif, il a exercé sa pratique médicale à Hong Kong."
+        },
+        "maYukPing": {
+          "name": "MA YUK PING, 1950-1999",
+          "bio": "Ma Yuk Ping est le premier Sifu à transmettre l’art du Wing Chun dans la province de Québec (1978). Élève de Tam Lai, il commence très tôt son enseignement et côtoie le grand maître Ip Man. En 1965, Ma Yuk Ping remporte la médaille d’or de combat à Hong Kong."
+        },
+        "denisShink": {
+          "name": "DENIS SHINK, 1957-",
+          "bio": "Élève de Ma Yuk Ping et unique héritier de sa lignée, Denis Shink est certifié de la main de Ma Yuk Ping. Aujourd’hui, Sifu Denis Shink enseigne à son école de Lévis plusieurs styles, dont le Wing Chun, le Tai Chi, le Chi Gong et le Bagua."
+        },
+        "michelOrchard": {
+          "name": "MICHEL ORCHARD, 1960-",
+          "bio": "Élève de Ma Yuk Ping et de Denis Shink, Michel Orchard a débuté le Wing Chun dans le quartier chinois de Montréal en 1979. Plusieurs fois médaillé en compétition nationale et internationale, il perpétue l’enseignement traditionnel du Wing Chun."
+        }
+      }
     },
     "wingChunHistory": {
       "title": "Qu'est-ce que le Wing Chun, ses acteurs clés et le contexte historique",
@@ -556,7 +579,30 @@
         "1993 - Gold and bronze medals \"Chinese Canadian Kao Shu Federation\"",
         "1991 - 1st place \"Annual Canadian Kung Fu Championships\"",
         "1989 - 3rd place \"Montreal International\""
-      ]
+      ],
+      "instructors": {
+        "title": "Instructors of Sifu Orchard",
+        "ipMan": {
+          "name": "IP MAN, 1893 to 1972",
+          "bio": "Born in Foshan (China), Ip Man is considered one of the greatest Wing Chun Kung Fu masters and was the teacher of the famous Bruce Lee."
+        },
+        "tamLai": {
+          "name": "TAM LAI, 1920-",
+          "bio": "A student of Ip Man, Tam Lai was born in the 1920s and began studying Wing Chun in Tsim Sha Tsui around 1960. He also practiced Dit Da (Chinese osteopathy). Retired from active teaching, he practiced medicine in Hong Kong."
+        },
+        "maYukPing": {
+          "name": "MA YUK PING, 1950-1999",
+          "bio": "Ma Yuk Ping was the first Sifu to transmit Wing Chun in the province of Quebec (1978). A student of Tam Lai, he began teaching very early and trained alongside Grandmaster Ip Man. In 1965, Ma Yuk Ping won a gold medal in combat in Hong Kong."
+        },
+        "denisShink": {
+          "name": "DENIS SHINK, 1957-",
+          "bio": "A student of Ma Yuk Ping and the sole heir of his lineage, Denis Shink was certified directly by Ma Yuk Ping. Today, Sifu Denis Shink teaches several styles at his school in Lévis, including Wing Chun, Tai Chi, Chi Gong, and Bagua."
+        },
+        "michelOrchard": {
+          "name": "MICHEL ORCHARD, 1960-",
+          "bio": "A student of Ma Yuk Ping and Denis Shink, Michel Orchard began Wing Chun in Montreal’s Chinatown in 1979. A multiple medalist in national and international competitions, he continues the traditional teaching of Wing Chun."
+        }
+      }
     },
     "wingChunHistory": {
       "title": "Wing Chun: What it is, key figures and historical context",

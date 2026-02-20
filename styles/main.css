@@ -549,6 +549,34 @@ a {
   margin: 0.45rem 0;
 }
 
+.sifu-page .sifu-lineage-list {
+  display: grid;
+  gap: 16px;
+}
+
+.sifu-page .sifu-lineage-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.sifu-page .sifu-lineage-item img {
+  width: 150px;
+  height: auto;
+  border: 1px solid #000;
+  border-radius: 8px;
+  display: block;
+}
+
+.sifu-page .sifu-lineage-item h3 {
+  margin: 0 0 6px;
+}
+
+.sifu-page .sifu-lineage-item p {
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .sifu-page .sifu-photo,
   .sifu-page .sifu-photo--left,
@@ -557,6 +585,15 @@ a {
     width: min(460px, 100%);
     margin: 0 auto 14px;
     display: block;
+  }
+
+  .sifu-page .sifu-lineage-item {
+    grid-template-columns: 1fr;
+  }
+
+  .sifu-page .sifu-lineage-item img {
+    width: min(260px, 100%);
+    margin: 0 auto;
   }
 }
 
