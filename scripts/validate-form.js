@@ -1,6 +1,7 @@
 (function () {
-  const form = document.querySelector('form[name="contact"]');
+  const form = document.querySelector('form[name="contact-wingchun"], form[name="contact"]');
   if (!form) return;
+  form.noValidate = true;
 
   const MESSAGE_MIN_LEN = 10;
   const PHONE_REGEX_NANP = /^(?:1)?[2-9]\d{2}[2-9]\d{6}$/;
@@ -14,6 +15,7 @@
     return true;
   });
   const fieldSet = new Set(fields);
+  let hasSubmitted = false;
 
   const errorEls = new Map();
   form.querySelectorAll('[data-error-for]').forEach((el) => {
@@ -222,24 +224,37 @@
   }
 
   form.addEventListener('submit', function (e) {
+    hasSubmitted = true;
     if (!validateForm()) e.preventDefault();
   });
 
   form.addEventListener('input', function (e) {
     const field = e.target;
     if (!field || !fieldSet.has(field)) return;
-    validateForm();
+    validateField(field);
+
+    if (hasSubmitted) {
+      validateForm();
+    }
   });
 
   form.addEventListener('change', function (e) {
     const field = e.target;
     if (!field || !fieldSet.has(field)) return;
-    validateForm();
+    validateField(field);
+
+    if (hasSubmitted) {
+      validateForm();
+    }
   });
 
   form.addEventListener('focusout', function (e) {
     const field = e.target;
     if (!field || !fieldSet.has(field)) return;
-    validateForm();
+    validateField(field);
+
+    if (hasSubmitted) {
+      validateForm();
+    }
   });
 })();
