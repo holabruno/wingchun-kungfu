@@ -29,13 +29,14 @@
       "line2": "Brossard, Québec",
       "line3": "J4W 3J2 Canada"
     },
-    "cta": {
+    "boutons-action": {
       "trial": "Cours d'essai gratuit",
       "entreprise": "Formation en entreprise",
       "home": "Accueil",
       "school": "École",
       "teachers": "Instructeurs",
-      "reserve": "Réservez votre place!"
+      "reserve": "Réservez votre place!", 
+      "gallery": "Gallerie de Photos"
     },
     "benefits": {
       "title": "Ce que vous gagnerez en pratiquant le Wing Chun :",
@@ -70,7 +71,7 @@
     "whatIsLion": {
       "title": "Qu'est-ce que la danse du lion?",
       "p1": "La danse du lion est une tradition chinoise à la fois culturelle et artistique, souvent présentée lors du Nouvel An lunaire, des inaugurations, des mariages et des festivals. Deux danseurs portent un costume de lion (tête et corps) et exécutent des mouvements rythmés au son des tambours, gongs et cymbales. Le lion symbolise la chance, la protection et la prospérité : on croit qu’il chasse les mauvais esprits et apporte une énergie positive à la communauté et aux commerces qu’il visite.",
-      "p2": "Au-delà du spectacle, la danse du lion demande un entraînement rigoureux. Elle combine équilibre, force, souplesse, coordination et esprit d’équipe, car les deux danseurs doivent bouger comme un seul corps, parfois sur des sauts, des positions basses ou des plateformes. Dans plusieurs écoles, la danse du lion est liée aux arts martiaux (comme le kung fu) : les bases de posture, de puissance des jambes et de discipline mentale se retrouvent dans la performance. C’est donc à la fois un art vivant de transmission culturelle et une pratique physique exigeante."
+      "p2": "Au-delà du speboutons-actioncle, la danse du lion demande un entraînement rigoureux. Elle combine équilibre, force, souplesse, coordination et esprit d’équipe, car les deux danseurs doivent bouger comme un seul corps, parfois sur des sauts, des positions basses ou des plateformes. Dans plusieurs écoles, la danse du lion est liée aux arts martiaux (comme le kung fu) : les bases de posture, de puissance des jambes et de discipline mentale se retrouvent dans la performance. C’est donc à la fois un art vivant de transmission culturelle et une pratique physique exigeante."
     },
     "whatIs": {
       "title": "Qu'est-ce que le Wing Chun?",
@@ -111,7 +112,7 @@
       "moreButton": "Plus sur le Wing Chun...",
       "figuresTitle": "Maitres de Wing Chun",
       "whatIsWingChunTitle": "Qu'est-ce que le Wing Chun?",
-      "whatIsP1": "Le Wing Chun Kung Fu est un art martial chinois de self-défense axé sur l’efficacité, la simplicité et l’économie de mouvement. Conçu pour fonctionner à courte distance, il privilégie des actions directes plutôt que des gestes amples ou spectaculaires. Son principe central est d’occuper la ligne centrale — l’axe entre vous et l’adversaire — afin de protéger les zones vitales et de créer des ouvertures pour contre-attaquer.",
+      "whatIsP1": "Le Wing Chun Kung Fu est un art martial chinois de self-défense axé sur l’efficacité, la simplicité et l’économie de mouvement. Conçu pour fonctionner à courte distance, il privilégie des actions directes plutôt que des gestes amples ou speboutons-actionculaires. Son principe central est d’occuper la ligne centrale — l’axe entre vous et l’adversaire — afin de protéger les zones vitales et de créer des ouvertures pour contre-attaquer.",
       "whatIsP2": "Le Wing Chun mise sur la structure du corps, l’alignement, la détente et la précision. On y apprend à générer de la puissance sans force brute, en utilisant la posture, le transfert de poids et la coordination. Les techniques comprennent des frappes rapides, des coups de paume, des coudes, des genoux, ainsi que des contrôles et des déviations pour neutraliser l’attaque dès son départ.",
       "whatIsP3": "Une pratique emblématique est le Chi Sao (« mains collantes »), un exercice qui développe la sensibilité tactile, le timing et la capacité à réagir instantanément à la pression et à la direction du mouvement adverse. Au-delà du combat, le Wing Chun améliore la concentration, la confiance en soi, la gestion du stress et la condition physique, tout en cultivant discipline et maîtrise de soi.",
       "periods": [
@@ -453,13 +454,14 @@
       "line2": "Brossard, Quebec",
       "line3": "J4W 3J2 Canada"
     },
-    "cta": {
+    "boutons-action": {
       "trial": "Free trial class",
       "entreprise": "Corporate training",
       "home": "Home",
       "school": "School",
       "teacher": "Instructors",
-      "reserve": "Reserve your spot now!"
+      "reserve": "Reserve your spot now!",
+      "gallery": "Photos Gallery"
     },
     "benefits": {
       "title": "What you will gain from practicing Wing Chun:",

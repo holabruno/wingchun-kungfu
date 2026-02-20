@@ -660,14 +660,14 @@ a {
   background: rgba(255, 255, 255, 0.7);
 }
 
-.contact-page .cta-row {
+.contact-page .boutons-action-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 6px;
 }
 
-.contact-page .cta-row .btn:hover {
+.contact-page .boutons-action-row .btn:hover {
   background: rgba(0, 0, 255, 0.95);
   color: #fff;
 }

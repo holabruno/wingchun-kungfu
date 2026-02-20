@@ -50,8 +50,8 @@
       <div class="container">
         <div class="hero3-actions">
           <img class="hero3-badge" src="images/armoiries.png" alt="Wing Chun Kung Fu Michel Orchard" />
-          <a class="chip" href="horaires.html" data-i18n="cta.trial">Cours d'essai gratuit</a>
-          <a class="chip" href="evenements-corporatifs.html" data-i18n="cta.entreprise">Formation en entreprise</a>
+          <a class="chip" href="horaires.html" data-i18n="boutons-action.trial">Cours d'essai gratuit</a>
+          <a class="chip" href="evenements-corporatifs.html" data-i18n="boutons-action.entreprise">Formation en entreprise</a>
           <a class="chip chip--ghost" href="a-propos.html" data-i18n="menu.about">A propos de l'ecole</a>
         </div>
       </div>
