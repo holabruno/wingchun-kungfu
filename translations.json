@@ -109,7 +109,7 @@
       "2016": "Semi-Finales - 5ième Compétition d'arts martiaux traditionnels chinois NTD"      
     },
     "sifuPage": {
-      "bio": "Sifu Michel Orchard possède plus de 40 ans d'expérience dans la pratique du <strong>Wing Chun</strong>, incluant 35 ans dans l'enseignement de celui-ci et 50 ans dans les arts martiaux. Il étudie les styles de combat chinois depuis 1979 et croit en l'approche traditionnelle de l'enseignement du <strong>Wing Chun</strong> tel qu'il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève de <strong>Tam Lai</strong>, lui-même élève du grand maître <strong>Ip Man</strong>.",
+      "bio": "Sifu Michel Orchard possède plus de <strong><span id='wingchunYears'></span> ans</strong> d'expérience dans la pratique du Wing Chun,  incluant <strong><span id='teachingYears'></span> ans</strong> dans l'enseignement de celui-ci et <strong><span id='martialYears'></span> ans</strong> dans les arts martiaux.  Il étudie les styles de combat chinois depuis 1979 et croit en l’approche traditionnelle de l’enseignement du <strong>Wing Chun</strong> tel qu’il a appris de son <strong>Sifu Ma Yuk Ping</strong> qui était un élève de <strong>Tam Lai</strong>, lui-même élève du grand maître <strong>Ip Man</strong>.",
       "awardsIntro": "Il a remporté plusieurs prix en compétition tels que :",
       "awards": [
         "2016 - Semi-finale « NTD 5th International Chinese Traditional Martial Arts Competition »",
@@ -571,7 +571,7 @@
       "2016": "Semi-finals - 5th NTD Traditional Chinese Martial Arts Competition"
     },
     "sifuPage": {
-      "bio": "Sifu Michel Orchard has over 40 years of experience practicing <strong>Wing Chun</strong>, including 35 years teaching it and more than 50 years in martial arts. He has studied Chinese fighting styles since 1979 and believes in the traditional approach to teaching <strong>Wing Chun</strong>, as he learned it from his <strong>Sifu Ma Yuk Ping</strong>, who was a student of <strong>Tam Lai</strong>, himself a student of the great master <strong>Ip Man</strong>.",
+      "bio": "Sifu Michel Orchard has more than <strong><span id='wingchunYears'></span> years</strong> of experience practicing Wing Chun, including <strong><span id='teachingYears'></span> years</strong> teaching it and <strong><span id='martialYears'></span> years</strong> in martial arts. He has studied Chinese fighting styles since 1979 and believes in the traditional approach to teaching <strong>Wing Chun</strong> as he learned it from his <strong>Sifu Ma Yuk Ping</strong>, who was a student of <strong>Tam Lai</strong>, himself a student of the great master <strong>Ip Man</strong>.",
       "awardsIntro": "He has won several competition awards such as:",
       "awards": [
         "2016 - Semi-finals \"NTD 5th International Chinese Traditional Martial Arts Competition\"",
