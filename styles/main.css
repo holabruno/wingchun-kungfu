@@ -48,6 +48,11 @@ a {
   z-index: 200;
 }
 
+/* Reusable offset for hash targets under sticky top bar */
+.anchor-target {
+  scroll-margin-top: calc(var(--topbar-h) + 12px);
+}
+
 /* Top bar and menu (for partials/topbar_menu.html) */
 .topbar {
   background: rgba(255, 255, 255, 0.42);
