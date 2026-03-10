@@ -50,7 +50,7 @@ a {
 
 /* Reusable offset for hash targets under sticky top bar */
 .anchor-target {
-  scroll-margin-top: calc(var(--topbar-h) + 24px);
+  scroll-margin-top: calc(var(--topbar-h) + 44px); /* param a changer (etait 24px... Bruno) */
 }
 
 /* Top bar and menu (for partials/topbar_menu.html) */
