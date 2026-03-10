@@ -14,4 +14,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (window.SiteUI && typeof window.SiteUI.init === 'function') {
     window.SiteUI.init();
   }
+
+  // Re-apply hash scroll after topbar injection/layout shift.
+  const scrollToHashTarget = () => {
+    const hash = window.location.hash;
+    if (!hash || hash === '#') return;
+    const id = decodeURIComponent(hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'auto', block: 'start' });
+  };
+
+  scrollToHashTarget();
+  setTimeout(scrollToHashTarget, 120);
 });
