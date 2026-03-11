@@ -399,10 +399,10 @@
           { "day": "Lundi", "time": "—" },
           { "day": "Mardi", "time": "—" },
           { "day": "Mercredi", "time": "—" },
-          { "day": "Jeudi", "time": "19h00 – 20h30" },
+          { "day": "Jeudi", "time": "—" },
           { "day": "Vendredi", "time": "—" },
-          { "day": "Samedi", "time": "14h00 – 15h00" },
-          { "day": "Dimanche", "time": "13h00 – 15h30" }
+          { "day": "Samedi", "time": "—" },
+          { "day": "Dimanche", "time": "—" }
         ], 
         "taichiRows": [
           { "day": "Lundi", "time": "-" },
@@ -861,10 +861,10 @@
           { "day": "Monday", "time": "—" },
           { "day": "Tuesday", "time": "—" },
           { "day": "Wednesday", "time": "—" },
-          { "day": "Thursday", "time": "7:00 pm – 8:30 pm" },
+          { "day": "Thursday", "time": "—" },
           { "day": "Friday", "time": "—" },
-          { "day": "Saturday", "time": "2:00 pm – 3:00 pm" },
-          { "day": "Sunday", "time": "1:00 pm – 3:30 pm" }
+          { "day": "Saturday", "time": "—" },
+          { "day": "Sunday", "time": "—" }
         ],
         "taichiRows": [
          { "day": "Lundi", "time": "-" },
